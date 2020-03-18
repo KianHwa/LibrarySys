@@ -89,7 +89,42 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="BookManagement\ModifyBook.Designer.vb">
+      <DependentUpon>ModifyBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookManagement\ModifyBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookManagement\NewBook.Designer.vb">
+      <DependentUpon>NewBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookManagement\NewBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookManagement\RemoveBook.Designer.vb">
+      <DependentUpon>RemoveBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookManagement\RemoveBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookManagement\SearchBook.Designer.vb">
+      <DependentUpon>SearchBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookManagement\SearchBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowReturn\BorrowBook.Designer.vb">
+      <DependentUpon>BorrowBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowReturn\BorrowBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowReturn\ReturnBook.Designer.vb">
+      <DependentUpon>ReturnBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowReturn\ReturnBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +157,42 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Others\Help.Designer.vb">
+      <DependentUpon>Help.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Others\Help.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Others\Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Others\Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\GenerateReport.Designer.vb">
+      <DependentUpon>GenerateReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\GenerateReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ViewReport.Designer.vb">
+      <DependentUpon>ViewReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ViewReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\ChangePassword.Designer.vb">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\ChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\ViewProfile.Designer.vb">
+      <DependentUpon>ViewProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\ViewProfile.vb">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
