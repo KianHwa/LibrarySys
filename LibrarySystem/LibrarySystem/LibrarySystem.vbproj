@@ -132,10 +132,10 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="Home.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Library.designer.vb">
@@ -208,6 +208,9 @@
     <EmbeddedResource Include="BookManagement\SearchBook.resx">
       <DependentUpon>SearchBook.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -240,6 +243,24 @@
     <Content Include="Library_log.ldf">
       <DependentUpon>Library.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\0zuld2 %284%29.jpg" />
+    <None Include="Resources\0zuld2 %283%29.jpg" />
+    <None Include="Resources\0zuld2 %282%29.jpg" />
+    <None Include="Resources\0zuld2 %281%29.jpg" />
+    <None Include="Resources\e25dfd426d73449a2d28e840aa1ee4ce.jpg" />
+    <None Include="Resources\0zuld2.jpg" />
+    <None Include="Resources\34902fc14c13beeaba1395610bc47590.jpg" />
+    <None Include="Resources\pngguru.com %281%29.png" />
+    <None Include="Resources\pngguru.com %288%29.png" />
+    <None Include="Resources\pngguru.com %287%29.png" />
+    <None Include="Resources\pngguru.com %286%29.png" />
+    <None Include="Resources\pngguru.com %285%29.png" />
+    <None Include="Resources\pngguru.com %284%29.png" />
+    <None Include="Resources\pngguru.com %283%29.png" />
+    <None Include="Resources\pngguru.com %282%29.png" />
+    <None Include="Resources\pngguru.com.png" />
+    <None Include="Resources\books-glasses-table-library.jpg" />
+    <None Include="Resources\profile.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
