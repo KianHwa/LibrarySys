@@ -175,6 +175,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BookManagement\ModifyBook.resx">
+      <DependentUpon>ModifyBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookManagement\NewBook.resx">
+      <DependentUpon>NewBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookManagement\RemoveBook.resx">
+      <DependentUpon>RemoveBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookManagement\SearchBook.resx">
+      <DependentUpon>SearchBook.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
