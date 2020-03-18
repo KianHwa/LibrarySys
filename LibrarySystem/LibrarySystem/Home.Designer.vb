@@ -35,6 +35,7 @@ Partial Class formHome
         Me.btnBookReturn = New System.Windows.Forms.Button()
         Me.btnSearchBook = New System.Windows.Forms.Button()
         Me.btnBookBorrow = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,7 +44,7 @@ Partial Class formHome
         'MenuStrip1
         '
         Me.MenuStrip1.AutoSize = False
-        Me.MenuStrip1.BackColor = System.Drawing.Color.MidnightBlue
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserToolStripMenuItem, Me.BookManagementToolStripMenuItem, Me.ReportToolStripMenuItem, Me.SettingToolStripMenuItem, Me.GelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
@@ -101,7 +102,7 @@ Partial Class formHome
         'Panel1
         '
         Me.Panel1.AutoSize = True
-        Me.Panel1.BackColor = System.Drawing.Color.MidnightBlue
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Button5)
         Me.Panel1.Controls.Add(Me.btnAddNewBook)
@@ -126,7 +127,7 @@ Partial Class formHome
         '
         'Button5
         '
-        Me.Button5.BackColor = System.Drawing.Color.MidnightBlue
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button5.FlatAppearance.BorderSize = 0
         Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson
@@ -142,7 +143,7 @@ Partial Class formHome
         '
         'btnAddNewBook
         '
-        Me.btnAddNewBook.BackColor = System.Drawing.Color.MidnightBlue
+        Me.btnAddNewBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnAddNewBook.FlatAppearance.BorderSize = 0
         Me.btnAddNewBook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnAddNewBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -158,7 +159,7 @@ Partial Class formHome
         '
         'btnBookReturn
         '
-        Me.btnBookReturn.BackColor = System.Drawing.Color.MidnightBlue
+        Me.btnBookReturn.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBookReturn.FlatAppearance.BorderSize = 0
         Me.btnBookReturn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnBookReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -174,7 +175,7 @@ Partial Class formHome
         '
         'btnSearchBook
         '
-        Me.btnSearchBook.BackColor = System.Drawing.Color.MidnightBlue
+        Me.btnSearchBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnSearchBook.FlatAppearance.BorderSize = 0
         Me.btnSearchBook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnSearchBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -190,7 +191,7 @@ Partial Class formHome
         '
         'btnBookBorrow
         '
-        Me.btnBookBorrow.BackColor = System.Drawing.Color.MidnightBlue
+        Me.btnBookBorrow.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBookBorrow.FlatAppearance.BorderSize = 0
         Me.btnBookBorrow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnBookBorrow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -204,16 +205,29 @@ Partial Class formHome
         Me.btnBookBorrow.Text = "Book Borrow"
         Me.btnBookBorrow.UseVisualStyleBackColor = False
         '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Hobo Std", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(1118, 350)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(534, 286)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Library Management System"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'formHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.LibrarySystem.My.Resources.Resources._0zuld2__4_
+        Me.BackgroundImage = Global.LibrarySystem.My.Resources.Resources.bg11
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1902, 1033)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.DoubleBuffered = True
         Me.MinimumSize = New System.Drawing.Size(1080, 720)
         Me.Name = "formHome"
         Me.Text = "Library Management System"
@@ -239,4 +253,5 @@ Partial Class formHome
     Friend WithEvents SettingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class
