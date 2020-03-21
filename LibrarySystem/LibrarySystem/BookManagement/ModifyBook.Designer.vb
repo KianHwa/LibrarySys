@@ -38,21 +38,25 @@ Partial Class ModifyBook
         '
         'btnCancel
         '
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnCancel.Location = New System.Drawing.Point(212, 243)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(79, 38)
         Me.btnCancel.TabIndex = 31
         Me.btnCancel.Text = "&Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'btnModify
         '
+        Me.btnModify.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnModify.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnModify.Location = New System.Drawing.Point(80, 243)
         Me.btnModify.Name = "btnModify"
         Me.btnModify.Size = New System.Drawing.Size(84, 38)
         Me.btnModify.TabIndex = 30
         Me.btnModify.Text = "&Modify"
-        Me.btnModify.UseVisualStyleBackColor = True
+        Me.btnModify.UseVisualStyleBackColor = False
         '
         'txtBookType
         '

@@ -38,21 +38,25 @@ Partial Class RemoveBook
         '
         'btnCancel
         '
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnCancel.Location = New System.Drawing.Point(201, 241)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(79, 38)
         Me.btnCancel.TabIndex = 19
         Me.btnCancel.Text = "&Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'btnRemove
         '
+        Me.btnRemove.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnRemove.Location = New System.Drawing.Point(69, 241)
         Me.btnRemove.Name = "btnRemove"
         Me.btnRemove.Size = New System.Drawing.Size(84, 38)
         Me.btnRemove.TabIndex = 18
         Me.btnRemove.Text = "&Remove"
-        Me.btnRemove.UseVisualStyleBackColor = True
+        Me.btnRemove.UseVisualStyleBackColor = False
         '
         'txtBookType
         '

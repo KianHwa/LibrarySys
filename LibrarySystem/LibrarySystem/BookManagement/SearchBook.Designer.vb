@@ -38,21 +38,25 @@ Partial Class SearchBook
         '
         'btnCancel
         '
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnCancel.Location = New System.Drawing.Point(190, 236)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(79, 38)
         Me.btnCancel.TabIndex = 31
         Me.btnCancel.Text = "&Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'btnSearch
         '
+        Me.btnSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnSearch.Location = New System.Drawing.Point(58, 236)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(84, 38)
         Me.btnSearch.TabIndex = 30
         Me.btnSearch.Text = "&Search"
-        Me.btnSearch.UseVisualStyleBackColor = True
+        Me.btnSearch.UseVisualStyleBackColor = False
         '
         'txtBookType
         '
