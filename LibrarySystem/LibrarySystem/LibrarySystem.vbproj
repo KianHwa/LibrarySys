@@ -243,6 +243,8 @@
     <Content Include="Library_log.ldf">
       <DependentUpon>Library.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\bg1.jpg" />
+    <None Include="Resources\bg1.png" />
     <None Include="Resources\0zuld2 %284%29.jpg" />
     <None Include="Resources\0zuld2 %283%29.jpg" />
     <None Include="Resources\0zuld2 %282%29.jpg" />
