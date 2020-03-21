@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class BorrowBook
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,46 +20,46 @@ Partial Class BorrowBook
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnBorrow = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.lblDueDate = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtISBN = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtMemberName = New System.Windows.Forms.TextBox()
+        Me.txtMemberID = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.btnClear = New System.Windows.Forms.Button()
-        Me.btnBorrow = New System.Windows.Forms.Button()
+        Me.dgvBorrow = New System.Windows.Forms.DataGridView()
         Me.btnRemove = New System.Windows.Forms.Button()
-        Me.btnConfirmBorrow = New System.Windows.Forms.Button()
+        Me.txtRemoveBorrowBook = New System.Windows.Forms.TextBox()
+        Me.btnConfirm = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.dgvBorrow, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.btnBorrow)
         Me.GroupBox1.Controls.Add(Me.btnClear)
-        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.lblDueDate)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.txtISBN)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtMemberName)
+        Me.GroupBox1.Controls.Add(Me.txtMemberID)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -71,13 +71,48 @@ Partial Class BorrowBook
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'Label6
+        'btnBorrow
         '
-        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label6.Location = New System.Drawing.Point(656, 100)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(200, 30)
-        Me.Label6.TabIndex = 9
+        Me.btnBorrow.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnBorrow.FlatAppearance.BorderSize = 0
+        Me.btnBorrow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnBorrow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBorrow.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBorrow.ForeColor = System.Drawing.Color.White
+        Me.btnBorrow.Location = New System.Drawing.Point(736, 202)
+        Me.btnBorrow.Name = "btnBorrow"
+        Me.btnBorrow.Size = New System.Drawing.Size(120, 35)
+        Me.btnBorrow.TabIndex = 13
+        Me.btnBorrow.Text = "&Borrow"
+        Me.btnBorrow.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnBorrow.UseVisualStyleBackColor = False
+        '
+        'btnClear
+        '
+        Me.btnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnClear.FlatAppearance.BorderSize = 0
+        Me.btnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.ForeColor = System.Drawing.Color.White
+        Me.btnClear.Location = New System.Drawing.Point(587, 202)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(120, 35)
+        Me.btnClear.TabIndex = 12
+        Me.btnClear.Text = "C&lear"
+        Me.btnClear.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnClear.UseVisualStyleBackColor = False
+        '
+        'lblDueDate
+        '
+        Me.lblDueDate.BackColor = System.Drawing.Color.White
+        Me.lblDueDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblDueDate.Location = New System.Drawing.Point(656, 100)
+        Me.lblDueDate.Name = "lblDueDate"
+        Me.lblDueDate.Size = New System.Drawing.Size(200, 30)
+        Me.lblDueDate.TabIndex = 9
         '
         'Label5
         '
@@ -87,33 +122,33 @@ Partial Class BorrowBook
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Due Date"
         '
-        'TextBox3
+        'txtISBN
         '
-        Me.TextBox3.Location = New System.Drawing.Point(656, 150)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(200, 30)
-        Me.TextBox3.TabIndex = 7
+        Me.txtISBN.Location = New System.Drawing.Point(656, 150)
+        Me.txtISBN.Name = "txtISBN"
+        Me.txtISBN.Size = New System.Drawing.Size(200, 30)
+        Me.txtISBN.TabIndex = 4
         '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(656, 50)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 30)
-        Me.DateTimePicker1.TabIndex = 6
+        Me.DateTimePicker1.TabIndex = 3
         '
-        'TextBox2
+        'txtMemberName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(176, 100)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(200, 30)
-        Me.TextBox2.TabIndex = 5
+        Me.txtMemberName.Location = New System.Drawing.Point(176, 100)
+        Me.txtMemberName.Name = "txtMemberName"
+        Me.txtMemberName.Size = New System.Drawing.Size(200, 30)
+        Me.txtMemberName.TabIndex = 2
         '
-        'TextBox1
+        'txtMemberID
         '
-        Me.TextBox1.Location = New System.Drawing.Point(176, 47)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 30)
-        Me.TextBox1.TabIndex = 4
+        Me.txtMemberID.Location = New System.Drawing.Point(176, 47)
+        Me.txtMemberID.Name = "txtMemberID"
+        Me.txtMemberID.Size = New System.Drawing.Size(200, 30)
+        Me.txtMemberID.TabIndex = 1
         '
         'Label4
         '
@@ -153,9 +188,9 @@ Partial Class BorrowBook
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.dgvBorrow)
         Me.GroupBox3.Controls.Add(Me.btnRemove)
-        Me.GroupBox3.Controls.Add(Me.TextBox4)
-        Me.GroupBox3.Controls.Add(Me.TableLayoutPanel1)
+        Me.GroupBox3.Controls.Add(Me.txtRemoveBorrowBook)
         Me.GroupBox3.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(41, 324)
         Me.GroupBox3.Name = "GroupBox3"
@@ -163,117 +198,58 @@ Partial Class BorrowBook
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         '
-        'TableLayoutPanel1
+        'dgvBorrow
         '
-        Me.TableLayoutPanel1.ColumnCount = 5
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.900585!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.77778!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.67836!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.67251!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.4386!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Label7, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label9, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label10, 3, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label11, 4, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label8, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(24, 40)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 6
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.33333!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.66667!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(873, 196)
-        Me.TableLayoutPanel1.TabIndex = 0
-        '
-        'Label7
-        '
-        Me.Label7.Location = New System.Drawing.Point(3, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(52, 43)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "No"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label8
-        '
-        Me.Label8.Location = New System.Drawing.Point(62, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(145, 43)
-        Me.Label8.TabIndex = 1
-        Me.Label8.Text = "ISBN"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label9
-        '
-        Me.Label9.Location = New System.Drawing.Point(216, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(379, 43)
-        Me.Label9.TabIndex = 2
-        Me.Label9.Text = "Book Name"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label10
-        '
-        Me.Label10.Location = New System.Drawing.Point(604, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(127, 43)
-        Me.Label10.TabIndex = 3
-        Me.Label10.Text = "Borrow Date"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label11
-        '
-        Me.Label11.Location = New System.Drawing.Point(740, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(130, 43)
-        Me.Label11.TabIndex = 4
-        Me.Label11.Text = "Due Date"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(531, 256)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(224, 35)
-        Me.TextBox4.TabIndex = 13
-        '
-        'btnClear
-        '
-        Me.btnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btnClear.FlatAppearance.BorderSize = 0
-        Me.btnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClear.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.ForeColor = System.Drawing.Color.White
-        Me.btnClear.Location = New System.Drawing.Point(587, 202)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(120, 35)
-        Me.btnClear.TabIndex = 12
-        Me.btnClear.Text = "C&lear"
-        Me.btnClear.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnClear.UseVisualStyleBackColor = False
-        '
-        'btnBorrow
-        '
-        Me.btnBorrow.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btnBorrow.FlatAppearance.BorderSize = 0
-        Me.btnBorrow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnBorrow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.btnBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBorrow.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBorrow.ForeColor = System.Drawing.Color.White
-        Me.btnBorrow.Location = New System.Drawing.Point(736, 202)
-        Me.btnBorrow.Name = "btnBorrow"
-        Me.btnBorrow.Size = New System.Drawing.Size(120, 35)
-        Me.btnBorrow.TabIndex = 13
-        Me.btnBorrow.Text = "&Borrow"
-        Me.btnBorrow.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnBorrow.UseVisualStyleBackColor = False
+        Me.dgvBorrow.AllowUserToAddRows = False
+        Me.dgvBorrow.AllowUserToDeleteRows = False
+        Me.dgvBorrow.AllowUserToResizeColumns = False
+        Me.dgvBorrow.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.dgvBorrow.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvBorrow.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvBorrow.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvBorrow.CausesValidation = False
+        Me.dgvBorrow.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBorrow.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvBorrow.ColumnHeadersHeight = 35
+        Me.dgvBorrow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvBorrow.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvBorrow.EnableHeadersVisualStyles = False
+        Me.dgvBorrow.GridColor = System.Drawing.SystemColors.ActiveCaption
+        Me.dgvBorrow.Location = New System.Drawing.Point(24, 30)
+        Me.dgvBorrow.Name = "dgvBorrow"
+        Me.dgvBorrow.ReadOnly = True
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBorrow.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvBorrow.RowHeadersWidth = 51
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
+        Me.dgvBorrow.RowsDefaultCellStyle = DataGridViewCellStyle5
+        Me.dgvBorrow.RowTemplate.Height = 24
+        Me.dgvBorrow.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvBorrow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvBorrow.Size = New System.Drawing.Size(873, 194)
+        Me.dgvBorrow.TabIndex = 15
         '
         'btnRemove
         '
@@ -287,34 +263,45 @@ Partial Class BorrowBook
         Me.btnRemove.Location = New System.Drawing.Point(774, 253)
         Me.btnRemove.Name = "btnRemove"
         Me.btnRemove.Size = New System.Drawing.Size(120, 35)
-        Me.btnRemove.TabIndex = 14
+        Me.btnRemove.TabIndex = 6
         Me.btnRemove.Text = "&Remove"
         Me.btnRemove.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnRemove.UseVisualStyleBackColor = False
         '
-        'btnConfirmBorrow
+        'txtRemoveBorrowBook
         '
-        Me.btnConfirmBorrow.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btnConfirmBorrow.FlatAppearance.BorderSize = 0
-        Me.btnConfirmBorrow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnConfirmBorrow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.btnConfirmBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnConfirmBorrow.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConfirmBorrow.ForeColor = System.Drawing.Color.White
-        Me.btnConfirmBorrow.Location = New System.Drawing.Point(818, 660)
-        Me.btnConfirmBorrow.Name = "btnConfirmBorrow"
-        Me.btnConfirmBorrow.Size = New System.Drawing.Size(120, 35)
-        Me.btnConfirmBorrow.TabIndex = 15
-        Me.btnConfirmBorrow.Text = "&Confirm"
-        Me.btnConfirmBorrow.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnConfirmBorrow.UseVisualStyleBackColor = False
+        Me.txtRemoveBorrowBook.Location = New System.Drawing.Point(531, 256)
+        Me.txtRemoveBorrowBook.Multiline = True
+        Me.txtRemoveBorrowBook.Name = "txtRemoveBorrowBook"
+        Me.txtRemoveBorrowBook.Size = New System.Drawing.Size(224, 35)
+        Me.txtRemoveBorrowBook.TabIndex = 5
+        '
+        'btnConfirm
+        '
+        Me.btnConfirm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnConfirm.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnConfirm.FlatAppearance.BorderSize = 0
+        Me.btnConfirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnConfirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConfirm.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnConfirm.ForeColor = System.Drawing.Color.White
+        Me.btnConfirm.Location = New System.Drawing.Point(818, 660)
+        Me.btnConfirm.Name = "btnConfirm"
+        Me.btnConfirm.Size = New System.Drawing.Size(120, 35)
+        Me.btnConfirm.TabIndex = 7
+        Me.btnConfirm.Text = "&Confirm"
+        Me.btnConfirm.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnConfirm.UseVisualStyleBackColor = False
         '
         'BorrowBook
         '
+        Me.AcceptButton = Me.btnBorrow
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnConfirm
         Me.ClientSize = New System.Drawing.Size(1006, 721)
-        Me.Controls.Add(Me.btnConfirmBorrow)
+        Me.Controls.Add(Me.btnConfirm)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximumSize = New System.Drawing.Size(1024, 768)
@@ -324,32 +311,27 @@ Partial Class BorrowBook
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        Me.TableLayoutPanel1.ResumeLayout(False)
+        CType(Me.dgvBorrow, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtMemberName As TextBox
+    Friend WithEvents txtMemberID As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lblDueDate As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtISBN As TextBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtRemoveBorrowBook As TextBox
     Friend WithEvents btnBorrow As Button
     Friend WithEvents btnClear As Button
     Friend WithEvents btnRemove As Button
-    Friend WithEvents btnConfirmBorrow As Button
+    Friend WithEvents btnConfirm As Button
+    Friend WithEvents dgvBorrow As DataGridView
 End Class
