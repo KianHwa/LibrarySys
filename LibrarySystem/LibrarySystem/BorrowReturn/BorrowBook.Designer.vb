@@ -22,11 +22,12 @@ Partial Class BorrowBook
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnBorrow = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
@@ -45,6 +46,7 @@ Partial Class BorrowBook
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.txtRemoveBorrowBook = New System.Windows.Forms.TextBox()
         Me.btnConfirm = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvBorrow, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,6 +115,7 @@ Partial Class BorrowBook
         Me.lblDueDate.Name = "lblDueDate"
         Me.lblDueDate.Size = New System.Drawing.Size(200, 30)
         Me.lblDueDate.TabIndex = 9
+        Me.ToolTip1.SetToolTip(Me.lblDueDate, "The day you need to return the book")
         '
         'Label5
         '
@@ -128,6 +131,7 @@ Partial Class BorrowBook
         Me.txtISBN.Name = "txtISBN"
         Me.txtISBN.Size = New System.Drawing.Size(200, 30)
         Me.txtISBN.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.txtISBN, "Numerical number on the cover of the page")
         '
         'DateTimePicker1
         '
@@ -142,6 +146,7 @@ Partial Class BorrowBook
         Me.txtMemberName.Name = "txtMemberName"
         Me.txtMemberName.Size = New System.Drawing.Size(200, 30)
         Me.txtMemberName.TabIndex = 2
+        Me.ToolTip1.SetToolTip(Me.txtMemberName, "Your registered name")
         '
         'txtMemberID
         '
@@ -149,6 +154,7 @@ Partial Class BorrowBook
         Me.txtMemberID.Name = "txtMemberID"
         Me.txtMemberID.Size = New System.Drawing.Size(200, 30)
         Me.txtMemberID.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.txtMemberID, "Your member ID, start with M...")
         '
         'Label4
         '
@@ -204,47 +210,47 @@ Partial Class BorrowBook
         Me.dgvBorrow.AllowUserToDeleteRows = False
         Me.dgvBorrow.AllowUserToResizeColumns = False
         Me.dgvBorrow.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.dgvBorrow.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.dgvBorrow.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
         Me.dgvBorrow.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvBorrow.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvBorrow.CausesValidation = False
         Me.dgvBorrow.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBorrow.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBorrow.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.dgvBorrow.ColumnHeadersHeight = 35
         Me.dgvBorrow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvBorrow.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvBorrow.DefaultCellStyle = DataGridViewCellStyle13
         Me.dgvBorrow.EnableHeadersVisualStyles = False
         Me.dgvBorrow.GridColor = System.Drawing.SystemColors.ActiveCaption
         Me.dgvBorrow.Location = New System.Drawing.Point(24, 30)
         Me.dgvBorrow.Name = "dgvBorrow"
         Me.dgvBorrow.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBorrow.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBorrow.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.dgvBorrow.RowHeadersWidth = 51
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
-        Me.dgvBorrow.RowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
+        Me.dgvBorrow.RowsDefaultCellStyle = DataGridViewCellStyle15
         Me.dgvBorrow.RowTemplate.Height = 24
         Me.dgvBorrow.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvBorrow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -275,6 +281,7 @@ Partial Class BorrowBook
         Me.txtRemoveBorrowBook.Name = "txtRemoveBorrowBook"
         Me.txtRemoveBorrowBook.Size = New System.Drawing.Size(224, 35)
         Me.txtRemoveBorrowBook.TabIndex = 5
+        Me.ToolTip1.SetToolTip(Me.txtRemoveBorrowBook, "Enter the book ISBN to remove")
         '
         'btnConfirm
         '
@@ -293,6 +300,12 @@ Partial Class BorrowBook
         Me.btnConfirm.Text = "&Confirm"
         Me.btnConfirm.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnConfirm.UseVisualStyleBackColor = False
+        '
+        'ToolTip1
+        '
+        Me.ToolTip1.AutoPopDelay = 5000
+        Me.ToolTip1.InitialDelay = 100
+        Me.ToolTip1.ReshowDelay = 100
         '
         'BorrowBook
         '
@@ -334,4 +347,5 @@ Partial Class BorrowBook
     Friend WithEvents btnRemove As Button
     Friend WithEvents btnConfirm As Button
     Friend WithEvents dgvBorrow As DataGridView
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

@@ -22,6 +22,7 @@ Partial Class formHome
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.menuUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiViewProfile = New System.Windows.Forms.ToolStripMenuItem()
@@ -49,6 +50,7 @@ Partial Class formHome
         Me.btnSearchBook = New System.Windows.Forms.Button()
         Me.btnBookBorrow = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,6 +89,7 @@ Partial Class formHome
         Me.tsmiViewProfile.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
         Me.tsmiViewProfile.Size = New System.Drawing.Size(352, 36)
         Me.tsmiViewProfile.Text = "View Profile"
+        Me.tsmiViewProfile.ToolTipText = "View your profile details"
         '
         'tsmiChangePassword
         '
@@ -98,6 +101,7 @@ Partial Class formHome
             Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
         Me.tsmiChangePassword.Size = New System.Drawing.Size(352, 36)
         Me.tsmiChangePassword.Text = "Change Password"
+        Me.tsmiChangePassword.ToolTipText = "Change your passwords"
         '
         'menuBookManagement
         '
@@ -118,6 +122,7 @@ Partial Class formHome
         Me.tsmiAddBooks.ShortcutKeys = System.Windows.Forms.Keys.F1
         Me.tsmiAddBooks.Size = New System.Drawing.Size(257, 36)
         Me.tsmiAddBooks.Text = "Add New Books"
+        Me.tsmiAddBooks.ToolTipText = "Add new books to the library"
         '
         'tsmiSearchBook
         '
@@ -128,6 +133,7 @@ Partial Class formHome
         Me.tsmiSearchBook.ShortcutKeys = System.Windows.Forms.Keys.F2
         Me.tsmiSearchBook.Size = New System.Drawing.Size(257, 36)
         Me.tsmiSearchBook.Text = "Search Books"
+        Me.tsmiSearchBook.ToolTipText = "Search for books"
         '
         'tsmiModifyBooks
         '
@@ -138,6 +144,7 @@ Partial Class formHome
         Me.tsmiModifyBooks.ShortcutKeys = System.Windows.Forms.Keys.F3
         Me.tsmiModifyBooks.Size = New System.Drawing.Size(257, 36)
         Me.tsmiModifyBooks.Text = "Modify Books"
+        Me.tsmiModifyBooks.ToolTipText = "Update the book details"
         '
         'tsmiRemoveBooks
         '
@@ -148,6 +155,7 @@ Partial Class formHome
         Me.tsmiRemoveBooks.ShortcutKeys = System.Windows.Forms.Keys.F4
         Me.tsmiRemoveBooks.Size = New System.Drawing.Size(257, 36)
         Me.tsmiRemoveBooks.Text = "Remove Books"
+        Me.tsmiRemoveBooks.ToolTipText = "Remove the books "
         '
         'menuReports
         '
@@ -169,6 +177,7 @@ Partial Class formHome
             Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
         Me.tsmiViewReports.Size = New System.Drawing.Size(349, 36)
         Me.tsmiViewReports.Text = "View Reports"
+        Me.tsmiViewReports.ToolTipText = "View reports"
         '
         'tsmiGenerateReports
         '
@@ -180,6 +189,7 @@ Partial Class formHome
             Or System.Windows.Forms.Keys.G), System.Windows.Forms.Keys)
         Me.tsmiGenerateReports.Size = New System.Drawing.Size(349, 36)
         Me.tsmiGenerateReports.Text = "Generate Reports"
+        Me.tsmiGenerateReports.ToolTipText = "Generate reports"
         '
         'menuSetting
         '
@@ -236,6 +246,7 @@ Partial Class formHome
         Me.tsmiAbout.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
         Me.tsmiAbout.Size = New System.Drawing.Size(224, 36)
         Me.tsmiAbout.Text = "About us"
+        Me.tsmiAbout.ToolTipText = "Know more about us"
         '
         'tsmiUse
         '
@@ -245,6 +256,7 @@ Partial Class formHome
         Me.tsmiUse.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
         Me.tsmiUse.Size = New System.Drawing.Size(224, 36)
         Me.tsmiUse.Text = "How to use"
+        Me.tsmiUse.ToolTipText = "Guide on how to use the system"
         '
         'Panel1
         '
@@ -286,6 +298,7 @@ Partial Class formHome
         Me.btnLogout.Size = New System.Drawing.Size(356, 80)
         Me.btnLogout.TabIndex = 5
         Me.btnLogout.Text = "Log &out"
+        Me.ToolTip1.SetToolTip(Me.btnLogout, "Log out from session")
         Me.btnLogout.UseVisualStyleBackColor = False
         '
         'btnAddNewBook
@@ -302,6 +315,7 @@ Partial Class formHome
         Me.btnAddNewBook.Size = New System.Drawing.Size(356, 80)
         Me.btnAddNewBook.TabIndex = 4
         Me.btnAddNewBook.Text = "&Add Book"
+        Me.ToolTip1.SetToolTip(Me.btnAddNewBook, "Add new book")
         Me.btnAddNewBook.UseVisualStyleBackColor = False
         '
         'btnBookReturn
@@ -318,6 +332,7 @@ Partial Class formHome
         Me.btnBookReturn.Size = New System.Drawing.Size(356, 80)
         Me.btnBookReturn.TabIndex = 3
         Me.btnBookReturn.Text = "Book &Return"
+        Me.ToolTip1.SetToolTip(Me.btnBookReturn, "Return books")
         Me.btnBookReturn.UseVisualStyleBackColor = False
         '
         'btnSearchBook
@@ -334,6 +349,7 @@ Partial Class formHome
         Me.btnSearchBook.Size = New System.Drawing.Size(356, 80)
         Me.btnSearchBook.TabIndex = 2
         Me.btnSearchBook.Text = "&Search Book"
+        Me.ToolTip1.SetToolTip(Me.btnSearchBook, "Search for books")
         Me.btnSearchBook.UseVisualStyleBackColor = False
         '
         'btnBookBorrow
@@ -350,6 +366,7 @@ Partial Class formHome
         Me.btnBookBorrow.Size = New System.Drawing.Size(356, 80)
         Me.btnBookBorrow.TabIndex = 1
         Me.btnBookBorrow.Text = "Book &Borrow"
+        Me.ToolTip1.SetToolTip(Me.btnBookBorrow, "Borrow books")
         Me.btnBookBorrow.UseVisualStyleBackColor = False
         '
         'Label1
@@ -415,4 +432,5 @@ Partial Class formHome
     Friend WithEvents tsmiTheme As ToolStripMenuItem
     Friend WithEvents DefaultThemeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DarkThemeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
