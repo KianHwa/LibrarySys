@@ -207,7 +207,7 @@ Partial Class formHome
         Me.tsmiTheme.ForeColor = System.Drawing.Color.White
         Me.tsmiTheme.Name = "tsmiTheme"
         Me.tsmiTheme.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiTheme.Size = New System.Drawing.Size(224, 36)
+        Me.tsmiTheme.Size = New System.Drawing.Size(150, 36)
         Me.tsmiTheme.Text = "Theme"
         '
         'DefaultThemeToolStripMenuItem
@@ -216,7 +216,7 @@ Partial Class formHome
         Me.DefaultThemeToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.DefaultThemeToolStripMenuItem.Name = "DefaultThemeToolStripMenuItem"
         Me.DefaultThemeToolStripMenuItem.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.DefaultThemeToolStripMenuItem.Size = New System.Drawing.Size(224, 36)
+        Me.DefaultThemeToolStripMenuItem.Size = New System.Drawing.Size(214, 36)
         Me.DefaultThemeToolStripMenuItem.Text = "Default Theme"
         '
         'DarkThemeToolStripMenuItem
@@ -225,7 +225,7 @@ Partial Class formHome
         Me.DarkThemeToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.DarkThemeToolStripMenuItem.Name = "DarkThemeToolStripMenuItem"
         Me.DarkThemeToolStripMenuItem.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.DarkThemeToolStripMenuItem.Size = New System.Drawing.Size(224, 36)
+        Me.DarkThemeToolStripMenuItem.Size = New System.Drawing.Size(214, 36)
         Me.DarkThemeToolStripMenuItem.Text = "Dark Theme"
         '
         'menuHelp
@@ -244,7 +244,7 @@ Partial Class formHome
         Me.tsmiAbout.ForeColor = System.Drawing.Color.White
         Me.tsmiAbout.Name = "tsmiAbout"
         Me.tsmiAbout.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiAbout.Size = New System.Drawing.Size(224, 36)
+        Me.tsmiAbout.Size = New System.Drawing.Size(188, 36)
         Me.tsmiAbout.Text = "About us"
         Me.tsmiAbout.ToolTipText = "Know more about us"
         '
@@ -254,7 +254,7 @@ Partial Class formHome
         Me.tsmiUse.ForeColor = System.Drawing.Color.White
         Me.tsmiUse.Name = "tsmiUse"
         Me.tsmiUse.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiUse.Size = New System.Drawing.Size(224, 36)
+        Me.tsmiUse.Size = New System.Drawing.Size(188, 36)
         Me.tsmiUse.Text = "How to use"
         Me.tsmiUse.ToolTipText = "Guide on how to use the system"
         '
@@ -395,6 +395,7 @@ Partial Class formHome
         Me.DoubleBuffered = True
         Me.MinimumSize = New System.Drawing.Size(1080, 720)
         Me.Name = "formHome"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Library Management System"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

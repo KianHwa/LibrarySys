@@ -183,6 +183,12 @@
     <Compile Include="Report\ViewReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SplashScreen\formSplash.Designer.vb">
+      <DependentUpon>formSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen\formSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User\ChangePassword.Designer.vb">
       <DependentUpon>ChangePassword.vb</DependentUpon>
     </Compile>
@@ -211,6 +217,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen\formSplash.resx">
+      <DependentUpon>formSplash.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
