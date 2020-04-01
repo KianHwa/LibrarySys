@@ -1,5 +1,6 @@
 ﻿Public Class formHome
     Dim db As New LibraryDataContext()
+    Public loggedInID As String = "M1001"
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -45,8 +46,8 @@
 
         '=====================================================================================
         'Borrow book form
-        BorrowBook.BackColor = Color.DimGray
-        For Each ctrl In BorrowBook.GroupBox1.Controls
+        BorrowBookv2.BackColor = Color.DimGray
+        For Each ctrl In BorrowBookv2.GroupBox1.Controls
             If TypeOf ctrl Is Button Then
                 Dim btn = DirectCast(ctrl, Button)
 
@@ -59,31 +60,19 @@
             End If
         Next
 
-        For Each ctrl In BorrowBook.GroupBox3.Controls
+        For Each ctrl In BorrowBookv2.GroupBox3.Controls
             If TypeOf ctrl Is Button Then
                 Dim btn = DirectCast(ctrl, Button)
 
                 btn.BackColor = Color.Black
             End If
 
-            If TypeOf ctrl Is DataGridView Then
-                Dim dgv = DirectCast(ctrl, DataGridView)
 
-                dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.Black
-                dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.Black
-                dgv.DefaultCellStyle.BackColor = Color.DimGray
-                dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.Gray
-                dgv.RowHeadersDefaultCellStyle.SelectionBackColor = Color.LightGray
-                dgv.RowHeadersDefaultCellStyle.BackColor = Color.DimGray
-                dgv.DefaultCellStyle.SelectionBackColor = Color.LightGray
-            End If
         Next
-        BorrowBook.btnConfirm.BackColor = Color.Black
-        BorrowBook.btnConfirm.FlatAppearance.MouseOverBackColor = Color.FromArgb(22, 22, 22)
     End Sub
 
     Private Sub BtnBookBorrow_Click(sender As Object, e As EventArgs) Handles btnBookBorrow.Click
-        BorrowBook.ShowDialog()
+        BorrowBookv2.ShowDialog()
     End Sub
 
     Private Sub DefaultThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DefaultThemeToolStripMenuItem.Click

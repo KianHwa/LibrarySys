@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class BorrowBook
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class BorrowBookv2
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,8 @@ Partial Class BorrowBook
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnBorrow = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
@@ -42,14 +36,15 @@ Partial Class BorrowBook
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.dgvBorrow = New System.Windows.Forms.DataGridView()
+        Me.lvBorrowList = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnRemove = New System.Windows.Forms.Button()
-        Me.txtRemoveBorrowBook = New System.Windows.Forms.TextBox()
         Me.btnConfirm = New System.Windows.Forms.Button()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.dgvBorrow, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -67,10 +62,10 @@ Partial Class BorrowBook
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(41, 38)
+        Me.GroupBox1.Location = New System.Drawing.Point(29, 39)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(914, 266)
-        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
         'btnBorrow
@@ -115,7 +110,6 @@ Partial Class BorrowBook
         Me.lblDueDate.Name = "lblDueDate"
         Me.lblDueDate.Size = New System.Drawing.Size(200, 30)
         Me.lblDueDate.TabIndex = 9
-        Me.ToolTip1.SetToolTip(Me.lblDueDate, "The day you need to return the book")
         '
         'Label5
         '
@@ -131,7 +125,6 @@ Partial Class BorrowBook
         Me.txtISBN.Name = "txtISBN"
         Me.txtISBN.Size = New System.Drawing.Size(200, 30)
         Me.txtISBN.TabIndex = 4
-        Me.ToolTip1.SetToolTip(Me.txtISBN, "Numerical number on the cover of the page")
         '
         'DateTimePicker1
         '
@@ -146,7 +139,6 @@ Partial Class BorrowBook
         Me.txtMemberName.Name = "txtMemberName"
         Me.txtMemberName.Size = New System.Drawing.Size(200, 30)
         Me.txtMemberName.TabIndex = 2
-        Me.ToolTip1.SetToolTip(Me.txtMemberName, "Your registered name")
         '
         'txtMemberID
         '
@@ -154,7 +146,6 @@ Partial Class BorrowBook
         Me.txtMemberID.Name = "txtMemberID"
         Me.txtMemberID.Size = New System.Drawing.Size(200, 30)
         Me.txtMemberID.TabIndex = 1
-        Me.ToolTip1.SetToolTip(Me.txtMemberID, "Your member ID, start with M...")
         '
         'Label4
         '
@@ -194,68 +185,48 @@ Partial Class BorrowBook
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.dgvBorrow)
+        Me.GroupBox3.Controls.Add(Me.lvBorrowList)
         Me.GroupBox3.Controls.Add(Me.btnRemove)
-        Me.GroupBox3.Controls.Add(Me.txtRemoveBorrowBook)
         Me.GroupBox3.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(41, 324)
+        Me.GroupBox3.Location = New System.Drawing.Point(29, 330)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(914, 307)
-        Me.GroupBox3.TabIndex = 2
+        Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         '
-        'dgvBorrow
+        'lvBorrowList
         '
-        Me.dgvBorrow.AllowUserToAddRows = False
-        Me.dgvBorrow.AllowUserToDeleteRows = False
-        Me.dgvBorrow.AllowUserToResizeColumns = False
-        Me.dgvBorrow.AllowUserToResizeRows = False
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.dgvBorrow.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
-        Me.dgvBorrow.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvBorrow.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.dgvBorrow.CausesValidation = False
-        Me.dgvBorrow.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBorrow.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
-        Me.dgvBorrow.ColumnHeadersHeight = 35
-        Me.dgvBorrow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvBorrow.DefaultCellStyle = DataGridViewCellStyle13
-        Me.dgvBorrow.EnableHeadersVisualStyles = False
-        Me.dgvBorrow.GridColor = System.Drawing.SystemColors.ActiveCaption
-        Me.dgvBorrow.Location = New System.Drawing.Point(24, 30)
-        Me.dgvBorrow.Name = "dgvBorrow"
-        Me.dgvBorrow.ReadOnly = True
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBorrow.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
-        Me.dgvBorrow.RowHeadersWidth = 51
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
-        Me.dgvBorrow.RowsDefaultCellStyle = DataGridViewCellStyle15
-        Me.dgvBorrow.RowTemplate.Height = 24
-        Me.dgvBorrow.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgvBorrow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvBorrow.Size = New System.Drawing.Size(873, 194)
-        Me.dgvBorrow.TabIndex = 15
+        Me.lvBorrowList.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.lvBorrowList.FullRowSelect = True
+        Me.lvBorrowList.GridLines = True
+        Me.lvBorrowList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
+        Me.lvBorrowList.HideSelection = False
+        Me.lvBorrowList.Location = New System.Drawing.Point(33, 40)
+        Me.lvBorrowList.Name = "lvBorrowList"
+        Me.lvBorrowList.Size = New System.Drawing.Size(850, 184)
+        Me.lvBorrowList.TabIndex = 7
+        Me.lvBorrowList.UseCompatibleStateImageBehavior = False
+        Me.lvBorrowList.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "No"
+        Me.ColumnHeader1.Width = 50
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Book ISBN"
+        Me.ColumnHeader2.Width = 200
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Book Name"
+        Me.ColumnHeader3.Width = 450
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Borrow Date"
+        Me.ColumnHeader4.Width = 150
         '
         'btnRemove
         '
@@ -274,62 +245,47 @@ Partial Class BorrowBook
         Me.btnRemove.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnRemove.UseVisualStyleBackColor = False
         '
-        'txtRemoveBorrowBook
-        '
-        Me.txtRemoveBorrowBook.Location = New System.Drawing.Point(531, 256)
-        Me.txtRemoveBorrowBook.Multiline = True
-        Me.txtRemoveBorrowBook.Name = "txtRemoveBorrowBook"
-        Me.txtRemoveBorrowBook.Size = New System.Drawing.Size(224, 35)
-        Me.txtRemoveBorrowBook.TabIndex = 5
-        Me.ToolTip1.SetToolTip(Me.txtRemoveBorrowBook, "Enter the book ISBN to remove")
-        '
         'btnConfirm
         '
         Me.btnConfirm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btnConfirm.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnConfirm.FlatAppearance.BorderSize = 0
         Me.btnConfirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnConfirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConfirm.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirm.ForeColor = System.Drawing.Color.White
-        Me.btnConfirm.Location = New System.Drawing.Point(818, 660)
+        Me.btnConfirm.Location = New System.Drawing.Point(803, 662)
         Me.btnConfirm.Name = "btnConfirm"
         Me.btnConfirm.Size = New System.Drawing.Size(120, 35)
-        Me.btnConfirm.TabIndex = 7
+        Me.btnConfirm.TabIndex = 14
         Me.btnConfirm.Text = "&Confirm"
         Me.btnConfirm.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnConfirm.UseVisualStyleBackColor = False
         '
-        'ToolTip1
+        'BorrowBookv2
         '
-        Me.ToolTip1.AutoPopDelay = 5000
-        Me.ToolTip1.InitialDelay = 100
-        Me.ToolTip1.ReshowDelay = 100
-        '
-        'BorrowBook
-        '
-        Me.AcceptButton = Me.btnBorrow
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.btnConfirm
         Me.ClientSize = New System.Drawing.Size(1006, 721)
         Me.Controls.Add(Me.btnConfirm)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
-        Me.MaximumSize = New System.Drawing.Size(1024, 768)
-        Me.Name = "BorrowBook"
-        Me.Text = "Borrow Book"
+        Me.Name = "BorrowBookv2"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "BorrowBookv2"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
-        CType(Me.dgvBorrow, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents btnBorrow As Button
+    Friend WithEvents btnClear As Button
+    Friend WithEvents lblDueDate As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents txtISBN As TextBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents txtMemberName As TextBox
     Friend WithEvents txtMemberID As TextBox
@@ -337,15 +293,12 @@ Partial Class BorrowBook
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents lblDueDate As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents txtISBN As TextBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents txtRemoveBorrowBook As TextBox
-    Friend WithEvents btnBorrow As Button
-    Friend WithEvents btnClear As Button
     Friend WithEvents btnRemove As Button
+    Friend WithEvents lvBorrowList As ListView
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents btnConfirm As Button
-    Friend WithEvents dgvBorrow As DataGridView
-    Friend WithEvents ToolTip1 As ToolTip
 End Class

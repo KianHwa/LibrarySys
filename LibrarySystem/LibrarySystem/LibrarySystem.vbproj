@@ -114,10 +114,10 @@
     <Compile Include="BookManagement\SearchBook.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BorrowReturn\BorrowBook.Designer.vb">
-      <DependentUpon>BorrowBook.vb</DependentUpon>
+    <Compile Include="BorrowReturn\BorrowBookv2.Designer.vb">
+      <DependentUpon>BorrowBookv2.vb</DependentUpon>
     </Compile>
-    <Compile Include="BorrowReturn\BorrowBook.vb">
+    <Compile Include="BorrowReturn\BorrowBookv2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BorrowReturn\ReturnBook.Designer.vb">
@@ -203,8 +203,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BorrowReturn\BorrowBook.resx">
-      <DependentUpon>BorrowBook.vb</DependentUpon>
+    <EmbeddedResource Include="BorrowReturn\BorrowBookv2.resx">
+      <DependentUpon>BorrowBookv2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
