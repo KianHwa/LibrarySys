@@ -114,10 +114,10 @@
     <Compile Include="BookManagement\SearchBook.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BorrowReturn\BorrowBook.Designer.vb">
-      <DependentUpon>BorrowBook.vb</DependentUpon>
+    <Compile Include="BorrowReturn\BorrowBookv2.Designer.vb">
+      <DependentUpon>BorrowBookv2.vb</DependentUpon>
     </Compile>
-    <Compile Include="BorrowReturn\BorrowBook.vb">
+    <Compile Include="BorrowReturn\BorrowBookv2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BorrowReturn\ReturnBook.Designer.vb">
@@ -184,6 +184,12 @@
     <Compile Include="Report\ViewReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SplashScreen\formSplash.Designer.vb">
+      <DependentUpon>formSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen\formSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User\ChangePassword.Designer.vb">
       <DependentUpon>ChangePassword.vb</DependentUpon>
     </Compile>
@@ -206,6 +212,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookManagement\RemoveBook.resx">
       <DependentUpon>RemoveBook.vb</DependentUpon>
+    <EmbeddedResource Include="BorrowReturn\BorrowBookv2.resx">
+      <DependentUpon>BorrowBookv2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookManagement\SearchBook.resx">
       <DependentUpon>SearchBook.vb</DependentUpon>
@@ -218,6 +226,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen\formSplash.resx">
+      <DependentUpon>formSplash.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -243,6 +254,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Library.mdf" />
+    <Content Include="Library_log.ldf">
+      <DependentUpon>Library.mdf</DependentUpon>
+    </Content>
     <None Include="Resources\bg1.jpg" />
     <None Include="Resources\bg1.png" />
     <None Include="Resources\0zuld2 %284%29.jpg" />
@@ -280,10 +295,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Library.mdf" />
-    <Content Include="Library_log.ldf">
-      <DependentUpon>Library.mdf</DependentUpon>
-    </Content>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
