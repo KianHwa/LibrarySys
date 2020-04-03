@@ -118,7 +118,7 @@ Partial Class NewBook
         '
         'btnAdd
         '
-        Me.btnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnAdd.Location = New System.Drawing.Point(77, 243)
         Me.btnAdd.Name = "btnAdd"
@@ -129,8 +129,8 @@ Partial Class NewBook
         '
         'btnCancel
         '
-        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnCancel.ForeColor = System.Drawing.Color.White
         Me.btnCancel.Location = New System.Drawing.Point(209, 243)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(79, 38)

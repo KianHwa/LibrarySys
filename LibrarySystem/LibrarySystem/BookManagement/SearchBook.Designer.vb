@@ -38,7 +38,7 @@ Partial Class SearchBook
         '
         'btnCancel
         '
-        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnCancel.Location = New System.Drawing.Point(190, 236)
         Me.btnCancel.Name = "btnCancel"
@@ -49,7 +49,7 @@ Partial Class SearchBook
         '
         'btnSearch
         '
-        Me.btnSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnSearch.Location = New System.Drawing.Point(58, 236)
         Me.btnSearch.Name = "btnSearch"
