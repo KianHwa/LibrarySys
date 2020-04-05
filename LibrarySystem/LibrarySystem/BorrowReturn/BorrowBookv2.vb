@@ -37,8 +37,8 @@ Public Class BorrowBookv2
 
 
         'Check if the book available
-        Try
-            If CheckBookExistence() = True Then
+
+        If CheckBookExistence() = True Then
                 'Check if the member has returned the book A (if he borrow book A again)
                 Dim bookstatus = CheckCurrentBookStatus()
                 If (bookstatus = True) Then
@@ -84,9 +84,7 @@ Public Class BorrowBookv2
                 'Book not found
                 MessageBox.Show("Book with ISBN " & txtISBN.Text & " not found", "Book not found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
-        Catch ex As Exception
 
-        End Try
     End Sub
 
     Private Function CheckBookExistence() As Boolean
