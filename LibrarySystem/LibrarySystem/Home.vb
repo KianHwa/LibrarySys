@@ -5,7 +5,7 @@
 
     End Sub
 
-    Private Sub DarkThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DarkThemeToolStripMenuItem.Click
+    Private Sub DarkThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiDarkTheme.Click
         'Home form
         For Each ctrl In Me.Controls
             If TypeOf ctrl Is Button Then
@@ -43,6 +43,8 @@
         tsmiUse.BackColor = Color.Black
         tsmiViewProfile.BackColor = Color.Black
         tsmiViewReports.BackColor = Color.Black
+        tsmiDefaultTheme.BackColor = Color.Black
+        tsmiDarkTheme.BackColor = Color.Black
 
         '=====================================================================================
         'Borrow book form
@@ -75,7 +77,15 @@
         BorrowBookv2.ShowDialog()
     End Sub
 
-    Private Sub DefaultThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DefaultThemeToolStripMenuItem.Click
-        application.Restart()
+    Private Sub DefaultThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiDefaultTheme.Click
+        Application.Restart()
+    End Sub
+
+    Private Sub TsmiAbout_Click(sender As Object, e As EventArgs) Handles tsmiAbout.Click
+        About.ShowDialog()
+    End Sub
+
+    Private Sub TsmiUse_Click(sender As Object, e As EventArgs) Handles tsmiUse.Click
+        HowToUse.ShowDialog()
     End Sub
 End Class

@@ -37,8 +37,8 @@ Partial Class formHome
         Me.tsmiGenerateReports = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuSetting = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiTheme = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DefaultThemeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DarkThemeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiDefaultTheme = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiDarkTheme = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuHelp = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiUse = New System.Windows.Forms.ToolStripMenuItem()
@@ -203,30 +203,30 @@ Partial Class formHome
         'tsmiTheme
         '
         Me.tsmiTheme.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiTheme.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DefaultThemeToolStripMenuItem, Me.DarkThemeToolStripMenuItem})
+        Me.tsmiTheme.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiDefaultTheme, Me.tsmiDarkTheme})
         Me.tsmiTheme.ForeColor = System.Drawing.Color.White
         Me.tsmiTheme.Name = "tsmiTheme"
         Me.tsmiTheme.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
         Me.tsmiTheme.Size = New System.Drawing.Size(150, 36)
         Me.tsmiTheme.Text = "Theme"
         '
-        'DefaultThemeToolStripMenuItem
+        'tsmiDefaultTheme
         '
-        Me.DefaultThemeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.DefaultThemeToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.DefaultThemeToolStripMenuItem.Name = "DefaultThemeToolStripMenuItem"
-        Me.DefaultThemeToolStripMenuItem.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.DefaultThemeToolStripMenuItem.Size = New System.Drawing.Size(214, 36)
-        Me.DefaultThemeToolStripMenuItem.Text = "Default Theme"
+        Me.tsmiDefaultTheme.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.tsmiDefaultTheme.ForeColor = System.Drawing.Color.White
+        Me.tsmiDefaultTheme.Name = "tsmiDefaultTheme"
+        Me.tsmiDefaultTheme.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.tsmiDefaultTheme.Size = New System.Drawing.Size(214, 36)
+        Me.tsmiDefaultTheme.Text = "Default Theme"
         '
-        'DarkThemeToolStripMenuItem
+        'tsmiDarkTheme
         '
-        Me.DarkThemeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.DarkThemeToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.DarkThemeToolStripMenuItem.Name = "DarkThemeToolStripMenuItem"
-        Me.DarkThemeToolStripMenuItem.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.DarkThemeToolStripMenuItem.Size = New System.Drawing.Size(214, 36)
-        Me.DarkThemeToolStripMenuItem.Text = "Dark Theme"
+        Me.tsmiDarkTheme.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.tsmiDarkTheme.ForeColor = System.Drawing.Color.White
+        Me.tsmiDarkTheme.Name = "tsmiDarkTheme"
+        Me.tsmiDarkTheme.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.tsmiDarkTheme.Size = New System.Drawing.Size(214, 36)
+        Me.tsmiDarkTheme.Text = "Dark Theme"
         '
         'menuHelp
         '
@@ -244,8 +244,8 @@ Partial Class formHome
         Me.tsmiAbout.ForeColor = System.Drawing.Color.White
         Me.tsmiAbout.Name = "tsmiAbout"
         Me.tsmiAbout.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiAbout.Size = New System.Drawing.Size(188, 36)
-        Me.tsmiAbout.Text = "About us"
+        Me.tsmiAbout.Size = New System.Drawing.Size(224, 36)
+        Me.tsmiAbout.Text = "About"
         Me.tsmiAbout.ToolTipText = "Know more about us"
         '
         'tsmiUse
@@ -254,7 +254,7 @@ Partial Class formHome
         Me.tsmiUse.ForeColor = System.Drawing.Color.White
         Me.tsmiUse.Name = "tsmiUse"
         Me.tsmiUse.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiUse.Size = New System.Drawing.Size(188, 36)
+        Me.tsmiUse.Size = New System.Drawing.Size(224, 36)
         Me.tsmiUse.Text = "How to use"
         Me.tsmiUse.ToolTipText = "Guide on how to use the system"
         '
@@ -431,7 +431,7 @@ Partial Class formHome
     Friend WithEvents tsmiUse As ToolStripMenuItem
     Friend WithEvents menuSetting As ToolStripMenuItem
     Friend WithEvents tsmiTheme As ToolStripMenuItem
-    Friend WithEvents DefaultThemeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DarkThemeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents tsmiDefaultTheme As ToolStripMenuItem
+    Friend WithEvents tsmiDarkTheme As ToolStripMenuItem
     Friend WithEvents ToolTip1 As ToolTip
 End Class

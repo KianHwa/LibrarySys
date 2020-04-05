@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("LibrarySystem")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("LibrarySystem")>
-<Assembly: AssemblyCopyright("Copyright ©  2020")>
+<Assembly: AssemblyTitle("Library Management System")>
+<Assembly: AssemblyDescription("This is the system used by librarian to manage library books and allow member to borrow and return books")>
+<Assembly: AssemblyCompany("Malaysia Library Corporation 2020")>
+<Assembly: AssemblyProduct("Library Management System")>
+<Assembly: AssemblyCopyright("Copyright © 2020 All Rights Reserved")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

@@ -1,10 +1,41 @@
-﻿Public Class BorrowBookv2
+﻿Imports System.Text
+
+Public Class BorrowBookv2
     Dim db As New LibraryDataContext()
     'Getting current date
-    Dim todayDate As Date = Date.Now()
-    Dim strDate As String = todayDate.ToString("dd/MM/yyyy")
 
     Private Sub BtnBorrow_Click(sender As Object, e As EventArgs) Handles btnBorrow.Click
+        'Error checking
+        ' (1) Validation purpose
+        Dim err As New StringBuilder()
+        Dim ctr As Control = Nothing
+
+        ' (2) Read inputs
+        Dim id As String = If(txtMemberID.MaskCompleted, txtMemberID.Text, "")
+        Dim name As String = txtMemberName.Text.Trim()
+
+        ' (3) Validate Borrow details
+        If id = "" Then
+            err.AppendLine("- Member ID is invalid")
+            ctr = If(ctr, txtMemberID)
+        End If
+
+        If name = "" Then
+            err.AppendLine("- Member name is empty")
+            ctr = If(ctr, txtMemberName)
+        End If
+
+        ' (4) Check if there is input error
+        If err.Length > 0 Then
+            MessageBox.Show(err.ToString(), "Error Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            ctr.Focus()
+            Return
+        End If
+
+        ' If ALL input is VALID, proceed ..
+        ' =================================
+
+
         'Check if the book available
         Try
             If CheckBookExistence() = True Then
@@ -21,10 +52,10 @@
 
                         If lvBorrowList.Items.Count = 0 Then
                             Dim item As ListViewItem
-                            item = lvBorrowList.Items.Add(1)
+                            item = lvBorrowList.Items.Add(lvBorrowList.Items.Count + 1)
                             item.SubItems.Add(txtISBN.Text)
                             item.SubItems.Add(GetBookName(txtISBN.Text))
-                            item.SubItems.Add(strDate)
+                            item.SubItems.Add(dtpBorrowDate.Value.ToString("dd/MM/yyyy"))
                         Else
                             Dim existedInlist = False
                             For Each item As ListViewItem In lvBorrowList.Items
@@ -35,18 +66,18 @@
 
                             If existedInlist = False Then
                                 Dim item As ListViewItem
-                                item = lvBorrowList.Items.Add(1)
+                                item = lvBorrowList.Items.Add(lvBorrowList.Items.Count + 1)
                                 item.SubItems.Add(txtISBN.Text)
                                 item.SubItems.Add(GetBookName(txtISBN.Text))
-                                item.SubItems.Add(strDate)
+                                item.SubItems.Add(dtpBorrowDate.Value.ToString("dd/MM/yyyy"))
                             Else
                                 MessageBox.Show("The book is already in the borrow list.", "Failed to borrow", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                             End If
                         End If
 
                     Else
-                            'Maximum five books at a time
-                            MessageBox.Show("Sorry, you can only borrow five books at a time ", "Failed to borrow", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        'Maximum five books at a time
+                        MessageBox.Show("Sorry, you can only borrow five books at a time ", "Failed to borrow", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     End If
                 End If
             Else
@@ -132,7 +163,7 @@
                     .ISBN = item.SubItems.Item(1).Text,
                     .memberID = formHome.loggedInID,
                     .status = "Borrow",
-                    .borrowDate = strDate}
+                    .borrowDate = dtpBorrowDate.Value.ToString("dd/MM/yyyy")}
                     db.Borrows.InsertOnSubmit(borrow)
                 Next
                 MessageBox.Show("Successfully borrowed", "Borrow successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -152,5 +183,27 @@
             End If
 
         End If
+    End Sub
+
+    Private Sub BorrowBookv2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dtpBorrowDate.Value = DateTime.Now
+    End Sub
+
+    Private Sub DtpBorrowDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpBorrowDate.ValueChanged
+
+        Dim currentDate As DateTime = dtpBorrowDate.Value.ToString()
+        Dim dueDate As DateTime = currentDate.AddDays(7)
+
+        lblDueDate.Text = dueDate.ToString("dd/MM/yyyy")
+    End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        ' Remove all book from borrow list
+        lvBorrowList.Items.Clear()
+    End Sub
+
+    Private Sub LvBorrowList_DoubleClick(sender As Object, e As EventArgs) Handles lvBorrowList.DoubleClick
+        Dim selectedItem = lvBorrowList.SelectedIndices(0)
+        lvBorrowList.Items(selectedItem).Remove()
     End Sub
 End Class
