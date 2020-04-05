@@ -218,6 +218,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookManagement\RemoveBook.resx">
       <DependentUpon>RemoveBook.vb</DependentUpon>
+      </EmbeddedResource>
     <EmbeddedResource Include="BorrowReturn\BorrowBookv2.resx">
       <DependentUpon>BorrowBookv2.vb</DependentUpon>
     </EmbeddedResource>
