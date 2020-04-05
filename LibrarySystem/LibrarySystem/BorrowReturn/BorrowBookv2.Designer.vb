@@ -22,15 +22,16 @@ Partial Class BorrowBookv2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtISBN = New System.Windows.Forms.TextBox()
+        Me.txtMemberID = New System.Windows.Forms.MaskedTextBox()
         Me.btnBorrow = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.lblDueDate = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtISBN = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpBorrowDate = New System.Windows.Forms.DateTimePicker()
         Me.txtMemberName = New System.Windows.Forms.TextBox()
-        Me.txtMemberID = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -41,22 +42,26 @@ Partial Class BorrowBookv2
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.cmsRmvAllBorrowList = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.btnConfirm = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.cmsRmvAllBorrowList.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtISBN)
+        Me.GroupBox1.Controls.Add(Me.txtMemberID)
         Me.GroupBox1.Controls.Add(Me.btnBorrow)
         Me.GroupBox1.Controls.Add(Me.btnClear)
         Me.GroupBox1.Controls.Add(Me.lblDueDate)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.txtISBN)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.dtpBorrowDate)
         Me.GroupBox1.Controls.Add(Me.txtMemberName)
-        Me.GroupBox1.Controls.Add(Me.txtMemberID)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -67,6 +72,23 @@ Partial Class BorrowBookv2
         Me.GroupBox1.Size = New System.Drawing.Size(914, 266)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
+        '
+        'txtISBN
+        '
+        Me.txtISBN.Location = New System.Drawing.Point(656, 150)
+        Me.txtISBN.Name = "txtISBN"
+        Me.txtISBN.Size = New System.Drawing.Size(200, 30)
+        Me.txtISBN.TabIndex = 15
+        Me.ToolTip1.SetToolTip(Me.txtISBN, "10 - 13 digits found on the book")
+        '
+        'txtMemberID
+        '
+        Me.txtMemberID.Location = New System.Drawing.Point(177, 50)
+        Me.txtMemberID.Mask = "L0000"
+        Me.txtMemberID.Name = "txtMemberID"
+        Me.txtMemberID.Size = New System.Drawing.Size(200, 30)
+        Me.txtMemberID.TabIndex = 14
+        Me.ToolTip1.SetToolTip(Me.txtMemberID, "Member ID, start with 'M'")
         '
         'btnBorrow
         '
@@ -83,6 +105,7 @@ Partial Class BorrowBookv2
         Me.btnBorrow.TabIndex = 13
         Me.btnBorrow.Text = "&Borrow"
         Me.btnBorrow.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.ToolTip1.SetToolTip(Me.btnBorrow, "Add the book to borrow list")
         Me.btnBorrow.UseVisualStyleBackColor = False
         '
         'btnClear
@@ -100,6 +123,7 @@ Partial Class BorrowBookv2
         Me.btnClear.TabIndex = 12
         Me.btnClear.Text = "C&lear"
         Me.btnClear.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.ToolTip1.SetToolTip(Me.btnClear, "Clear the text")
         Me.btnClear.UseVisualStyleBackColor = False
         '
         'lblDueDate
@@ -110,6 +134,7 @@ Partial Class BorrowBookv2
         Me.lblDueDate.Name = "lblDueDate"
         Me.lblDueDate.Size = New System.Drawing.Size(200, 30)
         Me.lblDueDate.TabIndex = 9
+        Me.ToolTip1.SetToolTip(Me.lblDueDate, "Day where you must return the book borrowed")
         '
         'Label5
         '
@@ -119,19 +144,15 @@ Partial Class BorrowBookv2
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Due Date"
         '
-        'txtISBN
+        'dtpBorrowDate
         '
-        Me.txtISBN.Location = New System.Drawing.Point(656, 150)
-        Me.txtISBN.Name = "txtISBN"
-        Me.txtISBN.Size = New System.Drawing.Size(200, 30)
-        Me.txtISBN.TabIndex = 4
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(656, 50)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 30)
-        Me.DateTimePicker1.TabIndex = 3
+        Me.dtpBorrowDate.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpBorrowDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpBorrowDate.Location = New System.Drawing.Point(656, 50)
+        Me.dtpBorrowDate.Name = "dtpBorrowDate"
+        Me.dtpBorrowDate.Size = New System.Drawing.Size(200, 30)
+        Me.dtpBorrowDate.TabIndex = 3
+        Me.ToolTip1.SetToolTip(Me.dtpBorrowDate, "Borrow Date")
         '
         'txtMemberName
         '
@@ -139,13 +160,7 @@ Partial Class BorrowBookv2
         Me.txtMemberName.Name = "txtMemberName"
         Me.txtMemberName.Size = New System.Drawing.Size(200, 30)
         Me.txtMemberName.TabIndex = 2
-        '
-        'txtMemberID
-        '
-        Me.txtMemberID.Location = New System.Drawing.Point(176, 47)
-        Me.txtMemberID.Name = "txtMemberID"
-        Me.txtMemberID.Size = New System.Drawing.Size(200, 30)
-        Me.txtMemberID.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.txtMemberName, "Your name")
         '
         'Label4
         '
@@ -197,6 +212,7 @@ Partial Class BorrowBookv2
         'lvBorrowList
         '
         Me.lvBorrowList.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.lvBorrowList.ContextMenuStrip = Me.cmsRmvAllBorrowList
         Me.lvBorrowList.FullRowSelect = True
         Me.lvBorrowList.GridLines = True
         Me.lvBorrowList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
@@ -205,6 +221,7 @@ Partial Class BorrowBookv2
         Me.lvBorrowList.Name = "lvBorrowList"
         Me.lvBorrowList.Size = New System.Drawing.Size(850, 184)
         Me.lvBorrowList.TabIndex = 7
+        Me.ToolTip1.SetToolTip(Me.lvBorrowList, "Borrow list, double click to remove")
         Me.lvBorrowList.UseCompatibleStateImageBehavior = False
         Me.lvBorrowList.View = System.Windows.Forms.View.Details
         '
@@ -228,6 +245,20 @@ Partial Class BorrowBookv2
         Me.ColumnHeader4.Text = "Borrow Date"
         Me.ColumnHeader4.Width = 150
         '
+        'cmsRmvAllBorrowList
+        '
+        Me.cmsRmvAllBorrowList.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.cmsRmvAllBorrowList.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
+        Me.cmsRmvAllBorrowList.Name = "cmsRmvAllBorrowList"
+        Me.cmsRmvAllBorrowList.Size = New System.Drawing.Size(155, 28)
+        Me.cmsRmvAllBorrowList.Text = "Remove all"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(210, 24)
+        Me.ToolStripMenuItem1.Text = "&Remove All"
+        '
         'btnRemove
         '
         Me.btnRemove.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
@@ -243,6 +274,7 @@ Partial Class BorrowBookv2
         Me.btnRemove.TabIndex = 6
         Me.btnRemove.Text = "&Remove"
         Me.btnRemove.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.ToolTip1.SetToolTip(Me.btnRemove, "Select a book to remove")
         Me.btnRemove.UseVisualStyleBackColor = False
         '
         'btnConfirm
@@ -260,6 +292,7 @@ Partial Class BorrowBookv2
         Me.btnConfirm.TabIndex = 14
         Me.btnConfirm.Text = "&Confirm"
         Me.btnConfirm.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.ToolTip1.SetToolTip(Me.btnConfirm, "Confirm to borrow the book(s)")
         Me.btnConfirm.UseVisualStyleBackColor = False
         '
         'BorrowBookv2
@@ -276,6 +309,7 @@ Partial Class BorrowBookv2
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
+        Me.cmsRmvAllBorrowList.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -285,10 +319,8 @@ Partial Class BorrowBookv2
     Friend WithEvents btnClear As Button
     Friend WithEvents lblDueDate As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtISBN As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpBorrowDate As DateTimePicker
     Friend WithEvents txtMemberName As TextBox
-    Friend WithEvents txtMemberID As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
@@ -301,4 +333,9 @@ Partial Class BorrowBookv2
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents btnConfirm As Button
+    Friend WithEvents cmsRmvAllBorrowList As ContextMenuStrip
+    Friend WithEvents txtMemberID As MaskedTextBox
+    Friend WithEvents txtISBN As TextBox
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

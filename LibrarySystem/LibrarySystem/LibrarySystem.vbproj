@@ -159,10 +159,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Others\Help.Designer.vb">
-      <DependentUpon>Help.vb</DependentUpon>
+    <Compile Include="Others\About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
     </Compile>
-    <Compile Include="Others\Help.vb">
+    <Compile Include="Others\About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Others\HowToUse.Designer.vb">
+      <DependentUpon>HowToUse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Others\HowToUse.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Others\Settings.Designer.vb">
@@ -227,6 +233,12 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Others\About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Others\HowToUse.resx">
+      <DependentUpon>HowToUse.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen\formSplash.resx">
       <DependentUpon>formSplash.vb</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +268,8 @@
     <Content Include="Library_log.ldf">
       <DependentUpon>Library.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\borrow.PNG" />
+    <None Include="Resources\home.PNG" />
     <None Include="Resources\bg1.jpg" />
     <None Include="Resources\bg1.png" />
     <None Include="Resources\0zuld2 %284%29.jpg" />
