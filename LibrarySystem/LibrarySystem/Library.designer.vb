@@ -20,7 +20,7 @@ Imports System.Data.Linq.Mapping
 Imports System.Linq
 Imports System.Linq.Expressions
 Imports System.Reflection
-Imports LibrarySystem
+
 
 <Global.System.Data.Linq.Mapping.DatabaseAttribute(Name:="Library")>  _
 Partial Public Class LibraryDataContext
@@ -265,8 +265,6 @@ Partial Public Class Book
 		Me.SendPropertyChanging
 		entity.Book = Nothing
 	End Sub
-
-
 End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Borrow")>  _
@@ -331,7 +329,7 @@ Partial Public Class Borrow
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_borrowID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_borrowID", DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
 	Public Property borrowID() As Integer
 		Get
 			Return Me._borrowID
