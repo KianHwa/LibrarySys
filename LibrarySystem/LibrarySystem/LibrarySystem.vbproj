@@ -218,12 +218,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookManagement\RemoveBook.resx">
       <DependentUpon>RemoveBook.vb</DependentUpon>
-      </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="BorrowReturn\BorrowBookv2.resx">
       <DependentUpon>BorrowBookv2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookManagement\SearchBook.resx">
       <DependentUpon>SearchBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowReturn\ReturnBook.resx">
+      <DependentUpon>ReturnBook.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>

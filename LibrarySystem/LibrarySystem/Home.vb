@@ -88,4 +88,8 @@
     Private Sub TsmiUse_Click(sender As Object, e As EventArgs) Handles tsmiUse.Click
         HowToUse.ShowDialog()
     End Sub
+
+    Private Sub BtnBookReturn_Click(sender As Object, e As EventArgs) Handles btnBookReturn.Click
+        ReturnBook.ShowDialog()
+    End Sub
 End Class
