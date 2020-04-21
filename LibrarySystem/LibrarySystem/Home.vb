@@ -103,4 +103,8 @@
     Private Sub btnAddNewBook_Click(sender As Object, e As EventArgs) Handles btnAddNewBook.Click
         NewBook.ShowDialog()
     End Sub
+
+    Private Sub btnBookReturn_Click(sender As Object, e As EventArgs) Handles btnBookReturn.Click
+        ReturnBook.Show()
+    End Sub
 End Class
