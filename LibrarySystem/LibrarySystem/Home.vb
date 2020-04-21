@@ -36,8 +36,7 @@
         tsmiAddBooks.BackColor = Color.Black
         tsmiChangePassword.BackColor = Color.Black
         tsmiGenerateReports.BackColor = Color.Black
-        tsmiModifyBooks.BackColor = Color.Black
-        tsmiRemoveBooks.BackColor = Color.Black
+
         tsmiSearchBook.BackColor = Color.Black
         tsmiTheme.BackColor = Color.Black
         tsmiUse.BackColor = Color.Black
@@ -89,8 +88,20 @@
         HowToUse.ShowDialog()
     End Sub
 
-    Private Sub BtnBookReturn_Click(sender As Object, e As EventArgs) Handles btnBookReturn.Click
-        ReturnBook.ShowDialog()
+    Private Sub tsmiAddBooks_Click(sender As Object, e As EventArgs) Handles tsmiAddBooks.Click
+        NewBook.ShowDialog()
+    End Sub
+
+    Private Sub SearchBooksToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiSearchBook.Click
+        SearchBook.ShowDialog()
+    End Sub
+
+    Private Sub btnSearchBook_Click(sender As Object, e As EventArgs) Handles btnSearchBook.Click
+        SearchBook.ShowDialog()
+    End Sub
+
+    Private Sub btnAddNewBook_Click(sender As Object, e As EventArgs) Handles btnAddNewBook.Click
+        NewBook.ShowDialog()
     End Sub
 
 
