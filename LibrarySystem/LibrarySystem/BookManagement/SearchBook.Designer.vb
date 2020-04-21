@@ -23,8 +23,7 @@ Partial Class SearchBook
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgv = New System.Windows.Forms.DataGridView()
         Me.ISBNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BookNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -33,7 +32,6 @@ Partial Class SearchBook
         Me.TypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BookBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LibraryDataSet = New LibrarySystem.LibraryDataSet()
-        Me.cboCategory = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtBookName = New System.Windows.Forms.TextBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
@@ -42,19 +40,19 @@ Partial Class SearchBook
         Me.lblCount = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BookTableAdapter = New LibrarySystem.LibraryDataSetTableAdapters.BookTableAdapter()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.chkHistory = New System.Windows.Forms.CheckBox()
+        Me.grpCategory = New System.Windows.Forms.GroupBox()
+        Me.chkMystery = New System.Windows.Forms.CheckBox()
+        Me.chkHorror = New System.Windows.Forms.CheckBox()
+        Me.btnReset = New System.Windows.Forms.Button()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BookBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpCategory.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(327, 12)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(73, 17)
-        Me.Label5.TabIndex = 20
-        Me.Label5.Text = "Category :"
         '
         'dgv
         '
@@ -70,16 +68,16 @@ Partial Class SearchBook
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ISBNDataGridViewTextBoxColumn, Me.BookNameDataGridViewTextBoxColumn, Me.BookDescDataGridViewTextBoxColumn, Me.AuthorDataGridViewTextBoxColumn, Me.TypeDataGridViewTextBoxColumn})
         Me.dgv.DataSource = Me.BookBindingSource
-        Me.dgv.Location = New System.Drawing.Point(13, 92)
+        Me.dgv.Location = New System.Drawing.Point(24, 122)
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
         Me.dgv.RowHeadersWidth = 51
-        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
-        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgv.RowTemplate.Height = 24
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv.Size = New System.Drawing.Size(540, 203)
-        Me.dgv.TabIndex = 32
+        Me.dgv.Size = New System.Drawing.Size(715, 254)
+        Me.dgv.TabIndex = 3
         Me.ToolTip1.SetToolTip(Me.dgv, "Double click to make changes of the book list.")
         '
         'ISBNDataGridViewTextBoxColumn
@@ -137,89 +135,170 @@ Partial Class SearchBook
         Me.LibraryDataSet.DataSetName = "LibraryDataSet"
         Me.LibraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'cboCategory
-        '
-        Me.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboCategory.FormattingEnabled = True
-        Me.cboCategory.Items.AddRange(New Object() {"All", "Mystery", "Historical fiction", "Horror"})
-        Me.cboCategory.Location = New System.Drawing.Point(406, 9)
-        Me.cboCategory.Name = "cboCategory"
-        Me.cboCategory.Size = New System.Drawing.Size(147, 24)
-        Me.cboCategory.TabIndex = 33
-        Me.ToolTip1.SetToolTip(Me.cboCategory, "Search based on book category")
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(39, 12)
+        Me.Label8.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
+        Me.Label8.Location = New System.Drawing.Point(50, 10)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(43, 17)
-        Me.Label8.TabIndex = 23
+        Me.Label8.Size = New System.Drawing.Size(57, 24)
+        Me.Label8.TabIndex = 0
         Me.Label8.Text = "Title :"
         '
         'txtBookName
         '
-        Me.txtBookName.Location = New System.Drawing.Point(88, 12)
+        Me.txtBookName.Location = New System.Drawing.Point(113, 17)
         Me.txtBookName.Name = "txtBookName"
         Me.txtBookName.Size = New System.Drawing.Size(136, 22)
-        Me.txtBookName.TabIndex = 26
+        Me.txtBookName.TabIndex = 0
         Me.ToolTip1.SetToolTip(Me.txtBookName, "Search based on book title")
         '
         'btnAdd
         '
         Me.btnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnAdd.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAdd.Location = New System.Drawing.Point(218, 330)
+        Me.btnAdd.Location = New System.Drawing.Point(262, 401)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(152, 47)
-        Me.btnAdd.TabIndex = 34
+        Me.btnAdd.Size = New System.Drawing.Size(120, 35)
+        Me.btnAdd.TabIndex = 4
         Me.btnAdd.Text = "&Add"
         Me.ToolTip1.SetToolTip(Me.btnAdd, "To add new books")
         Me.btnAdd.UseVisualStyleBackColor = False
         '
         'txtISBN
         '
-        Me.txtISBN.Location = New System.Drawing.Point(88, 45)
+        Me.txtISBN.Location = New System.Drawing.Point(113, 50)
         Me.txtISBN.Name = "txtISBN"
         Me.txtISBN.Size = New System.Drawing.Size(136, 22)
-        Me.txtISBN.TabIndex = 37
+        Me.txtISBN.TabIndex = 1
         Me.ToolTip1.SetToolTip(Me.txtISBN, "Search based on book ISBN")
         '
         'lblCount
         '
         Me.lblCount.AutoSize = True
-        Me.lblCount.Location = New System.Drawing.Point(13, 301)
+        Me.lblCount.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 7.8!)
+        Me.lblCount.Location = New System.Drawing.Point(687, 379)
         Me.lblCount.Name = "lblCount"
-        Me.lblCount.Size = New System.Drawing.Size(69, 17)
-        Me.lblCount.TabIndex = 35
+        Me.lblCount.Size = New System.Drawing.Size(52, 14)
+        Me.lblCount.TabIndex = 0
         Me.lblCount.Text = "X book(s)"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(35, 45)
+        Me.Label1.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
+        Me.Label1.Location = New System.Drawing.Point(46, 43)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(47, 17)
-        Me.Label1.TabIndex = 36
+        Me.Label1.Size = New System.Drawing.Size(63, 24)
+        Me.Label1.TabIndex = 0
         Me.Label1.Text = "ISBN :"
         '
         'BookTableAdapter
         '
         Me.BookTableAdapter.ClearBeforeFill = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 7.8!)
+        Me.Label2.Location = New System.Drawing.Point(21, 379)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(254, 14)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Double click on selected column to makes changes."
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(355, 50)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(100, 21)
+        Me.CheckBox1.TabIndex = 5
+        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(355, 78)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(100, 21)
+        Me.CheckBox2.TabIndex = 6
+        Me.CheckBox2.Text = "CheckBox2"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'chkHistory
+        '
+        Me.chkHistory.AutoSize = True
+        Me.chkHistory.Location = New System.Drawing.Point(6, 28)
+        Me.chkHistory.Name = "chkHistory"
+        Me.chkHistory.Size = New System.Drawing.Size(160, 28)
+        Me.chkHistory.TabIndex = 7
+        Me.chkHistory.Text = "Historical fiction"
+        Me.chkHistory.UseVisualStyleBackColor = True
+        '
+        'grpCategory
+        '
+        Me.grpCategory.Controls.Add(Me.chkMystery)
+        Me.grpCategory.Controls.Add(Me.chkHorror)
+        Me.grpCategory.Controls.Add(Me.chkHistory)
+        Me.grpCategory.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
+        Me.grpCategory.Location = New System.Drawing.Point(322, 10)
+        Me.grpCategory.Name = "grpCategory"
+        Me.grpCategory.Size = New System.Drawing.Size(288, 106)
+        Me.grpCategory.TabIndex = 8
+        Me.grpCategory.TabStop = False
+        Me.grpCategory.Text = "Category"
+        '
+        'chkMystery
+        '
+        Me.chkMystery.AutoSize = True
+        Me.chkMystery.Location = New System.Drawing.Point(6, 62)
+        Me.chkMystery.Name = "chkMystery"
+        Me.chkMystery.Size = New System.Drawing.Size(94, 28)
+        Me.chkMystery.TabIndex = 9
+        Me.chkMystery.Text = "Mystery"
+        Me.chkMystery.UseVisualStyleBackColor = True
+        '
+        'chkHorror
+        '
+        Me.chkHorror.AutoSize = True
+        Me.chkHorror.Location = New System.Drawing.Point(172, 29)
+        Me.chkHorror.Name = "chkHorror"
+        Me.chkHorror.Size = New System.Drawing.Size(83, 28)
+        Me.chkHorror.TabIndex = 8
+        Me.chkHorror.Text = "Horror"
+        Me.chkHorror.UseVisualStyleBackColor = True
+        '
+        'btnReset
+        '
+        Me.btnReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnReset.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
+        Me.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnReset.Location = New System.Drawing.Point(403, 401)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(120, 35)
+        Me.btnReset.TabIndex = 9
+        Me.btnReset.Text = "&Reset"
+        Me.btnReset.UseVisualStyleBackColor = False
+        '
         'SearchBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(590, 397)
+        Me.ClientSize = New System.Drawing.Size(765, 448)
+        Me.Controls.Add(Me.btnReset)
+        Me.Controls.Add(Me.grpCategory)
+        Me.Controls.Add(Me.CheckBox2)
+        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtISBN)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblCount)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.cboCategory)
         Me.Controls.Add(Me.dgv)
         Me.Controls.Add(Me.txtBookName)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label8)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "SearchBook"
@@ -227,13 +306,13 @@ Partial Class SearchBook
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BookBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpCategory.ResumeLayout(False)
+        Me.grpCategory.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label5 As Label
     Friend WithEvents dgv As DataGridView
-    Friend WithEvents cboCategory As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents txtBookName As TextBox
     Friend WithEvents ToolTip1 As ToolTip
@@ -249,4 +328,12 @@ Partial Class SearchBook
     Friend WithEvents BookDescDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AuthorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Label2 As Label
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents chkHistory As CheckBox
+    Friend WithEvents grpCategory As GroupBox
+    Friend WithEvents chkMystery As CheckBox
+    Friend WithEvents chkHorror As CheckBox
+    Friend WithEvents btnReset As Button
 End Class
