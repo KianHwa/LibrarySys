@@ -140,15 +140,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Library.designer.vb">
-      <DependentUpon>Library.dbml</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Library.dbml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -252,11 +252,9 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>Library.designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Library.dbml.layout">
       <DependentUpon>Library.dbml</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -270,10 +268,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Library.mdf" />
-    <Content Include="Library_log.ldf">
-      <DependentUpon>Library.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\borrow.PNG" />
     <None Include="Resources\home.PNG" />
     <None Include="Resources\bg1.jpg" />
@@ -314,6 +308,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Library.mdf" />
+    <Content Include="Library_log.ldf">
+      <DependentUpon>Library.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
