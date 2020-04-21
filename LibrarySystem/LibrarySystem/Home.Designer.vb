@@ -29,9 +29,6 @@ Partial Class formHome
         Me.tsmiChangePassword = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBookManagement = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiAddBooks = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiSearchBook = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiModifyBooks = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiRemoveBooks = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuReports = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiViewReports = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiGenerateReports = New System.Windows.Forms.ToolStripMenuItem()
@@ -51,6 +48,7 @@ Partial Class formHome
         Me.btnBookBorrow = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.tsmiSearchBook = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -105,7 +103,7 @@ Partial Class formHome
         '
         'menuBookManagement
         '
-        Me.menuBookManagement.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiAddBooks, Me.tsmiSearchBook, Me.tsmiModifyBooks, Me.tsmiRemoveBooks})
+        Me.menuBookManagement.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiAddBooks, Me.tsmiSearchBook})
         Me.menuBookManagement.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menuBookManagement.ForeColor = System.Drawing.Color.White
         Me.menuBookManagement.Name = "menuBookManagement"
@@ -123,39 +121,6 @@ Partial Class formHome
         Me.tsmiAddBooks.Size = New System.Drawing.Size(257, 36)
         Me.tsmiAddBooks.Text = "Add New Books"
         Me.tsmiAddBooks.ToolTipText = "Add new books to the library"
-        '
-        'tsmiSearchBook
-        '
-        Me.tsmiSearchBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiSearchBook.ForeColor = System.Drawing.Color.White
-        Me.tsmiSearchBook.Name = "tsmiSearchBook"
-        Me.tsmiSearchBook.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiSearchBook.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.tsmiSearchBook.Size = New System.Drawing.Size(257, 36)
-        Me.tsmiSearchBook.Text = "Search Books"
-        Me.tsmiSearchBook.ToolTipText = "Search for books"
-        '
-        'tsmiModifyBooks
-        '
-        Me.tsmiModifyBooks.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiModifyBooks.ForeColor = System.Drawing.Color.White
-        Me.tsmiModifyBooks.Name = "tsmiModifyBooks"
-        Me.tsmiModifyBooks.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiModifyBooks.ShortcutKeys = System.Windows.Forms.Keys.F3
-        Me.tsmiModifyBooks.Size = New System.Drawing.Size(257, 36)
-        Me.tsmiModifyBooks.Text = "Modify Books"
-        Me.tsmiModifyBooks.ToolTipText = "Update the book details"
-        '
-        'tsmiRemoveBooks
-        '
-        Me.tsmiRemoveBooks.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiRemoveBooks.ForeColor = System.Drawing.Color.White
-        Me.tsmiRemoveBooks.Name = "tsmiRemoveBooks"
-        Me.tsmiRemoveBooks.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiRemoveBooks.ShortcutKeys = System.Windows.Forms.Keys.F4
-        Me.tsmiRemoveBooks.Size = New System.Drawing.Size(257, 36)
-        Me.tsmiRemoveBooks.Text = "Remove Books"
-        Me.tsmiRemoveBooks.ToolTipText = "Remove the books "
         '
         'menuReports
         '
@@ -207,7 +172,7 @@ Partial Class formHome
         Me.tsmiTheme.ForeColor = System.Drawing.Color.White
         Me.tsmiTheme.Name = "tsmiTheme"
         Me.tsmiTheme.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiTheme.Size = New System.Drawing.Size(150, 36)
+        Me.tsmiTheme.Size = New System.Drawing.Size(224, 36)
         Me.tsmiTheme.Text = "Theme"
         '
         'tsmiDefaultTheme
@@ -372,7 +337,7 @@ Partial Class formHome
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Hobo Std", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(1118, 350)
         Me.Label1.Name = "Label1"
@@ -380,6 +345,15 @@ Partial Class formHome
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Library Management System"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'tsmiSearchBook
+        '
+        Me.tsmiSearchBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.tsmiSearchBook.ForeColor = System.Drawing.Color.White
+        Me.tsmiSearchBook.Name = "tsmiSearchBook"
+        Me.tsmiSearchBook.ShortcutKeys = System.Windows.Forms.Keys.F2
+        Me.tsmiSearchBook.Size = New System.Drawing.Size(257, 28)
+        Me.tsmiSearchBook.Text = "Search Books"
         '
         'formHome
         '
@@ -421,9 +395,6 @@ Partial Class formHome
     Friend WithEvents tsmiViewProfile As ToolStripMenuItem
     Friend WithEvents tsmiChangePassword As ToolStripMenuItem
     Friend WithEvents tsmiAddBooks As ToolStripMenuItem
-    Friend WithEvents tsmiSearchBook As ToolStripMenuItem
-    Friend WithEvents tsmiModifyBooks As ToolStripMenuItem
-    Friend WithEvents tsmiRemoveBooks As ToolStripMenuItem
     Friend WithEvents tsmiViewReports As ToolStripMenuItem
     Friend WithEvents tsmiGenerateReports As ToolStripMenuItem
     Friend WithEvents menuHelp As ToolStripMenuItem
@@ -434,4 +405,5 @@ Partial Class formHome
     Friend WithEvents tsmiDefaultTheme As ToolStripMenuItem
     Friend WithEvents tsmiDarkTheme As ToolStripMenuItem
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents tsmiSearchBook As ToolStripMenuItem
 End Class

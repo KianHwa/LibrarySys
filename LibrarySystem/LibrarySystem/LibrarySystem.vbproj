@@ -108,12 +108,6 @@
     <Compile Include="BookManagement\NewBook.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BookManagement\RemoveBook.Designer.vb">
-      <DependentUpon>RemoveBook.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BookManagement\RemoveBook.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="BookManagement\SearchBook.Designer.vb">
       <DependentUpon>SearchBook.vb</DependentUpon>
     </Compile>
@@ -146,10 +140,14 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Library.designer.vb">
-      <DependentUpon>Library.dbml</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Library.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -234,9 +232,6 @@
     <EmbeddedResource Include="BookManagement\NewBook.resx">
       <DependentUpon>NewBook.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BookManagement\RemoveBook.resx">
-      <DependentUpon>RemoveBook.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BorrowReturn\BorrowBookv2.resx">
       <DependentUpon>BorrowBookv2.vb</DependentUpon>
     </EmbeddedResource>
@@ -279,11 +274,20 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>Library.designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Library.dbml.layout">
       <DependentUpon>Library.dbml</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LibraryDataSet.xsc">
+      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LibraryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LibraryDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LibraryDataSet.xss">
+      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -353,6 +357,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Library.mdf" />
+    <Content Include="Library_log.ldf">
+      <DependentUpon>Library.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
