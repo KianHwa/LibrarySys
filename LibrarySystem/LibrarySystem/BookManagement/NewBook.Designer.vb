@@ -31,9 +31,9 @@ Partial Class NewBook
         Me.txtBookName = New System.Windows.Forms.TextBox()
         Me.txtBookDesc = New System.Windows.Forms.TextBox()
         Me.txtAuthor = New System.Windows.Forms.TextBox()
-        Me.txtBookType = New System.Windows.Forms.TextBox()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.cboCategory = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -66,7 +66,7 @@ Partial Class NewBook
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(105, 150)
+        Me.Label4.Location = New System.Drawing.Point(105, 157)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(58, 17)
         Me.Label4.TabIndex = 0
@@ -75,7 +75,7 @@ Partial Class NewBook
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(88, 185)
+        Me.Label5.Location = New System.Drawing.Point(88, 192)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(73, 17)
         Me.Label5.TabIndex = 0
@@ -104,23 +104,16 @@ Partial Class NewBook
         '
         'txtAuthor
         '
-        Me.txtAuthor.Location = New System.Drawing.Point(197, 150)
+        Me.txtAuthor.Location = New System.Drawing.Point(197, 157)
         Me.txtAuthor.Name = "txtAuthor"
         Me.txtAuthor.Size = New System.Drawing.Size(100, 22)
         Me.txtAuthor.TabIndex = 4
-        '
-        'txtBookType
-        '
-        Me.txtBookType.Location = New System.Drawing.Point(197, 185)
-        Me.txtBookType.Name = "txtBookType"
-        Me.txtBookType.Size = New System.Drawing.Size(100, 22)
-        Me.txtBookType.TabIndex = 5
         '
         'btnAdd
         '
         Me.btnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAdd.Location = New System.Drawing.Point(77, 243)
+        Me.btnAdd.Location = New System.Drawing.Point(97, 266)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(84, 38)
         Me.btnAdd.TabIndex = 6
@@ -130,22 +123,35 @@ Partial Class NewBook
         'btnCancel
         '
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(209, 243)
+        Me.btnCancel.Location = New System.Drawing.Point(229, 266)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(79, 38)
         Me.btnCancel.TabIndex = 7
         Me.btnCancel.Text = "&Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
+        'cboCategory
+        '
+        Me.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCategory.FormattingEnabled = True
+        Me.cboCategory.Items.AddRange(New Object() {"All", "Mystery", "Historical fiction", "Horror"})
+        Me.cboCategory.Location = New System.Drawing.Point(197, 192)
+        Me.cboCategory.Name = "cboCategory"
+        Me.cboCategory.Size = New System.Drawing.Size(100, 24)
+        Me.cboCategory.TabIndex = 8
+        '
         'NewBook
         '
+        Me.AcceptButton = Me.btnAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(396, 335)
+        Me.Controls.Add(Me.cboCategory)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.txtBookType)
         Me.Controls.Add(Me.txtAuthor)
         Me.Controls.Add(Me.txtBookDesc)
         Me.Controls.Add(Me.txtBookName)
@@ -172,7 +178,7 @@ Partial Class NewBook
     Friend WithEvents txtBookName As TextBox
     Friend WithEvents txtBookDesc As TextBox
     Friend WithEvents txtAuthor As TextBox
-    Friend WithEvents txtBookType As TextBox
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnCancel As Button
+    Friend WithEvents cboCategory As ComboBox
 End Class

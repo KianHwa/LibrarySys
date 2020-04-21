@@ -38,7 +38,9 @@
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>LibrarySystem.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,7 +50,9 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>LibrarySystem.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -63,7 +67,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
@@ -102,12 +108,6 @@
     <Compile Include="BookManagement\NewBook.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BookManagement\RemoveBook.Designer.vb">
-      <DependentUpon>RemoveBook.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BookManagement\RemoveBook.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="BookManagement\SearchBook.Designer.vb">
       <DependentUpon>SearchBook.vb</DependentUpon>
     </Compile>
@@ -143,6 +143,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Library.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -196,16 +201,27 @@
     <Compile Include="SplashScreen\formSplash.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\ChangePassword.Designer.vb">
-      <DependentUpon>ChangePassword.vb</DependentUpon>
+    <Compile Include="User.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User.dbml</DependentUpon>
     </Compile>
-    <Compile Include="User\ChangePassword.vb">
+    <Compile Include="User\CreateAccount.Designer.vb">
+      <DependentUpon>CreateAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\CreateAccount.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\ViewProfile.Designer.vb">
-      <DependentUpon>ViewProfile.vb</DependentUpon>
+    <Compile Include="User\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="User\ViewProfile.vb">
+    <Compile Include="User\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserProfile.Designer.vb">
+      <DependentUpon>UserProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserProfile.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -215,9 +231,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookManagement\NewBook.resx">
       <DependentUpon>NewBook.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BookManagement\RemoveBook.resx">
-      <DependentUpon>RemoveBook.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowReturn\BorrowBookv2.resx">
       <DependentUpon>BorrowBookv2.vb</DependentUpon>
@@ -246,6 +259,15 @@
     <EmbeddedResource Include="SplashScreen\formSplash.resx">
       <DependentUpon>formSplash.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User\CreateAccount.resx">
+      <DependentUpon>CreateAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserProfile.resx">
+      <DependentUpon>UserProfile.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Library.dbml">
@@ -255,6 +277,17 @@
     </None>
     <None Include="Library.dbml.layout">
       <DependentUpon>Library.dbml</DependentUpon>
+    </None>
+    <None Include="LibraryDataSet.xsc">
+      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LibraryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LibraryDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LibraryDataSet.xss">
+      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -266,8 +299,24 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="User.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>User.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="User.dbml.layout">
+      <DependentUpon>User.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Library.mdf" />
+    <Content Include="Library_log.ldf">
+      <DependentUpon>Library.mdf</DependentUpon>
+    </Content>
+    <Content Include="User.mdf" />
+    <Content Include="User_log.ldf">
+      <DependentUpon>User.mdf</DependentUpon>
+    </Content>
     <None Include="Resources\borrow.PNG" />
     <None Include="Resources\home.PNG" />
     <None Include="Resources\bg1.jpg" />
