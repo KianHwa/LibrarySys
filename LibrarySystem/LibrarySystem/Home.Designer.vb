@@ -49,6 +49,8 @@ Partial Class formHome
         Me.btnBookBorrow = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lblDIsplayDateTime = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -236,6 +238,7 @@ Partial Class formHome
         '
         Me.Panel1.AutoSize = True
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.lblDIsplayDateTime)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.btnAddNewBook)
@@ -244,7 +247,7 @@ Partial Class formHome
         Me.Panel1.Controls.Add(Me.btnBookBorrow)
         Me.Panel1.ForeColor = System.Drawing.Color.White
         Me.Panel1.Location = New System.Drawing.Point(0, 38)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(269, 812)
         Me.Panel1.TabIndex = 1
@@ -253,7 +256,7 @@ Partial Class formHome
         '
         Me.PictureBox1.Image = Global.LibrarySystem.My.Resources.Resources.pngguru_com__5_
         Me.PictureBox1.Location = New System.Drawing.Point(72, 20)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(128, 184)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -270,7 +273,7 @@ Partial Class formHome
         Me.btnLogout.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.Color.White
         Me.btnLogout.Location = New System.Drawing.Point(0, 469)
-        Me.btnLogout.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(267, 65)
         Me.btnLogout.TabIndex = 5
@@ -288,7 +291,7 @@ Partial Class formHome
         Me.btnAddNewBook.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddNewBook.ForeColor = System.Drawing.Color.White
         Me.btnAddNewBook.Location = New System.Drawing.Point(0, 404)
-        Me.btnAddNewBook.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAddNewBook.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAddNewBook.Name = "btnAddNewBook"
         Me.btnAddNewBook.Size = New System.Drawing.Size(267, 65)
         Me.btnAddNewBook.TabIndex = 4
@@ -306,7 +309,7 @@ Partial Class formHome
         Me.btnBookReturn.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBookReturn.ForeColor = System.Drawing.Color.White
         Me.btnBookReturn.Location = New System.Drawing.Point(0, 274)
-        Me.btnBookReturn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBookReturn.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBookReturn.Name = "btnBookReturn"
         Me.btnBookReturn.Size = New System.Drawing.Size(267, 65)
         Me.btnBookReturn.TabIndex = 3
@@ -324,7 +327,7 @@ Partial Class formHome
         Me.btnSearchBook.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSearchBook.ForeColor = System.Drawing.Color.White
         Me.btnSearchBook.Location = New System.Drawing.Point(0, 339)
-        Me.btnSearchBook.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSearchBook.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSearchBook.Name = "btnSearchBook"
         Me.btnSearchBook.Size = New System.Drawing.Size(267, 65)
         Me.btnSearchBook.TabIndex = 2
@@ -342,7 +345,7 @@ Partial Class formHome
         Me.btnBookBorrow.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBookBorrow.ForeColor = System.Drawing.Color.White
         Me.btnBookBorrow.Location = New System.Drawing.Point(0, 209)
-        Me.btnBookBorrow.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBookBorrow.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBookBorrow.Name = "btnBookBorrow"
         Me.btnBookBorrow.Size = New System.Drawing.Size(267, 65)
         Me.btnBookBorrow.TabIndex = 1
@@ -363,6 +366,19 @@ Partial Class formHome
         Me.Label1.Text = "Library Management System"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Timer1
+        '
+        '
+        'lblDIsplayDateTime
+        '
+        Me.lblDIsplayDateTime.AutoSize = True
+        Me.lblDIsplayDateTime.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDIsplayDateTime.Location = New System.Drawing.Point(46, 624)
+        Me.lblDIsplayDateTime.Name = "lblDIsplayDateTime"
+        Me.lblDIsplayDateTime.Size = New System.Drawing.Size(107, 20)
+        Me.lblDIsplayDateTime.TabIndex = 3
+        Me.lblDIsplayDateTime.Text = "Date and Time"
+        '
         'formHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -375,7 +391,7 @@ Partial Class formHome
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.DoubleBuffered = True
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MinimumSize = New System.Drawing.Size(814, 592)
         Me.Name = "formHome"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -383,6 +399,7 @@ Partial Class formHome
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -415,4 +432,6 @@ Partial Class formHome
     Friend WithEvents tsmiDarkTheme As ToolStripMenuItem
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents tsmiSearchBook As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents lblDIsplayDateTime As Label
 End Class

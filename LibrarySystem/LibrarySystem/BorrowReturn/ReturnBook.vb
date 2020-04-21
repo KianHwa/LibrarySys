@@ -7,6 +7,11 @@ Public Class ReturnBook
     Dim count As Integer = 0
 
     Private Sub BtnReturn_Click(sender As Object, e As EventArgs) Handles btnReturn.Click
+        If lvBorrowList.Items.Count <= 0 Then
+            MessageBox.Show("No book selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtID.Focus()
+            Exit Sub
+        End If
         For Each item In lvBorrowList.Items
             Dim bookISBN As String = item.SubItems(1).Text
             If Math.Abs(DateDiff(DateInterval.Day, Date.Now(), GetBorrowDate(bookISBN))) >= 7 Then
@@ -108,7 +113,7 @@ Public Class ReturnBook
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        lblDisplayDateTime.Text = "Current Time:" + vbNewLine + DateTime.Now.ToString("MMMM dd, yyyy   h:mm:ss")
+        lblDisplayDateTime.Text = "Current Time:" + vbNewLine + DateTime.Now.ToString("MMMM dd, yyyy   HH:MM:ss")
     End Sub
 
     Private Sub lvBorrowList_DoubleClick(sender As Object, e As EventArgs) Handles lvBorrowList.DoubleClick
