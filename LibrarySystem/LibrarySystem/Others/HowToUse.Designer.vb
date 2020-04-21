@@ -23,18 +23,19 @@ Partial Class HowToUse
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.panelHome = New System.Windows.Forms.Panel()
+        Me.lblHomeDetails = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.panelBorrow = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnPrevious = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lblHomeDetails = New System.Windows.Forms.Label()
+        Me.lblBorrowDetails = New System.Windows.Forms.Label()
         Me.panelHome.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelBorrow.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -43,19 +44,39 @@ Partial Class HowToUse
         Me.panelHome.AutoScroll = True
         Me.panelHome.Controls.Add(Me.lblHomeDetails)
         Me.panelHome.Controls.Add(Me.PictureBox2)
-        Me.panelHome.Location = New System.Drawing.Point(35, 173)
+        Me.panelHome.Location = New System.Drawing.Point(49, 184)
         Me.panelHome.Name = "panelHome"
-        Me.panelHome.Size = New System.Drawing.Size(943, 808)
+        Me.panelHome.Size = New System.Drawing.Size(919, 537)
         Me.panelHome.TabIndex = 0
+        '
+        'lblHomeDetails
+        '
+        Me.lblHomeDetails.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHomeDetails.Location = New System.Drawing.Point(33, 394)
+        Me.lblHomeDetails.Name = "lblHomeDetails"
+        Me.lblHomeDetails.Size = New System.Drawing.Size(791, 751)
+        Me.lblHomeDetails.TabIndex = 6
+        Me.lblHomeDetails.Text = "Home details"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.LibrarySystem.My.Resources.Resources.home
+        Me.PictureBox2.Location = New System.Drawing.Point(96, 13)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(728, 356)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 0
+        Me.PictureBox2.TabStop = False
         '
         'panelBorrow
         '
         Me.panelBorrow.AutoScroll = True
         Me.panelBorrow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panelBorrow.Controls.Add(Me.lblBorrowDetails)
         Me.panelBorrow.Controls.Add(Me.PictureBox3)
-        Me.panelBorrow.Location = New System.Drawing.Point(35, 173)
+        Me.panelBorrow.Location = New System.Drawing.Point(49, 187)
         Me.panelBorrow.Name = "panelBorrow"
-        Me.panelBorrow.Size = New System.Drawing.Size(943, 816)
+        Me.panelBorrow.Size = New System.Drawing.Size(919, 534)
         Me.panelBorrow.TabIndex = 11
         '
         'PictureBox3
@@ -67,16 +88,6 @@ Partial Class HowToUse
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 0
         Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.LibrarySystem.My.Resources.Resources.home
-        Me.PictureBox2.Location = New System.Drawing.Point(184, 23)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(584, 369)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 0
-        Me.PictureBox2.TabStop = False
         '
         'btnNext
         '
@@ -119,14 +130,14 @@ Partial Class HowToUse
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
-        'lblHomeDetails
+        'lblBorrowDetails
         '
-        Me.lblHomeDetails.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHomeDetails.Location = New System.Drawing.Point(27, 409)
-        Me.lblHomeDetails.Name = "lblHomeDetails"
-        Me.lblHomeDetails.Size = New System.Drawing.Size(864, 520)
-        Me.lblHomeDetails.TabIndex = 6
-        Me.lblHomeDetails.Text = "Home details"
+        Me.lblBorrowDetails.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBorrowDetails.Location = New System.Drawing.Point(23, 360)
+        Me.lblBorrowDetails.Name = "lblBorrowDetails"
+        Me.lblBorrowDetails.Size = New System.Drawing.Size(864, 520)
+        Me.lblBorrowDetails.TabIndex = 7
+        Me.lblBorrowDetails.Text = "Borrow details"
         '
         'HowToUse
         '
@@ -140,11 +151,11 @@ Partial Class HowToUse
         Me.Controls.Add(Me.panelHome)
         Me.Controls.Add(Me.btnPrevious)
         Me.Name = "HowToUse"
-        Me.Text = "HowToUse"
+        Me.Text = "How To Use"
         Me.panelHome.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelBorrow.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -159,4 +170,5 @@ Partial Class HowToUse
     Friend WithEvents panelBorrow As Panel
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents lblHomeDetails As Label
+    Friend WithEvents lblBorrowDetails As Label
 End Class

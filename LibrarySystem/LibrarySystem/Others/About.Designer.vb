@@ -87,7 +87,7 @@ Partial Class About
         Me.Panel2.Controls.Add(Me.lblDevelopers)
         Me.Panel2.Controls.Add(Me.lblBuild)
         Me.Panel2.Controls.Add(Me.lblCopyright)
-        Me.Panel2.Location = New System.Drawing.Point(34, 36)
+        Me.Panel2.Location = New System.Drawing.Point(40, 3)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(620, 525)
         Me.Panel2.TabIndex = 0
@@ -95,7 +95,7 @@ Partial Class About
         'lblDescription
         '
         Me.lblDescription.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDescription.Location = New System.Drawing.Point(17, 336)
+        Me.lblDescription.Location = New System.Drawing.Point(45, 380)
         Me.lblDescription.Name = "lblDescription"
         Me.lblDescription.Size = New System.Drawing.Size(381, 43)
         Me.lblDescription.TabIndex = 8

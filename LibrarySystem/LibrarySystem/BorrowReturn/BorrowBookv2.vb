@@ -2,7 +2,6 @@
 
 Public Class BorrowBookv2
     Dim db As New LibraryDataContext()
-    'Getting current date
 
     Private Sub BtnBorrow_Click(sender As Object, e As EventArgs) Handles btnBorrow.Click
         'Error checking
@@ -47,8 +46,8 @@ Public Class BorrowBookv2
                 Else
                     If lvBorrowList.Items.Count <= 5 Then
                         Dim memberID, status As String
-                        memberID = "M1001"
-                        status = "Borrow"
+                    memberID = formHome.loggedInID
+                    status = "Borrow"
 
                         If lvBorrowList.Items.Count = 0 Then
                             Dim item As ListViewItem
@@ -185,6 +184,13 @@ Public Class BorrowBookv2
 
     Private Sub BorrowBookv2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dtpBorrowDate.Value = DateTime.Now
+
+        Dim member = From m In db.Members Where m.memberID = formHome.loggedInID
+        txtMemberID.Text = formHome.loggedInID
+        For Each loggedInMember In member
+            txtMemberName.Text = loggedInMember.memberName
+        Next
+
     End Sub
 
     Private Sub DtpBorrowDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpBorrowDate.ValueChanged

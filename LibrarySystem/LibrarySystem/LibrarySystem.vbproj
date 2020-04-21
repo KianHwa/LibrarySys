@@ -220,6 +220,9 @@
     <EmbeddedResource Include="BookManagement\SearchBook.resx">
       <DependentUpon>SearchBook.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BorrowReturn\ReturnBook.resx">
+      <DependentUpon>ReturnBook.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>
