@@ -70,6 +70,51 @@
 
 
         Next
+        '=====================================================================================
+        'NewBook form
+        NewBook.BackColor = Color.DimGray
+        For Each ctrl In NewBook.Controls
+            If TypeOf ctrl Is Button Then
+                Dim btn = DirectCast(ctrl, Button)
+
+                btn.BackColor = Color.Black
+                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(22, 22, 22)
+            End If
+            If TypeOf ctrl Is Label Then
+                Dim lbl = DirectCast(ctrl, Label)
+                lbl.ForeColor = Color.White
+            End If
+        Next
+        '=====================================================================================
+        'ModifyBook form
+        ModifyBook.BackColor = Color.DimGray
+        For Each ctrl In ModifyBook.Controls
+            If TypeOf ctrl Is Button Then
+                Dim btn = DirectCast(ctrl, Button)
+
+                btn.BackColor = Color.Black
+                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(22, 22, 22)
+            End If
+            If TypeOf ctrl Is Label Then
+                Dim lbl = DirectCast(ctrl, Label)
+                lbl.ForeColor = Color.White
+            End If
+        Next
+        '=====================================================================================
+        'SearchBook form
+        SearchBook.BackColor = Color.DimGray
+        For Each ctrl In SearchBook.Controls
+            If TypeOf ctrl Is Button Then
+                Dim btn = DirectCast(ctrl, Button)
+
+                btn.BackColor = Color.Black
+                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(22, 22, 22)
+            End If
+            If TypeOf ctrl Is Label Then
+                Dim lbl = DirectCast(ctrl, Label)
+                lbl.ForeColor = Color.White
+            End If
+        Next
     End Sub
 
     Private Sub BtnBookBorrow_Click(sender As Object, e As EventArgs) Handles btnBookBorrow.Click
