@@ -244,7 +244,7 @@ Partial Class formHome
         Me.tsmiAbout.ForeColor = System.Drawing.Color.White
         Me.tsmiAbout.Name = "tsmiAbout"
         Me.tsmiAbout.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiAbout.Size = New System.Drawing.Size(188, 36)
+        Me.tsmiAbout.Size = New System.Drawing.Size(224, 36)
         Me.tsmiAbout.Text = "About"
         Me.tsmiAbout.ToolTipText = "Know more about us"
         '
@@ -254,7 +254,7 @@ Partial Class formHome
         Me.tsmiUse.ForeColor = System.Drawing.Color.White
         Me.tsmiUse.Name = "tsmiUse"
         Me.tsmiUse.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiUse.Size = New System.Drawing.Size(188, 36)
+        Me.tsmiUse.Size = New System.Drawing.Size(224, 36)
         Me.tsmiUse.Text = "How to use"
         Me.tsmiUse.ToolTipText = "Guide on how to use the system"
         '
