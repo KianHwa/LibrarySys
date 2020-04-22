@@ -29,6 +29,7 @@ Partial Class formHome
         Me.tsmiChangePassword = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBookManagement = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiAddBooks = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiSearchBook = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuReports = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiViewReports = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiGenerateReports = New System.Windows.Forms.ToolStripMenuItem()
@@ -48,7 +49,6 @@ Partial Class formHome
         Me.btnBookBorrow = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.tsmiSearchBook = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,6 +122,16 @@ Partial Class formHome
         Me.tsmiAddBooks.Text = "Add New Books"
         Me.tsmiAddBooks.ToolTipText = "Add new books to the library"
         '
+        'tsmiSearchBook
+        '
+        Me.tsmiSearchBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.tsmiSearchBook.ForeColor = System.Drawing.Color.White
+        Me.tsmiSearchBook.Name = "tsmiSearchBook"
+        Me.tsmiSearchBook.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.tsmiSearchBook.ShortcutKeys = System.Windows.Forms.Keys.F2
+        Me.tsmiSearchBook.Size = New System.Drawing.Size(257, 36)
+        Me.tsmiSearchBook.Text = "Search Books"
+        '
         'menuReports
         '
         Me.menuReports.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiViewReports, Me.tsmiGenerateReports})
@@ -172,7 +182,7 @@ Partial Class formHome
         Me.tsmiTheme.ForeColor = System.Drawing.Color.White
         Me.tsmiTheme.Name = "tsmiTheme"
         Me.tsmiTheme.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiTheme.Size = New System.Drawing.Size(224, 36)
+        Me.tsmiTheme.Size = New System.Drawing.Size(150, 36)
         Me.tsmiTheme.Text = "Theme"
         '
         'tsmiDefaultTheme
@@ -209,7 +219,7 @@ Partial Class formHome
         Me.tsmiAbout.ForeColor = System.Drawing.Color.White
         Me.tsmiAbout.Name = "tsmiAbout"
         Me.tsmiAbout.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiAbout.Size = New System.Drawing.Size(224, 36)
+        Me.tsmiAbout.Size = New System.Drawing.Size(188, 36)
         Me.tsmiAbout.Text = "About"
         Me.tsmiAbout.ToolTipText = "Know more about us"
         '
@@ -219,7 +229,7 @@ Partial Class formHome
         Me.tsmiUse.ForeColor = System.Drawing.Color.White
         Me.tsmiUse.Name = "tsmiUse"
         Me.tsmiUse.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiUse.Size = New System.Drawing.Size(224, 36)
+        Me.tsmiUse.Size = New System.Drawing.Size(188, 36)
         Me.tsmiUse.Text = "How to use"
         Me.tsmiUse.ToolTipText = "Guide on how to use the system"
         '
@@ -345,15 +355,6 @@ Partial Class formHome
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Library Management System"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'tsmiSearchBook
-        '
-        Me.tsmiSearchBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiSearchBook.ForeColor = System.Drawing.Color.White
-        Me.tsmiSearchBook.Name = "tsmiSearchBook"
-        Me.tsmiSearchBook.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.tsmiSearchBook.Size = New System.Drawing.Size(257, 28)
-        Me.tsmiSearchBook.Text = "Search Books"
         '
         'formHome
         '

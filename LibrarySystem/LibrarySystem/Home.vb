@@ -2,7 +2,6 @@
     Dim db As New LibraryDataContext()
     Public loggedInID As String = "M1001"
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 
     Private Sub DarkThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiDarkTheme.Click
@@ -73,7 +72,7 @@
     End Sub
 
     Private Sub BtnBookBorrow_Click(sender As Object, e As EventArgs) Handles btnBookBorrow.Click
-        BorrowBookv2.ShowDialog()
+        BorrowBookv2.Show()
     End Sub
 
     Private Sub DefaultThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiDefaultTheme.Click
@@ -81,27 +80,27 @@
     End Sub
 
     Private Sub TsmiAbout_Click(sender As Object, e As EventArgs) Handles tsmiAbout.Click
-        About.ShowDialog()
+        About.Show()
     End Sub
 
     Private Sub TsmiUse_Click(sender As Object, e As EventArgs) Handles tsmiUse.Click
-        HowToUse.ShowDialog()
+        HowToUse.Show()
     End Sub
 
     Private Sub tsmiAddBooks_Click(sender As Object, e As EventArgs) Handles tsmiAddBooks.Click
-        NewBook.ShowDialog()
+        NewBook.Show()
     End Sub
 
     Private Sub SearchBooksToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiSearchBook.Click
-        SearchBook.ShowDialog()
+        SearchBook.Show()
     End Sub
 
     Private Sub btnSearchBook_Click(sender As Object, e As EventArgs) Handles btnSearchBook.Click
-        SearchBook.ShowDialog()
+        SearchBook.Show()
     End Sub
 
     Private Sub btnAddNewBook_Click(sender As Object, e As EventArgs) Handles btnAddNewBook.Click
-        NewBook.ShowDialog()
+        NewBook.Show()
     End Sub
 
 
