@@ -1,6 +1,6 @@
 ﻿Public Class formHome
     Dim db As New LibraryDataContext()
-    Public loggedInID As String = "M1001"
+    Public loggedInID As String = ""
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -102,5 +102,14 @@
 
     Private Sub btnAddNewBook_Click(sender As Object, e As EventArgs) Handles btnAddNewBook.Click
         NewBook.ShowDialog()
+    End Sub
+
+    Private Sub tsmiViewProfile_Click(sender As Object, e As EventArgs) Handles tsmiViewProfile.Click
+        LibrarySystem.UserProfile.ShowDialog()
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        loggedInID = ""
+        Me.Close()
     End Sub
 End Class

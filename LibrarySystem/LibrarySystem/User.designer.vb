@@ -95,6 +95,10 @@ Partial Public Class User
 	
 	Private _DateOfBirth As Date
 	
+	Private _ReturnedBook As String
+	
+	Private _BookBorrowing As String
+	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
@@ -137,6 +141,14 @@ Partial Public Class User
     Partial Private Sub OnDateOfBirthChanging(value As Date)
     End Sub
     Partial Private Sub OnDateOfBirthChanged()
+    End Sub
+    Partial Private Sub OnReturnedBookChanging(value As String)
+    End Sub
+    Partial Private Sub OnReturnedBookChanged()
+    End Sub
+    Partial Private Sub OnBookBorrowingChanging(value As String)
+    End Sub
+    Partial Private Sub OnBookBorrowingChanged()
     End Sub
     #End Region
 	
@@ -286,6 +298,38 @@ Partial Public Class User
 				Me._DateOfBirth = value
 				Me.SendPropertyChanged("DateOfBirth")
 				Me.OnDateOfBirthChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ReturnedBook", DbType:="VarChar(50)")>  _
+	Public Property ReturnedBook() As String
+		Get
+			Return Me._ReturnedBook
+		End Get
+		Set
+			If (String.Equals(Me._ReturnedBook, value) = false) Then
+				Me.OnReturnedBookChanging(value)
+				Me.SendPropertyChanging
+				Me._ReturnedBook = value
+				Me.SendPropertyChanged("ReturnedBook")
+				Me.OnReturnedBookChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_BookBorrowing", DbType:="VarChar(50)")>  _
+	Public Property BookBorrowing() As String
+		Get
+			Return Me._BookBorrowing
+		End Get
+		Set
+			If (String.Equals(Me._BookBorrowing, value) = false) Then
+				Me.OnBookBorrowingChanging(value)
+				Me.SendPropertyChanging
+				Me._BookBorrowing = value
+				Me.SendPropertyChanged("BookBorrowing")
+				Me.OnBookBorrowingChanged
 			End If
 		End Set
 	End Property
