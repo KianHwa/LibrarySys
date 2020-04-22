@@ -149,6 +149,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LibraryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LibraryDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryDataSet2.vb">
+      <DependentUpon>LibraryDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -193,6 +206,18 @@
       <DependentUpon>ViewReport.vb</DependentUpon>
     </Compile>
     <Compile Include="Report\ViewReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ViewReportMember.Designer.vb">
+      <DependentUpon>ViewReportMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ViewReportMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ViewReportReturnBook.Designer.vb">
+      <DependentUpon>ViewReportReturnBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ViewReportReturnBook.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SplashScreen\formSplash.Designer.vb">
@@ -256,6 +281,15 @@
     <EmbeddedResource Include="Others\HowToUse.resx">
       <DependentUpon>HowToUse.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\GenerateReport.resx">
+      <DependentUpon>GenerateReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ViewReport.resx">
+      <DependentUpon>ViewReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ViewReportReturnBook.resx">
+      <DependentUpon>ViewReportReturnBook.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen\formSplash.resx">
       <DependentUpon>formSplash.vb</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +322,28 @@
     </None>
     <None Include="LibraryDataSet.xss">
       <DependentUpon>LibraryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LibraryDataSet1.xsc">
+      <DependentUpon>LibraryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LibraryDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LibraryDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LibraryDataSet1.xss">
+      <DependentUpon>LibraryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LibraryDataSet2.xsc">
+      <DependentUpon>LibraryDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="LibraryDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LibraryDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LibraryDataSet2.xss">
+      <DependentUpon>LibraryDataSet2.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
