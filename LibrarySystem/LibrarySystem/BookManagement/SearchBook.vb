@@ -2,11 +2,27 @@
 
     Private Sub BindData()
         Dim title As String = txtBookName.Text
-        Dim category As String = cboCategory.Text
+        Dim history As String = ""
+        Dim mystery As String = ""
+        Dim horror As String = ""
         Dim isbn As String = txtISBN.Text
         Dim db As New LibraryDataContext()
+
+        If chkHistory.Checked Then
+            history = chkHistory.Text
+        End If
+        If chkMystery.Checked Then
+            mystery = chkMystery.Text
+
+        End If
+        If chkHorror.Checked Then
+            horror = chkHorror.Text
+
+        End If
         Dim rs = From b In db.Books
-                 Where b.bookName.Contains(title) And b.ISBN.Contains(isbn) And (category = "All" Or b.type.StartsWith(category))
+                 Where b.bookName.Contains(title) And b.ISBN.Contains(isbn) And ((b.type.Contains(history) And b.type.Contains(mystery) And b.type.Contains(horror)))
+
+
 
 
         dgv.DataSource = rs
@@ -20,7 +36,7 @@
         Dim rs = From b In db.Books
 
 
-        cboCategory.SelectedIndex = 0
+
         BindData()
     End Sub
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
@@ -48,7 +64,7 @@
         BindData()
     End Sub
 
-    Private Sub cboCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategory.SelectedIndexChanged
+    Private Sub cboCategory_SelectedIndexChanged(sender As Object, e As EventArgs)
         BindData()
     End Sub
 
@@ -57,4 +73,19 @@
     End Sub
 
 
+
+
+
+    Private Sub chkHistory_CheckedChanged(sender As Object, e As EventArgs) Handles chkHistory.CheckedChanged, chkMystery.CheckedChanged, chkHorror.CheckedChanged
+        BindData()
+    End Sub
+
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        txtISBN.Text = ""
+        txtBookName.Text = ""
+        chkHistory.Checked = False
+        chkMystery.Checked = False
+        chkHorror.Checked = False
+        txtBookName.Focus()
+    End Sub
 End Class

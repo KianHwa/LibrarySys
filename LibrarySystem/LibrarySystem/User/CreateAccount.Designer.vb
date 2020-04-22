@@ -272,6 +272,7 @@ Partial Class CreateAccount
         Me.Controls.Add(Me.lblName)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "CreateAccount"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CreateAccount"
         Me.ResumeLayout(False)
         Me.PerformLayout()

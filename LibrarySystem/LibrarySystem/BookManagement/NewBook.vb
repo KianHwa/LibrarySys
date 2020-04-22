@@ -19,7 +19,9 @@ Public Class NewBook
         Dim author As String = txtAuthor.Text.Trim
         Dim db As New LibraryDataContext()
         ' (3) Validate Borrow details
-
+        Dim history As String = ""
+        Dim mystery As String = ""
+        Dim horror As String = ""
 
         If isbn = "" Then
             err.AppendLine("- Book ISBN is empty")
@@ -49,11 +51,57 @@ Public Class NewBook
             MessageBox.Show("Book with ISBN [" & txtISBN.Text & "] already existing!Please re-enter another Book ISBN.", "Book not found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             Dim b As New Book()
+            Dim count As Integer = 0
             b.ISBN = isbn
             b.bookName = title
             b.bookDesc = desc
             b.author = author
-            b.type = cboCategory.SelectedItem
+            Dim counter As Integer = 0
+
+            If chkHistory.Checked Then
+                counter += 1
+
+            End If
+            If chkMystery.Checked Then
+                counter += 1
+
+            End If
+            If chkHorror.Checked Then
+                counter += 1
+
+            End If
+
+
+
+            If chkHistory.Checked Then
+                If counter > 1 Then
+                    b.type += chkHistory.Text + ","
+
+                Else
+                    b.type += chkHistory.Text
+                End If
+            End If
+
+            If chkMystery.Checked Then
+                If counter > 1 Then
+                    b.type += chkMystery.Text + ","
+
+                Else
+                    b.type += chkMystery.Text
+                End If
+            End If
+
+            If chkHorror.Checked Then
+                If counter > 1 Then
+                    b.type += chkHorror.Text + ","
+
+                Else
+                    b.type += chkHorror.Text
+                End If
+            End If
+
+            Dim lastComma As Integer = b.type.LastIndexOf(",")
+            b.type = b.type.Substring(0, lastComma) & " " & b.type.Substring(lastComma + 1)
 
             db.Books.InsertOnSubmit(b)
             db.SubmitChanges()
@@ -83,8 +131,11 @@ Public Class NewBook
         txtAuthor.Text = ""
         txtBookName.Text = ""
         txtBookDesc.Text = ""
-        cboCategory.SelectedIndex = 0
+        chkHistory.Checked = False
+        chkMystery.Checked = False
+        chkHorror.Checked = False
         txtISBN.Focus()
 
     End Sub
+
 End Class
