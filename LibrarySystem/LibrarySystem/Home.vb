@@ -1,8 +1,8 @@
 ﻿Public Class formHome
     Dim db As New LibraryDataContext()
-    Public loggedInID As String = "M1001"
+    Public loggedInID As String = ""
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Timer1.Enabled = True
     End Sub
 
     Private Sub DarkThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiDarkTheme.Click
@@ -69,6 +69,70 @@
 
 
         Next
+        '=====================================================================================
+        'NewBook form
+        NewBook.BackColor = Color.DimGray
+        For Each ctrl In NewBook.Controls
+            If TypeOf ctrl Is Button Then
+                Dim btn = DirectCast(ctrl, Button)
+
+                btn.BackColor = Color.Black
+                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(22, 22, 22)
+            End If
+            If TypeOf ctrl Is Label Then
+                Dim lbl = DirectCast(ctrl, Label)
+                lbl.ForeColor = Color.White
+            End If
+        Next
+        '=====================================================================================
+        'ModifyBook form
+        ModifyBook.BackColor = Color.DimGray
+        For Each ctrl In ModifyBook.Controls
+            If TypeOf ctrl Is Button Then
+                Dim btn = DirectCast(ctrl, Button)
+
+                btn.BackColor = Color.Black
+                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(22, 22, 22)
+            End If
+            If TypeOf ctrl Is Label Then
+                Dim lbl = DirectCast(ctrl, Label)
+                lbl.ForeColor = Color.White
+            End If
+        Next
+        '=====================================================================================
+        'SearchBook form
+        SearchBook.BackColor = Color.DimGray
+        For Each ctrl In SearchBook.Controls
+            If TypeOf ctrl Is Button Then
+                Dim btn = DirectCast(ctrl, Button)
+
+                btn.BackColor = Color.Black
+                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(22, 22, 22)
+            End If
+            If TypeOf ctrl Is Label Then
+                Dim lbl = DirectCast(ctrl, Label)
+                lbl.ForeColor = Color.White
+            End If
+        Next
+        '=====================================================================================
+        'ReturnBook form
+        ReturnBook.BackColor = Color.DimGray
+        For Each ctrl In ReturnBook.Controls
+            If TypeOf ctrl Is Button Then
+                Dim btn = DirectCast(ctrl, Button)
+
+                btn.BackColor = Color.Black
+                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(22, 22, 22)
+            End If
+            If TypeOf ctrl Is Label Then
+                Dim lbl = DirectCast(ctrl, Label)
+                lbl.ForeColor = Color.White
+            End If
+            If TypeOf ctrl Is ListView Then
+                Dim lst = DirectCast(ctrl, ListView)
+                lst.BackColor = Color.DarkGray
+            End If
+        Next
     End Sub
 
     Private Sub BtnBookBorrow_Click(sender As Object, e As EventArgs) Handles btnBookBorrow.Click
@@ -105,5 +169,13 @@
 
     Private Sub tsmiGenerateReports_Click(sender As Object, e As EventArgs) Handles tsmiGenerateReports.Click
         GenerateReport.ShowDialog()
+    End Sub
+
+    Private Sub btnBookReturn_Click(sender As Object, e As EventArgs) Handles btnBookReturn.Click
+        ReturnBook.Show()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        lblDIsplayDateTime.Text = DateTime.Now.ToString("MMMM dd, yyyy   HH:MM:ss")
     End Sub
 End Class

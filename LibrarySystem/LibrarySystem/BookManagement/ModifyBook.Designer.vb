@@ -35,6 +35,7 @@ Partial Class ModifyBook
         Me.lblISBN = New System.Windows.Forms.Label()
         Me.cboCategory = New System.Windows.Forms.ComboBox()
         Me.btnRemove = New System.Windows.Forms.Button()
+        Me.btnReset = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnCancel
@@ -42,121 +43,141 @@ Partial Class ModifyBook
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnCancel.CausesValidation = False
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnCancel.Location = New System.Drawing.Point(221, 243)
+        Me.btnCancel.Location = New System.Drawing.Point(222, 403)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(79, 38)
-        Me.btnCancel.TabIndex = 31
+        Me.btnCancel.Size = New System.Drawing.Size(120, 35)
+        Me.btnCancel.TabIndex = 7
         Me.btnCancel.Text = "&Close"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
         'btnModify
         '
         Me.btnModify.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnModify.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnModify.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnModify.Location = New System.Drawing.Point(111, 243)
+        Me.btnModify.Location = New System.Drawing.Point(222, 348)
         Me.btnModify.Name = "btnModify"
-        Me.btnModify.Size = New System.Drawing.Size(84, 38)
-        Me.btnModify.TabIndex = 30
+        Me.btnModify.Size = New System.Drawing.Size(120, 35)
+        Me.btnModify.TabIndex = 6
         Me.btnModify.Text = "&Modify"
         Me.btnModify.UseVisualStyleBackColor = False
         '
         'txtAuthor
         '
-        Me.txtAuthor.Location = New System.Drawing.Point(171, 150)
+        Me.txtAuthor.Location = New System.Drawing.Point(155, 246)
         Me.txtAuthor.Name = "txtAuthor"
-        Me.txtAuthor.Size = New System.Drawing.Size(100, 22)
-        Me.txtAuthor.TabIndex = 28
+        Me.txtAuthor.Size = New System.Drawing.Size(162, 22)
+        Me.txtAuthor.TabIndex = 3
         '
         'txtBookDesc
         '
-        Me.txtBookDesc.Location = New System.Drawing.Point(171, 120)
+        Me.txtBookDesc.Location = New System.Drawing.Point(155, 127)
+        Me.txtBookDesc.Multiline = True
         Me.txtBookDesc.Name = "txtBookDesc"
-        Me.txtBookDesc.Size = New System.Drawing.Size(100, 22)
-        Me.txtBookDesc.TabIndex = 27
+        Me.txtBookDesc.Size = New System.Drawing.Size(162, 100)
+        Me.txtBookDesc.TabIndex = 2
         '
         'txtBookName
         '
-        Me.txtBookName.Location = New System.Drawing.Point(171, 84)
+        Me.txtBookName.Location = New System.Drawing.Point(155, 91)
         Me.txtBookName.Name = "txtBookName"
-        Me.txtBookName.Size = New System.Drawing.Size(100, 22)
-        Me.txtBookName.TabIndex = 26
+        Me.txtBookName.Size = New System.Drawing.Size(162, 22)
+        Me.txtBookName.TabIndex = 1
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(62, 185)
+        Me.Label5.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
+        Me.Label5.Location = New System.Drawing.Point(54, 274)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(73, 17)
-        Me.Label5.TabIndex = 20
+        Me.Label5.Size = New System.Drawing.Size(95, 24)
+        Me.Label5.TabIndex = 0
         Me.Label5.Text = "Category :"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(79, 150)
+        Me.Label6.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
+        Me.Label6.Location = New System.Drawing.Point(71, 239)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(58, 17)
-        Me.Label6.TabIndex = 21
+        Me.Label6.Size = New System.Drawing.Size(75, 24)
+        Me.Label6.TabIndex = 0
         Me.Label6.Text = "Author :"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(50, 120)
+        Me.Label7.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
+        Me.Label7.Location = New System.Drawing.Point(37, 120)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(87, 17)
-        Me.Label7.TabIndex = 22
+        Me.Label7.Size = New System.Drawing.Size(112, 24)
+        Me.Label7.TabIndex = 0
         Me.Label7.Text = "Description :"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
         Me.Label8.Location = New System.Drawing.Point(92, 84)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(43, 17)
-        Me.Label8.TabIndex = 23
+        Me.Label8.Size = New System.Drawing.Size(57, 24)
+        Me.Label8.TabIndex = 0
         Me.Label8.Text = "Title :"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
         Me.Label9.Location = New System.Drawing.Point(88, 46)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(47, 17)
-        Me.Label9.TabIndex = 24
+        Me.Label9.Size = New System.Drawing.Size(63, 24)
+        Me.Label9.TabIndex = 0
         Me.Label9.Text = "ISBN :"
         '
         'lblISBN
         '
-        Me.lblISBN.AutoSize = True
         Me.lblISBN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblISBN.Location = New System.Drawing.Point(171, 46)
+        Me.lblISBN.Location = New System.Drawing.Point(155, 52)
         Me.lblISBN.Name = "lblISBN"
-        Me.lblISBN.Size = New System.Drawing.Size(2, 19)
-        Me.lblISBN.TabIndex = 32
+        Me.lblISBN.Size = New System.Drawing.Size(162, 27)
+        Me.lblISBN.TabIndex = 0
         '
         'cboCategory
         '
         Me.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCategory.FormattingEnabled = True
         Me.cboCategory.Items.AddRange(New Object() {"All", "Mystery", "Historical fiction", "Horror"})
-        Me.cboCategory.Location = New System.Drawing.Point(171, 185)
+        Me.cboCategory.Location = New System.Drawing.Point(155, 281)
         Me.cboCategory.Name = "cboCategory"
-        Me.cboCategory.Size = New System.Drawing.Size(100, 24)
-        Me.cboCategory.TabIndex = 34
+        Me.cboCategory.Size = New System.Drawing.Size(162, 24)
+        Me.cboCategory.TabIndex = 4
         '
         'btnRemove
         '
         Me.btnRemove.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnRemove.CausesValidation = False
+        Me.btnRemove.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnRemove.Location = New System.Drawing.Point(12, 243)
+        Me.btnRemove.Location = New System.Drawing.Point(58, 348)
         Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.Size = New System.Drawing.Size(84, 38)
-        Me.btnRemove.TabIndex = 35
+        Me.btnRemove.Size = New System.Drawing.Size(120, 35)
+        Me.btnRemove.TabIndex = 5
         Me.btnRemove.Text = "&Remove"
         Me.btnRemove.UseVisualStyleBackColor = False
+        '
+        'btnReset
+        '
+        Me.btnReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnReset.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
+        Me.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnReset.Location = New System.Drawing.Point(58, 403)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(120, 35)
+        Me.btnReset.TabIndex = 10
+        Me.btnReset.Text = "&Reset"
+        Me.btnReset.UseVisualStyleBackColor = False
         '
         'ModifyBook
         '
@@ -164,7 +185,8 @@ Partial Class ModifyBook
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(330, 323)
+        Me.ClientSize = New System.Drawing.Size(405, 450)
+        Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.cboCategory)
         Me.Controls.Add(Me.lblISBN)
@@ -199,4 +221,5 @@ Partial Class ModifyBook
     Friend WithEvents lblISBN As Label
     Friend WithEvents cboCategory As ComboBox
     Friend WithEvents btnRemove As Button
+    Friend WithEvents btnReset As Button
 End Class

@@ -22,388 +22,295 @@ Partial Class UserProfile
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnLogout = New System.Windows.Forms.Button()
-        Me.btnAddNewBook = New System.Windows.Forms.Button()
-        Me.btnBookReturn = New System.Windows.Forms.Button()
-        Me.btnSearchBook = New System.Windows.Forms.Button()
-        Me.btnBookBorrow = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.menuUser = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiViewProfile = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiChangePassword = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuBookManagement = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiAddBooks = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiSearchBook = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiModifyBooks = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiRemoveBooks = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuReports = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiViewReports = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiGenerateReports = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuSetting = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiTheme = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiDefaultTheme = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiDarkTheme = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuHelp = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiAbout = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiUse = New System.Windows.Forms.ToolStripMenuItem()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.cboOccupation = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblStudentID = New System.Windows.Forms.Label()
+        Me.lbl09 = New System.Windows.Forms.Label()
+        Me.lblUserId = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
+        Me.lblGender = New System.Windows.Forms.Label()
+        Me.lblDob = New System.Windows.Forms.Label()
+        Me.lblIc = New System.Windows.Forms.Label()
+        Me.btnResetPassword = New System.Windows.Forms.Button()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.chkShowPass = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
-        'PictureBox1
+        'Label7
         '
-        Me.PictureBox1.Image = Global.LibrarySystem.My.Resources.Resources.pngguru_com__5_
-        Me.PictureBox1.Location = New System.Drawing.Point(96, 25)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(171, 226)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(29, 10)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(63, 17)
+        Me.Label7.TabIndex = 59
+        Me.Label7.Text = "User ID :"
         '
-        'btnLogout
+        'Label6
         '
-        Me.btnLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btnLogout.FlatAppearance.BorderSize = 0
-        Me.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(179, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogout.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.ForeColor = System.Drawing.Color.White
-        Me.btnLogout.Location = New System.Drawing.Point(0, 577)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(356, 80)
-        Me.btnLogout.TabIndex = 5
-        Me.btnLogout.Text = "Log &out"
-        Me.btnLogout.UseVisualStyleBackColor = False
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(31, 98)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(77, 17)
+        Me.Label6.TabIndex = 57
+        Me.Label6.Text = "Password :"
         '
-        'btnAddNewBook
+        'btnEdit
         '
-        Me.btnAddNewBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btnAddNewBook.FlatAppearance.BorderSize = 0
-        Me.btnAddNewBook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnAddNewBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.btnAddNewBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddNewBook.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddNewBook.ForeColor = System.Drawing.Color.White
-        Me.btnAddNewBook.Location = New System.Drawing.Point(0, 497)
-        Me.btnAddNewBook.Name = "btnAddNewBook"
-        Me.btnAddNewBook.Size = New System.Drawing.Size(356, 80)
-        Me.btnAddNewBook.TabIndex = 4
-        Me.btnAddNewBook.Text = "&Add Book"
-        Me.btnAddNewBook.UseVisualStyleBackColor = False
+        Me.btnEdit.Location = New System.Drawing.Point(37, 415)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(100, 28)
+        Me.btnEdit.TabIndex = 56
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.UseVisualStyleBackColor = True
         '
-        'btnBookReturn
+        'btnCancel
         '
-        Me.btnBookReturn.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btnBookReturn.FlatAppearance.BorderSize = 0
-        Me.btnBookReturn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnBookReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.btnBookReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBookReturn.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBookReturn.ForeColor = System.Drawing.Color.White
-        Me.btnBookReturn.Location = New System.Drawing.Point(0, 337)
-        Me.btnBookReturn.Name = "btnBookReturn"
-        Me.btnBookReturn.Size = New System.Drawing.Size(356, 80)
-        Me.btnBookReturn.TabIndex = 3
-        Me.btnBookReturn.Text = "Book &Return"
-        Me.btnBookReturn.UseVisualStyleBackColor = False
+        Me.btnCancel.CausesValidation = False
+        Me.btnCancel.Location = New System.Drawing.Point(166, 415)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(100, 28)
+        Me.btnCancel.TabIndex = 55
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'btnSearchBook
+        'cboOccupation
         '
-        Me.btnSearchBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btnSearchBook.FlatAppearance.BorderSize = 0
-        Me.btnSearchBook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnSearchBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.btnSearchBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearchBook.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchBook.ForeColor = System.Drawing.Color.White
-        Me.btnSearchBook.Location = New System.Drawing.Point(0, 417)
-        Me.btnSearchBook.Name = "btnSearchBook"
-        Me.btnSearchBook.Size = New System.Drawing.Size(356, 80)
-        Me.btnSearchBook.TabIndex = 2
-        Me.btnSearchBook.Text = "&Search Book"
-        Me.btnSearchBook.UseVisualStyleBackColor = False
+        Me.cboOccupation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboOccupation.FormattingEnabled = True
+        Me.cboOccupation.Items.AddRange(New Object() {"Student", "Work"})
+        Me.cboOccupation.Location = New System.Drawing.Point(135, 327)
+        Me.cboOccupation.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboOccupation.Name = "cboOccupation"
+        Me.cboOccupation.Size = New System.Drawing.Size(111, 24)
+        Me.cboOccupation.TabIndex = 47
         '
-        'btnBookBorrow
+        'Label5
         '
-        Me.btnBookBorrow.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btnBookBorrow.FlatAppearance.BorderSize = 0
-        Me.btnBookBorrow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnBookBorrow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.btnBookBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBookBorrow.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBookBorrow.ForeColor = System.Drawing.Color.White
-        Me.btnBookBorrow.Location = New System.Drawing.Point(0, 257)
-        Me.btnBookBorrow.Name = "btnBookBorrow"
-        Me.btnBookBorrow.Size = New System.Drawing.Size(356, 80)
-        Me.btnBookBorrow.TabIndex = 1
-        Me.btnBookBorrow.Text = "Book &Borrow"
-        Me.btnBookBorrow.UseVisualStyleBackColor = False
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(31, 331)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(88, 17)
+        Me.Label5.TabIndex = 46
+        Me.Label5.Text = "Occupation :"
         '
-        'Panel1
+        'Label4
         '
-        Me.Panel1.AutoSize = True
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.btnLogout)
-        Me.Panel1.Controls.Add(Me.btnAddNewBook)
-        Me.Panel1.Controls.Add(Me.btnBookReturn)
-        Me.Panel1.Controls.Add(Me.btnSearchBook)
-        Me.Panel1.Controls.Add(Me.btnBookBorrow)
-        Me.Panel1.ForeColor = System.Drawing.Color.White
-        Me.Panel1.Location = New System.Drawing.Point(0, 175)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(359, 1000)
-        Me.Panel1.TabIndex = 3
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(31, 225)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(68, 17)
+        Me.Label4.TabIndex = 45
+        Me.Label4.Text = "Address :"
         '
-        'MenuStrip1
+        'Label3
         '
-        Me.MenuStrip1.AutoSize = False
-        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuUser, Me.menuBookManagement, Me.menuReports, Me.menuSetting, Me.menuHelp})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(2382, 50)
-        Me.MenuStrip1.TabIndex = 2
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(223, 144)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(95, 17)
+        Me.Label3.TabIndex = 44
+        Me.Label3.Text = "Date of Birth :"
         '
-        'menuUser
+        'Label2
         '
-        Me.menuUser.BackColor = System.Drawing.Color.Transparent
-        Me.menuUser.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiViewProfile, Me.tsmiChangePassword})
-        Me.menuUser.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.menuUser.ForeColor = System.Drawing.Color.White
-        Me.menuUser.Name = "menuUser"
-        Me.menuUser.Padding = New System.Windows.Forms.Padding(20, 0, 20, 0)
-        Me.menuUser.Size = New System.Drawing.Size(92, 48)
-        Me.menuUser.Text = "&User"
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(31, 144)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(64, 17)
+        Me.Label2.TabIndex = 43
+        Me.Label2.Text = "Gender :"
         '
-        'tsmiViewProfile
+        'Label1
         '
-        Me.tsmiViewProfile.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiViewProfile.ForeColor = System.Drawing.Color.White
-        Me.tsmiViewProfile.Name = "tsmiViewProfile"
-        Me.tsmiViewProfile.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiViewProfile.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
-        Me.tsmiViewProfile.Size = New System.Drawing.Size(352, 36)
-        Me.tsmiViewProfile.Text = "View Profile"
-        Me.tsmiViewProfile.ToolTipText = "View your profile details"
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(31, 289)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(106, 17)
+        Me.Label1.TabIndex = 42
+        Me.Label1.Text = "Email Address :"
         '
-        'tsmiChangePassword
+        'lblStudentID
         '
-        Me.tsmiChangePassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiChangePassword.ForeColor = System.Drawing.Color.White
-        Me.tsmiChangePassword.Name = "tsmiChangePassword"
-        Me.tsmiChangePassword.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiChangePassword.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.tsmiChangePassword.Size = New System.Drawing.Size(352, 36)
-        Me.tsmiChangePassword.Text = "Change Password"
-        Me.tsmiChangePassword.ToolTipText = "Change your passwords"
+        Me.lblStudentID.AutoSize = True
+        Me.lblStudentID.Location = New System.Drawing.Point(31, 184)
+        Me.lblStudentID.Name = "lblStudentID"
+        Me.lblStudentID.Size = New System.Drawing.Size(117, 17)
+        Me.lblStudentID.TabIndex = 41
+        Me.lblStudentID.Text = "Identity Card No :"
         '
-        'menuBookManagement
+        'lbl09
         '
-        Me.menuBookManagement.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiAddBooks, Me.tsmiSearchBook, Me.tsmiModifyBooks, Me.tsmiRemoveBooks})
-        Me.menuBookManagement.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.menuBookManagement.ForeColor = System.Drawing.Color.White
-        Me.menuBookManagement.Name = "menuBookManagement"
-        Me.menuBookManagement.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.menuBookManagement.Size = New System.Drawing.Size(165, 48)
-        Me.menuBookManagement.Text = "Book &Management"
+        Me.lbl09.AutoSize = True
+        Me.lbl09.Location = New System.Drawing.Point(29, 53)
+        Me.lbl09.Name = "lbl09"
+        Me.lbl09.Size = New System.Drawing.Size(131, 17)
+        Me.lbl09.TabIndex = 40
+        Me.lbl09.Text = "Name of Applicant :"
         '
-        'tsmiAddBooks
+        'lblUserId
         '
-        Me.tsmiAddBooks.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiAddBooks.ForeColor = System.Drawing.Color.White
-        Me.tsmiAddBooks.Name = "tsmiAddBooks"
-        Me.tsmiAddBooks.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiAddBooks.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.tsmiAddBooks.Size = New System.Drawing.Size(257, 36)
-        Me.tsmiAddBooks.Text = "Add New Books"
-        Me.tsmiAddBooks.ToolTipText = "Add new books to the library"
+        Me.lblUserId.AutoSize = True
+        Me.lblUserId.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblUserId.Location = New System.Drawing.Point(98, 10)
+        Me.lblUserId.MinimumSize = New System.Drawing.Size(100, 0)
+        Me.lblUserId.Name = "lblUserId"
+        Me.lblUserId.Size = New System.Drawing.Size(100, 19)
+        Me.lblUserId.TabIndex = 60
         '
-        'tsmiSearchBook
+        'lblName
         '
-        Me.tsmiSearchBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiSearchBook.ForeColor = System.Drawing.Color.White
-        Me.tsmiSearchBook.Name = "tsmiSearchBook"
-        Me.tsmiSearchBook.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiSearchBook.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.tsmiSearchBook.Size = New System.Drawing.Size(257, 36)
-        Me.tsmiSearchBook.Text = "Search Books"
-        Me.tsmiSearchBook.ToolTipText = "Search for books"
+        Me.lblName.AutoSize = True
+        Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblName.Location = New System.Drawing.Point(166, 53)
+        Me.lblName.MinimumSize = New System.Drawing.Size(100, 0)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(100, 19)
+        Me.lblName.TabIndex = 66
         '
-        'tsmiModifyBooks
+        'lblGender
         '
-        Me.tsmiModifyBooks.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiModifyBooks.ForeColor = System.Drawing.Color.White
-        Me.tsmiModifyBooks.Name = "tsmiModifyBooks"
-        Me.tsmiModifyBooks.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiModifyBooks.ShortcutKeys = System.Windows.Forms.Keys.F3
-        Me.tsmiModifyBooks.Size = New System.Drawing.Size(257, 36)
-        Me.tsmiModifyBooks.Text = "Modify Books"
-        Me.tsmiModifyBooks.ToolTipText = "Update the book details"
+        Me.lblGender.AutoSize = True
+        Me.lblGender.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblGender.Location = New System.Drawing.Point(102, 144)
+        Me.lblGender.MinimumSize = New System.Drawing.Size(100, 0)
+        Me.lblGender.Name = "lblGender"
+        Me.lblGender.Size = New System.Drawing.Size(100, 19)
+        Me.lblGender.TabIndex = 68
         '
-        'tsmiRemoveBooks
+        'lblDob
         '
-        Me.tsmiRemoveBooks.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiRemoveBooks.ForeColor = System.Drawing.Color.White
-        Me.tsmiRemoveBooks.Name = "tsmiRemoveBooks"
-        Me.tsmiRemoveBooks.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiRemoveBooks.ShortcutKeys = System.Windows.Forms.Keys.F4
-        Me.tsmiRemoveBooks.Size = New System.Drawing.Size(257, 36)
-        Me.tsmiRemoveBooks.Text = "Remove Books"
-        Me.tsmiRemoveBooks.ToolTipText = "Remove the books "
+        Me.lblDob.AutoSize = True
+        Me.lblDob.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblDob.Location = New System.Drawing.Point(325, 144)
+        Me.lblDob.MinimumSize = New System.Drawing.Size(100, 0)
+        Me.lblDob.Name = "lblDob"
+        Me.lblDob.Size = New System.Drawing.Size(100, 19)
+        Me.lblDob.TabIndex = 69
         '
-        'menuReports
+        'lblIc
         '
-        Me.menuReports.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiViewReports, Me.tsmiGenerateReports})
-        Me.menuReports.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.menuReports.ForeColor = System.Drawing.Color.White
-        Me.menuReports.Name = "menuReports"
-        Me.menuReports.Padding = New System.Windows.Forms.Padding(20, 0, 20, 0)
-        Me.menuReports.Size = New System.Drawing.Size(108, 48)
-        Me.menuReports.Text = "&Report"
+        Me.lblIc.AutoSize = True
+        Me.lblIc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblIc.Location = New System.Drawing.Point(154, 184)
+        Me.lblIc.MinimumSize = New System.Drawing.Size(100, 0)
+        Me.lblIc.Name = "lblIc"
+        Me.lblIc.Size = New System.Drawing.Size(100, 19)
+        Me.lblIc.TabIndex = 70
         '
-        'tsmiViewReports
+        'btnResetPassword
         '
-        Me.tsmiViewReports.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiViewReports.ForeColor = System.Drawing.Color.White
-        Me.tsmiViewReports.Name = "tsmiViewReports"
-        Me.tsmiViewReports.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiViewReports.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.tsmiViewReports.Size = New System.Drawing.Size(349, 36)
-        Me.tsmiViewReports.Text = "View Reports"
-        Me.tsmiViewReports.ToolTipText = "View reports"
+        Me.btnResetPassword.Location = New System.Drawing.Point(295, 415)
+        Me.btnResetPassword.Name = "btnResetPassword"
+        Me.btnResetPassword.Size = New System.Drawing.Size(155, 28)
+        Me.btnResetPassword.TabIndex = 71
+        Me.btnResetPassword.Text = "Reset Password"
+        Me.btnResetPassword.UseVisualStyleBackColor = True
         '
-        'tsmiGenerateReports
+        'txtAddress
         '
-        Me.tsmiGenerateReports.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiGenerateReports.ForeColor = System.Drawing.Color.White
-        Me.tsmiGenerateReports.Name = "tsmiGenerateReports"
-        Me.tsmiGenerateReports.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiGenerateReports.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.G), System.Windows.Forms.Keys)
-        Me.tsmiGenerateReports.Size = New System.Drawing.Size(349, 36)
-        Me.tsmiGenerateReports.Text = "Generate Reports"
-        Me.tsmiGenerateReports.ToolTipText = "Generate reports"
+        Me.txtAddress.Location = New System.Drawing.Point(106, 222)
+        Me.txtAddress.Multiline = True
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(334, 49)
+        Me.txtAddress.TabIndex = 72
         '
-        'menuSetting
+        'txtEmail
         '
-        Me.menuSetting.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiTheme})
-        Me.menuSetting.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.menuSetting.ForeColor = System.Drawing.Color.White
-        Me.menuSetting.Name = "menuSetting"
-        Me.menuSetting.Size = New System.Drawing.Size(80, 48)
-        Me.menuSetting.Text = "&Setting"
+        Me.txtEmail.Location = New System.Drawing.Point(144, 286)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(158, 22)
+        Me.txtEmail.TabIndex = 73
         '
-        'tsmiTheme
+        'txtPassword
         '
-        Me.tsmiTheme.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiTheme.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiDefaultTheme, Me.tsmiDarkTheme})
-        Me.tsmiTheme.ForeColor = System.Drawing.Color.White
-        Me.tsmiTheme.Name = "tsmiTheme"
-        Me.tsmiTheme.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiTheme.Size = New System.Drawing.Size(150, 36)
-        Me.tsmiTheme.Text = "Theme"
+        Me.txtPassword.Location = New System.Drawing.Point(115, 95)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(100, 22)
+        Me.txtPassword.TabIndex = 74
         '
-        'tsmiDefaultTheme
+        'chkShowPass
         '
-        Me.tsmiDefaultTheme.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiDefaultTheme.ForeColor = System.Drawing.Color.White
-        Me.tsmiDefaultTheme.Name = "tsmiDefaultTheme"
-        Me.tsmiDefaultTheme.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiDefaultTheme.Size = New System.Drawing.Size(214, 36)
-        Me.tsmiDefaultTheme.Text = "Default Theme"
-        '
-        'tsmiDarkTheme
-        '
-        Me.tsmiDarkTheme.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiDarkTheme.ForeColor = System.Drawing.Color.White
-        Me.tsmiDarkTheme.Name = "tsmiDarkTheme"
-        Me.tsmiDarkTheme.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiDarkTheme.Size = New System.Drawing.Size(214, 36)
-        Me.tsmiDarkTheme.Text = "Dark Theme"
-        '
-        'menuHelp
-        '
-        Me.menuHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiAbout, Me.tsmiUse})
-        Me.menuHelp.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.menuHelp.ForeColor = System.Drawing.Color.White
-        Me.menuHelp.Name = "menuHelp"
-        Me.menuHelp.Padding = New System.Windows.Forms.Padding(20, 0, 20, 0)
-        Me.menuHelp.Size = New System.Drawing.Size(91, 48)
-        Me.menuHelp.Text = "&Help"
-        '
-        'tsmiAbout
-        '
-        Me.tsmiAbout.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiAbout.ForeColor = System.Drawing.Color.White
-        Me.tsmiAbout.Name = "tsmiAbout"
-        Me.tsmiAbout.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiAbout.Size = New System.Drawing.Size(188, 36)
-        Me.tsmiAbout.Text = "About"
-        Me.tsmiAbout.ToolTipText = "Know more about us"
-        '
-        'tsmiUse
-        '
-        Me.tsmiUse.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiUse.ForeColor = System.Drawing.Color.White
-        Me.tsmiUse.Name = "tsmiUse"
-        Me.tsmiUse.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiUse.Size = New System.Drawing.Size(188, 36)
-        Me.tsmiUse.Text = "How to use"
-        Me.tsmiUse.ToolTipText = "Guide on how to use the system"
+        Me.chkShowPass.AutoSize = True
+        Me.chkShowPass.Location = New System.Drawing.Point(242, 94)
+        Me.chkShowPass.Name = "chkShowPass"
+        Me.chkShowPass.Size = New System.Drawing.Size(129, 21)
+        Me.chkShowPass.TabIndex = 75
+        Me.chkShowPass.Text = "Show Password"
+        Me.chkShowPass.UseVisualStyleBackColor = True
         '
         'UserProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2382, 1303)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MinimumSize = New System.Drawing.Size(1080, 720)
+        Me.ClientSize = New System.Drawing.Size(587, 464)
+        Me.Controls.Add(Me.chkShowPass)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.txtEmail)
+        Me.Controls.Add(Me.txtAddress)
+        Me.Controls.Add(Me.btnResetPassword)
+        Me.Controls.Add(Me.lblIc)
+        Me.Controls.Add(Me.lblDob)
+        Me.Controls.Add(Me.lblGender)
+        Me.Controls.Add(Me.lblName)
+        Me.Controls.Add(Me.lblUserId)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.cboOccupation)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblStudentID)
+        Me.Controls.Add(Me.lbl09)
         Me.Name = "UserProfile"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UserProfile"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnLogout As Button
-    Friend WithEvents btnAddNewBook As Button
-    Friend WithEvents btnBookReturn As Button
-    Friend WithEvents btnSearchBook As Button
-    Friend WithEvents btnBookBorrow As Button
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents menuUser As ToolStripMenuItem
-    Friend WithEvents tsmiViewProfile As ToolStripMenuItem
-    Friend WithEvents tsmiChangePassword As ToolStripMenuItem
-    Friend WithEvents menuBookManagement As ToolStripMenuItem
-    Friend WithEvents tsmiAddBooks As ToolStripMenuItem
-    Friend WithEvents tsmiSearchBook As ToolStripMenuItem
-    Friend WithEvents tsmiModifyBooks As ToolStripMenuItem
-    Friend WithEvents tsmiRemoveBooks As ToolStripMenuItem
-    Friend WithEvents menuReports As ToolStripMenuItem
-    Friend WithEvents tsmiViewReports As ToolStripMenuItem
-    Friend WithEvents tsmiGenerateReports As ToolStripMenuItem
-    Friend WithEvents menuSetting As ToolStripMenuItem
-    Friend WithEvents tsmiTheme As ToolStripMenuItem
-    Friend WithEvents tsmiDefaultTheme As ToolStripMenuItem
-    Friend WithEvents tsmiDarkTheme As ToolStripMenuItem
-    Friend WithEvents menuHelp As ToolStripMenuItem
-    Friend WithEvents tsmiAbout As ToolStripMenuItem
-    Friend WithEvents tsmiUse As ToolStripMenuItem
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents btnEdit As Button
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents cboOccupation As ComboBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblStudentID As Label
+    Friend WithEvents lbl09 As Label
+    Friend WithEvents lblUserId As Label
+    Friend WithEvents lblName As Label
+    Friend WithEvents lblGender As Label
+    Friend WithEvents lblDob As Label
+    Friend WithEvents lblIc As Label
+    Friend WithEvents btnResetPassword As Button
+    Friend WithEvents txtAddress As TextBox
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents chkShowPass As CheckBox
 End Class

@@ -43,7 +43,9 @@
         db.Users.InsertOnSubmit(user)
         db.SubmitChanges()
 
-        MessageBox.Show("User [" + txtName.Text + "] Inserted")
+        MessageBox.Show("User " + txtName.Text + " Registered")
+        formHome.ShowDialog()
+        Me.Close()
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
