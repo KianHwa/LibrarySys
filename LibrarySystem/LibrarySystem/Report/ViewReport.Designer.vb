@@ -34,7 +34,7 @@ Partial Class ViewReport
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cboYears = New System.Windows.Forms.ComboBox()
-        Me.cboDay = New System.Windows.Forms.ComboBox()
+        Me.cboDays = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboMonths = New System.Windows.Forms.ComboBox()
         Me.btnReset = New System.Windows.Forms.Button()
@@ -43,6 +43,10 @@ Partial Class ViewReport
         Me.radDaily = New System.Windows.Forms.RadioButton()
         Me.radMonthly = New System.Windows.Forms.RadioButton()
         Me.radYearly = New System.Windows.Forms.RadioButton()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -50,9 +54,9 @@ Partial Class ViewReport
         'btnPrint
         '
         Me.btnPrint.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrint.Location = New System.Drawing.Point(15, 235)
+        Me.btnPrint.Location = New System.Drawing.Point(19, 248)
         Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(100, 60)
+        Me.btnPrint.Size = New System.Drawing.Size(80, 40)
         Me.btnPrint.TabIndex = 1
         Me.btnPrint.Text = "&Print"
         Me.btnPrint.UseVisualStyleBackColor = True
@@ -61,17 +65,17 @@ Partial Class ViewReport
         '
         Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnExit.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Location = New System.Drawing.Point(133, 313)
+        Me.btnExit.Location = New System.Drawing.Point(22, 310)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(100, 60)
+        Me.btnExit.Size = New System.Drawing.Size(195, 40)
         Me.btnExit.TabIndex = 2
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'lblCount
         '
-        Me.lblCount.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCount.Location = New System.Drawing.Point(30, 410)
+        Me.lblCount.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCount.Location = New System.Drawing.Point(21, 381)
         Me.lblCount.Name = "lblCount"
         Me.lblCount.Size = New System.Drawing.Size(120, 40)
         Me.lblCount.TabIndex = 3
@@ -98,23 +102,23 @@ Partial Class ViewReport
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.cboYears)
-        Me.GroupBox1.Controls.Add(Me.cboDay)
-        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.cboDays)
         Me.GroupBox1.Controls.Add(Me.cboMonths)
         Me.GroupBox1.Controls.Add(Me.btnReset)
+        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.btnExit)
         Me.GroupBox1.Controls.Add(Me.btnPrint)
         Me.GroupBox1.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(571, 23)
+        Me.GroupBox1.Location = New System.Drawing.Point(578, 54)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(249, 395)
+        Me.GroupBox1.Size = New System.Drawing.Size(249, 379)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         '
         'radPortrait
         '
         Me.radPortrait.AutoSize = True
-        Me.radPortrait.Location = New System.Drawing.Point(121, 241)
+        Me.radPortrait.Location = New System.Drawing.Point(17, 205)
         Me.radPortrait.Name = "radPortrait"
         Me.radPortrait.Size = New System.Drawing.Size(82, 26)
         Me.radPortrait.TabIndex = 13
@@ -125,7 +129,7 @@ Partial Class ViewReport
         'radLanscape
         '
         Me.radLanscape.AutoSize = True
-        Me.radLanscape.Location = New System.Drawing.Point(121, 274)
+        Me.radLanscape.Location = New System.Drawing.Point(116, 205)
         Me.radLanscape.Name = "radLanscape"
         Me.radLanscape.Size = New System.Drawing.Size(110, 26)
         Me.radLanscape.TabIndex = 12
@@ -136,7 +140,7 @@ Partial Class ViewReport
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 94)
+        Me.Label2.Location = New System.Drawing.Point(15, 86)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 22)
         Me.Label2.TabIndex = 10
@@ -145,7 +149,7 @@ Partial Class ViewReport
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 165)
+        Me.Label3.Location = New System.Drawing.Point(18, 144)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(46, 22)
         Me.Label3.TabIndex = 11
@@ -156,24 +160,24 @@ Partial Class ViewReport
         Me.cboYears.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboYears.FormattingEnabled = True
         Me.cboYears.Items.AddRange(New Object() {"2020", "2021", "2022", "2023", "2024"})
-        Me.cboYears.Location = New System.Drawing.Point(15, 56)
+        Me.cboYears.Location = New System.Drawing.Point(19, 53)
         Me.cboYears.Name = "cboYears"
-        Me.cboYears.Size = New System.Drawing.Size(180, 30)
+        Me.cboYears.Size = New System.Drawing.Size(201, 30)
         Me.cboYears.TabIndex = 5
         '
-        'cboDay
+        'cboDays
         '
-        Me.cboDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboDay.FormattingEnabled = True
-        Me.cboDay.Location = New System.Drawing.Point(15, 196)
-        Me.cboDay.Name = "cboDay"
-        Me.cboDay.Size = New System.Drawing.Size(180, 30)
-        Me.cboDay.TabIndex = 6
+        Me.cboDays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDays.FormattingEnabled = True
+        Me.cboDays.Location = New System.Drawing.Point(19, 169)
+        Me.cboDays.Name = "cboDays"
+        Me.cboDays.Size = New System.Drawing.Size(198, 30)
+        Me.cboDays.TabIndex = 6
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 24)
+        Me.Label1.Location = New System.Drawing.Point(18, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(52, 22)
         Me.Label1.TabIndex = 9
@@ -184,17 +188,17 @@ Partial Class ViewReport
         Me.cboMonths.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboMonths.FormattingEnabled = True
         Me.cboMonths.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "Oktober", "November", "Desember"})
-        Me.cboMonths.Location = New System.Drawing.Point(15, 126)
+        Me.cboMonths.Location = New System.Drawing.Point(19, 111)
         Me.cboMonths.Name = "cboMonths"
-        Me.cboMonths.Size = New System.Drawing.Size(180, 30)
+        Me.cboMonths.Size = New System.Drawing.Size(198, 30)
         Me.cboMonths.TabIndex = 7
         '
         'btnReset
         '
         Me.btnReset.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReset.Location = New System.Drawing.Point(15, 313)
+        Me.btnReset.Location = New System.Drawing.Point(137, 248)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(100, 60)
+        Me.btnReset.Size = New System.Drawing.Size(80, 40)
         Me.btnReset.TabIndex = 5
         Me.btnReset.Text = "&Reset"
         Me.btnReset.UseVisualStyleBackColor = True
@@ -204,9 +208,9 @@ Partial Class ViewReport
         Me.lstView.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstView.FormattingEnabled = True
         Me.lstView.ItemHeight = 22
-        Me.lstView.Location = New System.Drawing.Point(34, 106)
+        Me.lstView.Location = New System.Drawing.Point(25, 87)
         Me.lstView.Name = "lstView"
-        Me.lstView.Size = New System.Drawing.Size(501, 290)
+        Me.lstView.Size = New System.Drawing.Size(516, 268)
         Me.lstView.TabIndex = 6
         '
         'GroupBox2
@@ -214,19 +218,19 @@ Partial Class ViewReport
         Me.GroupBox2.Controls.Add(Me.radDaily)
         Me.GroupBox2.Controls.Add(Me.radMonthly)
         Me.GroupBox2.Controls.Add(Me.radYearly)
-        Me.GroupBox2.Location = New System.Drawing.Point(34, 23)
+        Me.GroupBox2.Location = New System.Drawing.Point(180, 368)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(501, 65)
+        Me.GroupBox2.Size = New System.Drawing.Size(361, 65)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         '
         'radDaily
         '
         Me.radDaily.AutoSize = True
-        Me.radDaily.Font = New System.Drawing.Font("High Tower Text", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radDaily.Location = New System.Drawing.Point(345, 17)
+        Me.radDaily.Font = New System.Drawing.Font("High Tower Text", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radDaily.Location = New System.Drawing.Point(271, 21)
         Me.radDaily.Name = "radDaily"
-        Me.radDaily.Size = New System.Drawing.Size(104, 38)
+        Me.radDaily.Size = New System.Drawing.Size(84, 32)
         Me.radDaily.TabIndex = 2
         Me.radDaily.TabStop = True
         Me.radDaily.Text = "Daily"
@@ -235,10 +239,10 @@ Partial Class ViewReport
         'radMonthly
         '
         Me.radMonthly.AutoSize = True
-        Me.radMonthly.Font = New System.Drawing.Font("High Tower Text", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radMonthly.Location = New System.Drawing.Point(193, 16)
+        Me.radMonthly.Font = New System.Drawing.Font("High Tower Text", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radMonthly.Location = New System.Drawing.Point(131, 21)
         Me.radMonthly.Name = "radMonthly"
-        Me.radMonthly.Size = New System.Drawing.Size(146, 38)
+        Me.radMonthly.Size = New System.Drawing.Size(116, 32)
         Me.radMonthly.TabIndex = 1
         Me.radMonthly.TabStop = True
         Me.radMonthly.Text = "Monthly"
@@ -247,21 +251,69 @@ Partial Class ViewReport
         'radYearly
         '
         Me.radYearly.AutoSize = True
-        Me.radYearly.Font = New System.Drawing.Font("High Tower Text", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radYearly.Location = New System.Drawing.Point(69, 16)
+        Me.radYearly.Font = New System.Drawing.Font("High Tower Text", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radYearly.Location = New System.Drawing.Point(6, 21)
         Me.radYearly.Name = "radYearly"
-        Me.radYearly.Size = New System.Drawing.Size(118, 38)
+        Me.radYearly.Size = New System.Drawing.Size(97, 32)
         Me.radYearly.TabIndex = 0
         Me.radYearly.TabStop = True
         Me.radYearly.Text = "Yearly"
         Me.radYearly.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(165, 20)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(260, 30)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "- Book Borrow Report -"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label5.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(25, 61)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(137, 27)
+        Me.Label5.TabIndex = 15
+        Me.Label5.Text = "Borrow Date"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label6
+        '
+        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label6.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(161, 61)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(130, 27)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Member ID"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label7
+        '
+        Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label7.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(289, 61)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(252, 27)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "Book Name"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'ViewReport
         '
+        Me.AcceptButton = Me.btnPrint
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnExit
         Me.ClientSize = New System.Drawing.Size(848, 459)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.lstView)
         Me.Controls.Add(Me.GroupBox1)
@@ -287,7 +339,7 @@ Partial Class ViewReport
     Friend WithEvents BookDescDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AuthorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents cboDay As ComboBox
+    Friend WithEvents cboDays As ComboBox
     Friend WithEvents cboMonths As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
@@ -299,4 +351,8 @@ Partial Class ViewReport
     Friend WithEvents radDaily As RadioButton
     Friend WithEvents radMonthly As RadioButton
     Friend WithEvents radYearly As RadioButton
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
 End Class

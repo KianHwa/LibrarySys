@@ -4,14 +4,11 @@ Imports System.Text
 Public Class ViewReport
 
     Private Sub ViewReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim db As New LibraryDataContext()
+        Reset()
         cboYears.Enabled = False
         cboMonths.Enabled = False
-        cboDay.Enabled = False
+        cboDays.Enabled = False
         radPortrait.Checked = True
-        'If cboTime.SelectedIndex = 0 Then
-        '    Dim rs = From s In db.Customers
-        'End If
     End Sub
 
     Public Function GetLastDayOfMonth(intMonth, intYear) As Date
@@ -24,21 +21,21 @@ Public Class ViewReport
     End Sub
 
 
-    Private Sub cboDays_SelectedIndexChanged(sender As Object, e As EventArgs) Handles radYearly.CheckedChanged, radMonthly.CheckedChanged, radDaily.CheckedChanged, cboYears.SelectedIndexChanged, cboMonths.SelectedValueChanged, cboDay.SelectedIndexChanged
+    Private Sub cboDays_SelectedIndexChanged(sender As Object, e As EventArgs) Handles radYearly.CheckedChanged, radMonthly.CheckedChanged, radDaily.CheckedChanged, cboYears.SelectedIndexChanged, cboMonths.SelectedValueChanged, cboDays.SelectedIndexChanged
         lstView.Items.Clear()
         Try
             Dim Years As Integer = cboYears.SelectedItem
             Dim Months As Integer = cboMonths.SelectedIndex + 1
-            Dim Days As Integer = cboDay.SelectedItem
+            Dim Days As Integer = cboDays.SelectedItem
 
             If radYearly.Checked = True Then
                 'Setting
                 lstView.Items.Clear()
                 cboYears.Enabled = True
                 cboMonths.Enabled = False
-                cboDay.Enabled = False
+                cboDays.Enabled = False
                 cboMonths.SelectedIndex = -1
-                cboDay.SelectedIndex = -1
+                cboDays.SelectedIndex = -1
                 'Below code is the Function
                 Dim selectedDate As Date = New DateTime(Years, 1, 1)
                 Dim db As New LibraryDataContext()
@@ -61,8 +58,8 @@ Public Class ViewReport
                 lstView.Items.Clear()
                 cboYears.Enabled = True
                 cboMonths.Enabled = True
-                cboDay.Enabled = False
-                cboDay.SelectedIndex = -1
+                cboDays.Enabled = False
+                cboDays.SelectedIndex = -1
                 'Below code is the Function
                 Dim selectedDate As Date = New DateTime(Years, Months, 1)
                 Dim db As New LibraryDataContext()
@@ -85,7 +82,7 @@ Public Class ViewReport
                 lstView.Items.Clear()
                 cboYears.Enabled = True
                 cboMonths.Enabled = True
-                cboDay.Enabled = True
+                cboDays.Enabled = True
                 'Below code is the Function
                 Dim selectedDate As Date = New DateTime(Years, Months, Days)
                 Dim db As New LibraryDataContext()
@@ -131,12 +128,12 @@ Public Class ViewReport
     End Sub
 
     Private Sub cboMonths_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonths.SelectedIndexChanged
-        cboDay.Items.Clear()
+        cboDays.Items.Clear()
         Dim Years As Integer = cboYears.SelectedItem
         Dim Months As Integer = cboMonths.SelectedIndex + 1
         Dim days As Integer = GetLastDayOfMonth(Years, Months).Day
         For value As Integer = 1 To days
-            cboDay.Items.Add(value)
+            cboDays.Items.Add(value)
         Next
 
 
@@ -146,8 +143,8 @@ Public Class ViewReport
         lstView.Items.Clear()
         cboYears.Enabled = False
         cboMonths.Enabled = False
-        cboDay.Enabled = False
-        cboDay.SelectedIndex = -1
+        cboDays.Enabled = False
+        cboDays.SelectedIndex = -1
         cboMonths.SelectedIndex = -1
         cboYears.SelectedIndex = -1
         radYearly.Checked = False
@@ -156,7 +153,6 @@ Public Class ViewReport
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-
         dlgPreview.Document = doc
         dlgPreview.ShowDialog(Me)
     End Sub
@@ -218,5 +214,15 @@ Public Class ViewReport
             e.PageSettings.Landscape = True
         End If
 
+    End Sub
+
+    Private Sub Reset()
+        lstView.Items.Clear()
+        radDaily.Checked = False
+        radMonthly.Checked = False
+        radYearly.Checked = False
+        cboYears.SelectedIndex = -1
+        cboMonths.SelectedIndex = -1
+        cboDays.SelectedIndex = -1
     End Sub
 End Class

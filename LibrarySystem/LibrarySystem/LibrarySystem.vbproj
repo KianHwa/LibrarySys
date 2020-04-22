@@ -287,6 +287,9 @@
     <EmbeddedResource Include="Report\ViewReport.resx">
       <DependentUpon>ViewReport.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\ViewReportMember.resx">
+      <DependentUpon>ViewReportMember.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\ViewReportReturnBook.resx">
       <DependentUpon>ViewReportReturnBook.vb</DependentUpon>
     </EmbeddedResource>
