@@ -68,7 +68,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
@@ -206,10 +206,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>User.dbml</DependentUpon>
     </Compile>
-    <Compile Include="User\CreateAccount.Designer.vb">
-      <DependentUpon>CreateAccount.vb</DependentUpon>
+    <Compile Include="User\BorrowHistory.Designer.vb">
+      <DependentUpon>BorrowHistory.vb</DependentUpon>
     </Compile>
-    <Compile Include="User\CreateAccount.vb">
+    <Compile Include="User\BorrowHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Borrowing.Designer.vb">
+      <DependentUpon>Borrowing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\Borrowing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\LibrarianRegis.Designer.vb">
+      <DependentUpon>LibrarianRegis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\LibrarianRegis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\MemberRegis.Designer.vb">
+      <DependentUpon>MemberRegis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\MemberRegis.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User\Login.Designer.vb">
@@ -259,8 +277,17 @@
     <EmbeddedResource Include="SplashScreen\formSplash.resx">
       <DependentUpon>formSplash.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\CreateAccount.resx">
-      <DependentUpon>CreateAccount.vb</DependentUpon>
+    <EmbeddedResource Include="User\BorrowHistory.resx">
+      <DependentUpon>BorrowHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Borrowing.resx">
+      <DependentUpon>Borrowing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\LibrarianRegis.resx">
+      <DependentUpon>LibrarianRegis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\MemberRegis.resx">
+      <DependentUpon>MemberRegis.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -313,8 +340,11 @@
     <Content Include="Library_log.ldf">
       <DependentUpon>Library.mdf</DependentUpon>
     </Content>
-    <Content Include="User.mdf" />
+    <Content Include="User.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="User_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>User.mdf</DependentUpon>
     </Content>
     <None Include="Resources\borrow.PNG" />
