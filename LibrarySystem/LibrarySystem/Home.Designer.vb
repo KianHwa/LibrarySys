@@ -34,7 +34,6 @@ Partial Class formHome
         Me.tsmiAddBooks = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiSearchBook = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuReports = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmiViewReports = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiGenerateReports = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuSetting = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiTheme = New System.Windows.Forms.ToolStripMenuItem()
@@ -167,7 +166,7 @@ Partial Class formHome
         '
         'menuReports
         '
-        Me.menuReports.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiViewReports, Me.tsmiGenerateReports})
+        Me.menuReports.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiGenerateReports})
         Me.menuReports.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menuReports.ForeColor = System.Drawing.Color.White
         Me.menuReports.Name = "menuReports"
@@ -453,7 +452,6 @@ Partial Class formHome
     Friend WithEvents tsmiViewProfile As ToolStripMenuItem
     Friend WithEvents tsmiChangePassword As ToolStripMenuItem
     Friend WithEvents tsmiAddBooks As ToolStripMenuItem
-    Friend WithEvents tsmiViewReports As ToolStripMenuItem
     Friend WithEvents tsmiGenerateReports As ToolStripMenuItem
     Friend WithEvents menuHelp As ToolStripMenuItem
     Friend WithEvents tsmiAbout As ToolStripMenuItem

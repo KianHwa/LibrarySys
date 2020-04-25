@@ -41,7 +41,6 @@
         tsmiTheme.BackColor = Color.Black
         tsmiUse.BackColor = Color.Black
         tsmiViewProfile.BackColor = Color.Black
-        tsmiViewReports.BackColor = Color.Black
         tsmiDefaultTheme.BackColor = Color.Black
         tsmiDarkTheme.BackColor = Color.Black
 
@@ -166,6 +165,10 @@
 
     Private Sub btnAddNewBook_Click(sender As Object, e As EventArgs) Handles btnAddNewBook.Click
         NewBook.ShowDialog()
+    End Sub
+
+    Private Sub tsmiGenerateReports_Click(sender As Object, e As EventArgs) Handles tsmiGenerateReports.Click
+        GenerateReport.ShowDialog()
     End Sub
 
     Private Sub btnBookReturn_Click(sender As Object, e As EventArgs) Handles btnBookReturn.Click

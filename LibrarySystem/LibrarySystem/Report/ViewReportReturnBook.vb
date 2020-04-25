@@ -1,9 +1,9 @@
 ﻿Imports System.Drawing.Printing
 Imports System.Text
 
-Public Class ViewReport
+Public Class ViewReportReturnBook
 
-    Private Sub ViewReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ViewReportReturnBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Reset()
         cboYears.Enabled = False
         cboMonths.Enabled = False
@@ -37,19 +37,23 @@ Public Class ViewReport
                 cboMonths.SelectedIndex = -1
                 cboDays.SelectedIndex = -1
                 'Below code is the Function
-                Dim selectedDate As Date = New DateTime(Years, 1, 1)
+                Dim selectedDate As Date = New Date(Years, 1, 1)
                 Dim db As New LibraryDataContext()
                 For Each row1 In db.Books
                     For Each row2 In db.Borrows
-                        Dim dbDate As String = CDate(row2.borrowDate).ToString("yyyy")
-                        If selectedDate.ToString("yyyy") = dbDate Then
-                            For Each row3 In db.Members
-                                If row3.memberID = row2.memberID And row1.ISBN = row2.ISBN Then
-                                    lstView.Items.Add(row2.borrowDate & vbTab & vbTab & row2.memberID & vbTab & vbTab & row1.bookName)
-                                    Exit For
-                                End If
-                            Next
-                        End If
+                        Try
+                            Dim dbDate As String = CDate(row2.returnDate).ToString("yyyy")
+                            If selectedDate.ToString("yyyy") = dbDate Then
+                                For Each row3 In db.Members
+                                    If row3.memberID = row2.memberID And row1.ISBN = row2.ISBN Then
+                                        lstView.Items.Add(row2.returnDate & vbTab & vbTab & row2.memberID & vbTab & vbTab & row1.bookName)
+                                        Exit For
+                                    End If
+                                Next
+                            End If
+                        Catch ex As Exception
+                            Continue For
+                        End Try
                     Next
                 Next
                 lblCount.Text = lstView.Items.Count().ToString("0 record(s)")
@@ -65,15 +69,19 @@ Public Class ViewReport
                 Dim db As New LibraryDataContext()
                 For Each row1 In db.Books
                     For Each row2 In db.Borrows
-                        Dim dbDate As String = CDate(row2.borrowDate).ToString("MM/yyyy")
-                        If selectedDate.ToString("MM/yyyy") = dbDate Then
-                            For Each row3 In db.Members
-                                If row3.memberID = row2.memberID And row1.ISBN = row2.ISBN Then
-                                    lstView.Items.Add(row2.borrowDate & vbTab & vbTab & row2.memberID & vbTab & vbTab & row1.bookName)
-                                    Exit For
-                                End If
-                            Next
-                        End If
+                        Try
+                            Dim dbDate As String = CDate(row2.returnDate).ToString("MM/yyyy")
+                            If selectedDate.ToString("MM/yyyy") = dbDate Then
+                                For Each row3 In db.Members
+                                    If row3.memberID = row2.memberID And row1.ISBN = row2.ISBN Then
+                                        lstView.Items.Add(row2.returnDate & vbTab & vbTab & row2.memberID & vbTab & vbTab & row1.bookName)
+                                        Exit For
+                                    End If
+                                Next
+                            End If
+                        Catch ex As Exception
+                            Continue For
+                        End Try
                     Next
                 Next
                 lblCount.Text = lstView.Items.Count().ToString("0 record(s)")
@@ -88,35 +96,43 @@ Public Class ViewReport
                 Dim db As New LibraryDataContext()
                 For Each row1 In db.Books
                     For Each row2 In db.Borrows
-                        Dim dbDate As String = CDate(row2.borrowDate).ToString("dd/MM/yyyy")
-                        If selectedDate.ToString("dd/MM/yyyy") = dbDate Then
-                            For Each row3 In db.Members
-                                If row3.memberID = row2.memberID And row1.ISBN = row2.ISBN Then
-                                    lstView.Items.Add(row2.borrowDate & vbTab & vbTab & row2.memberID & vbTab & vbTab & row1.bookName)
-                                    Exit For
-                                End If
-                            Next
-                        End If
+                        Try
+                            Dim dbDate As String = CDate(row2.returnDate).ToString("dd/MM/yyyy")
+                            If selectedDate.ToString("dd/MM/yyyy") = dbDate Then
+                                For Each row3 In db.Members
+                                    If row3.memberID = row2.memberID And row1.ISBN = row2.ISBN Then
+                                        lstView.Items.Add(row2.returnDate & vbTab & vbTab & row2.memberID & vbTab & vbTab & row1.bookName)
+                                        Exit For
+                                    End If
+                                Next
+                            End If
+                        Catch ex As Exception
+                            Continue For
+                        End Try
                     Next
                 Next
                 lblCount.Text = lstView.Items.Count().ToString("0 record(s)")
             End If
 
-            'This is the backup restore code for about
+            'This Is the backup restore code for about
             '============================================================================
-            'Dim selectedDate As Date = New DateTime(Years, Months, 1)
+            'Dim selectedDate As Date = New DateTime(Years, Months, Days)
             'Dim db As New LibraryDataContext()
             'For Each row1 In db.Books
             '    For Each row2 In db.Borrows
-            '        Dim dbDate As String = CDate(row2.borrowDate).ToString("MM/yyyy")
-            '        If selectedDate.ToString("MM/yyyy") = dbDate Then
-            '            For Each row3 In db.Members
-            '                If row3.memberID = row2.memberID And row1.ISBN = row2.ISBN Then
-            '                    lstView.Items.Add(row2.borrowDate & vbTab & vbTab & row2.memberID & vbTab & vbTab & row1.bookName)
-            '                    Exit For
-            '                End If
-            '            Next
-            '        End If
+            '        Try
+            '            Dim dbDate As String = CDate(row2.returnDate).ToString("dd/MM/yyyy")
+            '            If selectedDate.ToString("dd/MM/yyyy") = dbDate Then
+            '                For Each row3 In db.Members
+            '                    If row3.memberID = row2.memberID And row1.ISBN = row2.ISBN Then
+            '                        lstView.Items.Add(row2.returnDate & vbTab & vbTab & row2.memberID & vbTab & vbTab & row1.bookName)
+            '                        Exit For
+            '                    End If
+            '                Next
+            '            End If
+            '        Catch ex As Exception
+            '            Continue For
+            '        End Try
             '    Next
             'Next
             'lblCount.Text = lstView.Items.Count().ToString("0 record(s)")
@@ -177,7 +193,7 @@ Public Class ViewReport
         '(3) Prepare body
         Dim body As New StringBuilder()
 
-        body.AppendLine("No      Borrow Date          Member ID                 Book Name")
+        body.AppendLine("No      Return Date          Member ID                 Book Name")
         body.AppendLine("--     -------------     ----------------     ------------------------------")
 
         Dim cnt As Integer = 0
