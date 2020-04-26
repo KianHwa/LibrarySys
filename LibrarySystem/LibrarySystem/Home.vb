@@ -115,6 +115,7 @@
                 lbl.ForeColor = Color.White
             End If
         Next
+
     End Sub
 
     Private Sub BtnBookBorrow_Click(sender As Object, e As EventArgs) Handles btnBookBorrow.Click
