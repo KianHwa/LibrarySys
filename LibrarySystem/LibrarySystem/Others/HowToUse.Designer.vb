@@ -26,12 +26,12 @@ Partial Class HowToUse
         Me.lblHomeDetails = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.panelBorrow = New System.Windows.Forms.Panel()
+        Me.lblBorrowDetails = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnPrevious = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lblBorrowDetails = New System.Windows.Forms.Label()
         Me.panelHome.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelBorrow.SuspendLayout()
@@ -74,10 +74,19 @@ Partial Class HowToUse
         Me.panelBorrow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.panelBorrow.Controls.Add(Me.lblBorrowDetails)
         Me.panelBorrow.Controls.Add(Me.PictureBox3)
-        Me.panelBorrow.Location = New System.Drawing.Point(49, 187)
+        Me.panelBorrow.Location = New System.Drawing.Point(49, 184)
         Me.panelBorrow.Name = "panelBorrow"
         Me.panelBorrow.Size = New System.Drawing.Size(919, 534)
         Me.panelBorrow.TabIndex = 11
+        '
+        'lblBorrowDetails
+        '
+        Me.lblBorrowDetails.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBorrowDetails.Location = New System.Drawing.Point(23, 360)
+        Me.lblBorrowDetails.Name = "lblBorrowDetails"
+        Me.lblBorrowDetails.Size = New System.Drawing.Size(864, 520)
+        Me.lblBorrowDetails.TabIndex = 7
+        Me.lblBorrowDetails.Text = "Borrow details"
         '
         'PictureBox3
         '
@@ -129,15 +138,6 @@ Partial Class HowToUse
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
-        '
-        'lblBorrowDetails
-        '
-        Me.lblBorrowDetails.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBorrowDetails.Location = New System.Drawing.Point(23, 360)
-        Me.lblBorrowDetails.Name = "lblBorrowDetails"
-        Me.lblBorrowDetails.Size = New System.Drawing.Size(864, 520)
-        Me.lblBorrowDetails.TabIndex = 7
-        Me.lblBorrowDetails.Text = "Borrow details"
         '
         'HowToUse
         '

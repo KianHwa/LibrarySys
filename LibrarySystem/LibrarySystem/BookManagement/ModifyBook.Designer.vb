@@ -227,6 +227,7 @@ Partial Class ModifyBook
         Me.Controls.Add(Me.Label9)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "ModifyBook"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "ModifyBook"
         Me.grpCategory.ResumeLayout(False)
         Me.grpCategory.PerformLayout()

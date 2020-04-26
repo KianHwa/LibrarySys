@@ -273,6 +273,7 @@ Partial Class SearchBook
         Me.Controls.Add(Me.Label8)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "SearchBook"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "SearchBook"
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BookBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

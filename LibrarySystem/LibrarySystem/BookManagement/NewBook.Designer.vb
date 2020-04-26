@@ -224,6 +224,7 @@ Partial Class NewBook
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "NewBook"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "NewBook"
         Me.grpCategory.ResumeLayout(False)
         Me.grpCategory.PerformLayout()

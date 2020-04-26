@@ -91,9 +91,13 @@ Partial Public Class User
 	
 	Private _Gender As String
 	
-	Private _Occupation As String
+	Private _Status As String
 	
-	Private _DateOfBirth As Date
+	Private _DateofBirth As Date
+	
+	Private _ReturnedBook As String
+	
+	Private _BookBorrowing As String
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -130,13 +134,21 @@ Partial Public Class User
     End Sub
     Partial Private Sub OnGenderChanged()
     End Sub
-    Partial Private Sub OnOccupationChanging(value As String)
+    Partial Private Sub OnStatusChanging(value As String)
     End Sub
-    Partial Private Sub OnOccupationChanged()
+    Partial Private Sub OnStatusChanged()
     End Sub
-    Partial Private Sub OnDateOfBirthChanging(value As Date)
+    Partial Private Sub OnDateofBirthChanging(value As Date)
     End Sub
-    Partial Private Sub OnDateOfBirthChanged()
+    Partial Private Sub OnDateofBirthChanged()
+    End Sub
+    Partial Private Sub OnReturnedBookChanging(value As String)
+    End Sub
+    Partial Private Sub OnReturnedBookChanged()
+    End Sub
+    Partial Private Sub OnBookBorrowingChanging(value As String)
+    End Sub
+    Partial Private Sub OnBookBorrowingChanged()
     End Sub
     #End Region
 	
@@ -193,7 +205,7 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Ic", DbType:="VarChar(20) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Ic", DbType:="VarChar(14) NOT NULL", CanBeNull:=false)>  _
 	Public Property Ic() As String
 		Get
 			Return Me._Ic
@@ -257,35 +269,67 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Occupation", DbType:="VarChar(10) NOT NULL", CanBeNull:=false)>  _
-	Public Property Occupation() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Status", DbType:="VarChar(10) NOT NULL", CanBeNull:=false)>  _
+	Public Property Status() As String
 		Get
-			Return Me._Occupation
+			Return Me._Status
 		End Get
 		Set
-			If (String.Equals(Me._Occupation, value) = false) Then
-				Me.OnOccupationChanging(value)
+			If (String.Equals(Me._Status, value) = false) Then
+				Me.OnStatusChanging(value)
 				Me.SendPropertyChanging
-				Me._Occupation = value
-				Me.SendPropertyChanged("Occupation")
-				Me.OnOccupationChanged
+				Me._Status = value
+				Me.SendPropertyChanged("Status")
+				Me.OnStatusChanged
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DateOfBirth", DbType:="Date NOT NULL")>  _
-	Public Property DateOfBirth() As Date
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DateofBirth", DbType:="Date NOT NULL")>  _
+	Public Property DateofBirth() As Date
 		Get
-			Return Me._DateOfBirth
+			Return Me._DateofBirth
 		End Get
 		Set
-			If ((Me._DateOfBirth = value)  _
+			If ((Me._DateofBirth = value)  _
 						= false) Then
-				Me.OnDateOfBirthChanging(value)
+				Me.OnDateofBirthChanging(value)
 				Me.SendPropertyChanging
-				Me._DateOfBirth = value
-				Me.SendPropertyChanged("DateOfBirth")
-				Me.OnDateOfBirthChanged
+				Me._DateofBirth = value
+				Me.SendPropertyChanged("DateofBirth")
+				Me.OnDateofBirthChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ReturnedBook", DbType:="VarChar(50)")>  _
+	Public Property ReturnedBook() As String
+		Get
+			Return Me._ReturnedBook
+		End Get
+		Set
+			If (String.Equals(Me._ReturnedBook, value) = false) Then
+				Me.OnReturnedBookChanging(value)
+				Me.SendPropertyChanging
+				Me._ReturnedBook = value
+				Me.SendPropertyChanged("ReturnedBook")
+				Me.OnReturnedBookChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_BookBorrowing", DbType:="VarChar(50)")>  _
+	Public Property BookBorrowing() As String
+		Get
+			Return Me._BookBorrowing
+		End Get
+		Set
+			If (String.Equals(Me._BookBorrowing, value) = false) Then
+				Me.OnBookBorrowingChanging(value)
+				Me.SendPropertyChanging
+				Me._BookBorrowing = value
+				Me.SendPropertyChanged("BookBorrowing")
+				Me.OnBookBorrowingChanged
 			End If
 		End Set
 	End Property

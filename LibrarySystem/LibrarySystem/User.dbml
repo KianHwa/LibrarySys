@@ -5,12 +5,14 @@
       <Column Name="UserId" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="Password" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="Ic" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Ic" Type="System.String" DbType="VarChar(14) NOT NULL" CanBeNull="false" />
       <Column Name="Email" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="Address" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Gender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
-      <Column Name="Occupation" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="DateOfBirth" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DateofBirth" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ReturnedBook" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BookBorrowing" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
