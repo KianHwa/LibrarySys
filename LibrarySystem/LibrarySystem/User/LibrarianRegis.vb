@@ -46,7 +46,7 @@
         user.Status = status
         user.DateOfBirth = dob
 
-        Dim db As New UserDataContext()
+        Dim db As New LibraryDataContext()
         db.Users.InsertOnSubmit(user)
         db.SubmitChanges()
 

@@ -1,7 +1,7 @@
 ﻿Public Class UserProfile
 
     Private Sub UserProfile_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
-        Dim db As New UserDataContext()
+        Dim db As New LibraryDataContext()
         Dim user As User = db.Users.FirstOrDefault(Function(o) o.UserId = LibrarySystem.formHome.loggedInID)
 
         If user Is Nothing Then
@@ -35,7 +35,7 @@
             Return
         End If
 
-        Dim db As New UserDataContext()
+        Dim db As New LibraryDataContext()
         Dim user As User = db.Users.FirstOrDefault(Function(o) o.UserId = LibrarySystem.formHome.loggedInID)
 
         If user Is Nothing Then

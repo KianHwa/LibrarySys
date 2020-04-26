@@ -44,9 +44,9 @@ Public Class ViewReportReturnBook
                         Try
                             Dim dbDate As String = CDate(row2.returnDate).ToString("yyyy")
                             If selectedDate.ToString("yyyy") = dbDate Then
-                                For Each row3 In db.Members
-                                    If row3.memberID = row2.memberID And row1.ISBN = row2.ISBN Then
-                                        lstView.Items.Add(row2.returnDate & vbTab & vbTab & row2.memberID & vbTab & vbTab & row1.bookName)
+                                For Each row3 In db.Users
+                                    If row3.UserID = row2.UserID And row1.ISBN = row2.ISBN Then
+                                        lstView.Items.Add(row2.returnDate & vbTab & vbTab & row2.UserID & vbTab & vbTab & row1.bookName)
                                         Exit For
                                     End If
                                 Next
@@ -72,9 +72,9 @@ Public Class ViewReportReturnBook
                         Try
                             Dim dbDate As String = CDate(row2.returnDate).ToString("MM/yyyy")
                             If selectedDate.ToString("MM/yyyy") = dbDate Then
-                                For Each row3 In db.Members
-                                    If row3.memberID = row2.memberID And row1.ISBN = row2.ISBN Then
-                                        lstView.Items.Add(row2.returnDate & vbTab & vbTab & row2.memberID & vbTab & vbTab & row1.bookName)
+                                For Each row3 In db.Users
+                                    If row3.UserID = row2.UserID And row1.ISBN = row2.ISBN Then
+                                        lstView.Items.Add(row2.returnDate & vbTab & vbTab & row2.UserID & vbTab & vbTab & row1.bookName)
                                         Exit For
                                     End If
                                 Next
@@ -99,9 +99,9 @@ Public Class ViewReportReturnBook
                         Try
                             Dim dbDate As String = CDate(row2.returnDate).ToString("dd/MM/yyyy")
                             If selectedDate.ToString("dd/MM/yyyy") = dbDate Then
-                                For Each row3 In db.Members
-                                    If row3.memberID = row2.memberID And row1.ISBN = row2.ISBN Then
-                                        lstView.Items.Add(row2.returnDate & vbTab & vbTab & row2.memberID & vbTab & vbTab & row1.bookName)
+                                For Each row3 In db.Users
+                                    If row3.UserID = row2.UserID And row1.ISBN = row2.ISBN Then
+                                        lstView.Items.Add(row2.returnDate & vbTab & vbTab & row2.UserID & vbTab & vbTab & row1.bookName)
                                         Exit For
                                     End If
                                 Next

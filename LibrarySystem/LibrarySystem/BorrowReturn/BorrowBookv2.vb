@@ -100,7 +100,7 @@ Public Class BorrowBookv2
     Private Function CheckCurrentBookStatus() As Boolean
         'Check if the current borrow book is borrowed by the same person
         Dim isBorrow As Boolean = False
-        Dim bookstatus = From b In db.Books Join br In db.Borrows On b.ISBN Equals br.ISBN Join m In db.Members On br.memberID Equals m.memberID Where br.status = "Borrow" And m.memberID = formHome.loggedInID And br.ISBN = txtISBN.Text
+        Dim bookstatus = From b In db.Books Join br In db.Borrows On b.ISBN Equals br.ISBN Join m In db.Users On br.UserID Equals m.UserID Where br.status = "Borrow" And m.UserID = formHome.loggedInID And br.ISBN = txtISBN.Text
         For Each bs In bookstatus
             isBorrow = True
         Next
@@ -158,7 +158,7 @@ Public Class BorrowBookv2
                     'Borrow the book
                     Dim borrow As New Borrow With {
                     .ISBN = item.SubItems.Item(1).Text,
-                    .memberID = formHome.loggedInID,
+                    .UserID = formHome.loggedInID,
                     .status = "Borrow",
                     .borrowDate = dtpBorrowDate.Value.ToString("dd/MM/yyyy")}
                     db.Borrows.InsertOnSubmit(borrow)
@@ -185,10 +185,10 @@ Public Class BorrowBookv2
     Private Sub BorrowBookv2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dtpBorrowDate.Value = DateTime.Now
 
-        Dim member = From m In db.Members Where m.memberID = formHome.loggedInID
+        Dim member = From m In db.Users Where m.UserId = formHome.loggedInID
         txtMemberID.Text = formHome.loggedInID
         For Each loggedInMember In member
-            txtMemberName.Text = loggedInMember.memberName
+            txtMemberName.Text = loggedInMember.Name
         Next
 
     End Sub
