@@ -210,4 +210,6 @@ Public Class BorrowBookv2
         Dim selectedItem = lvBorrowList.SelectedIndices(0)
         lvBorrowList.Items(selectedItem).Remove()
     End Sub
+
+
 End Class

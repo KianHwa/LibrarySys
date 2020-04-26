@@ -100,8 +100,10 @@ Public Class NewBook
                 End If
             End If
 
-            Dim lastComma As Integer = b.type.LastIndexOf(",")
-            b.type = b.type.Substring(0, lastComma) & " " & b.type.Substring(lastComma + 1)
+            If counter > 1 Then
+                Dim lastComma As Integer = b.type.LastIndexOf(",")
+                b.type = b.type.Substring(0, lastComma) & " " & b.type.Substring(lastComma + 1)
+            End If
 
             db.Books.InsertOnSubmit(b)
             db.SubmitChanges()
