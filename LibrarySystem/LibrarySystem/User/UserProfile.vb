@@ -22,7 +22,7 @@
         lblIc.Text = user.Ic
         txtAddress.Text = user.Address
         txtEmail.Text = user.Email
-        cboOccupation.SelectedItem = user.Occupation
+        labelStatus.Text = user.Status
 
     End Sub
 
@@ -44,7 +44,7 @@
             Return
         End If
 
-        user.Occupation = cboOccupation.SelectedItem
+        user.Status = labelStatus.Text
         user.Password = txtPassword.Text
         user.Email = txtEmail.Text
         user.Address = txtAddress.Text
@@ -66,4 +66,5 @@
             txtPassword.PasswordChar = "*"
         End If
     End Sub
+
 End Class

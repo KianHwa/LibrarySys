@@ -178,4 +178,24 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblDIsplayDateTime.Text = DateTime.Now.ToString("MMMM dd, yyyy   HH:MM:ss")
     End Sub
+
+    Private Sub tsmiViewProfile_Click(sender As Object, e As EventArgs) Handles tsmiViewProfile.Click
+        UserProfile.Show()
+    End Sub
+
+    Private Sub BorrowingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BorrowingToolStripMenuItem.Click
+        FrmBorrowing.Show()
+    End Sub
+
+    Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoryToolStripMenuItem.Click
+        BorrowHistory.Show()
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Application.Restart()
+    End Sub
+
+    Private Sub RegisterLibrarianToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiRegisterLibrarian.Click
+        LibrarianRegis.Show()
+    End Sub
 End Class
