@@ -78,7 +78,7 @@ Public Class ReturnBook
         Dim item As ListViewItem
 
         For Each record In db.Borrows
-            If record.memberID = id AndAlso record.status = "Borrow" Then
+            If record.UserID = id AndAlso record.status = "Borrow" Then
                 item = lvBorrowList.Items.Add(lvBorrowList.Items.Count + 1)
                 item.SubItems.Add(record.ISBN)
                 item.SubItems.Add(GetBookName(record.ISBN))
@@ -86,9 +86,9 @@ Public Class ReturnBook
             End If
         Next
 
-        For Each stdName In db.Members
-            If stdName.memberID = id Then
-                txtName.Text = stdName.memberName
+        For Each stdName In db.Users
+            If stdName.UserID = id Then
+                txtName.Text = stdName.Name
                 Exit For
             End If
         Next

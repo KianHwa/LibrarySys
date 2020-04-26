@@ -160,6 +160,7 @@ Partial Class formHome
         Me.tsmiSearchBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.tsmiSearchBook.ForeColor = System.Drawing.Color.White
         Me.tsmiSearchBook.Name = "tsmiSearchBook"
+        Me.tsmiSearchBook.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
         Me.tsmiSearchBook.ShortcutKeys = System.Windows.Forms.Keys.F2
         Me.tsmiSearchBook.Size = New System.Drawing.Size(257, 28)
         Me.tsmiSearchBook.Text = "Search Books"

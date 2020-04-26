@@ -1,4 +1,5 @@
 ﻿Public Class MemberRegis
+    Dim db As New LibraryDataContext()
     Private Sub ResetForm()
         txtName.Text = ""
         txtAddress.Text = ""
@@ -31,7 +32,7 @@
         passLength = password.Length
 
         Dim user As New User()
-        user.UserId = userId
+        user.UserID = userId
         user.Name = name
         user.Email = email
         user.Password = password
@@ -41,13 +42,10 @@
         user.Status = status
         user.DateofBirth = dob
 
-        Dim db As New UserDataContext()
         db.Users.InsertOnSubmit(user)
         db.SubmitChanges()
 
         MsgBox("Member " + txtName.Text + " Registered", MsgBoxStyle.Information)
-        formHome.loggedInID = userId
-        formHome.ShowDialog()
         Me.Close()
     End Sub
 
@@ -56,4 +54,10 @@
         Me.Close()
     End Sub
 
+    Private Sub MemberRegis_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim rs = From m In db.Users Where m.UserID.StartsWith("MM")
+        mskID.Text = rs.Count().ToString("00000")
+
+        mskID.Enabled = False
+    End Sub
 End Class

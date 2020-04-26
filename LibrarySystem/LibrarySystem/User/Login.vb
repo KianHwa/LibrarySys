@@ -31,7 +31,7 @@
     End Sub
 
     Private Function IsValidUser(Name As String, Password As String) As Boolean
-        Dim db As New UserDataContext()
+        Dim db As New LibraryDataContext()
         If userID.Contains("MM") Then
             Return (From user In db.Users Where user.UserId = "MM" + mskId.Text And user.Password = txtPassword.Text).Any
         ElseIf userID.Contains("LB") Then
@@ -43,7 +43,6 @@
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         MemberRegis.ShowDialog()
-        Me.Close()
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -1,6 +1,6 @@
 ﻿Public Class FrmBorrowing
     Private Sub BindData()
-        Dim db As New UserDataContext()
+        Dim db As New LibraryDataContext()
 
         Dim rs = From c In db.Users
         dgvBorrowing.DataSource = rs
