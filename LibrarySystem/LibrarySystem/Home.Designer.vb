@@ -174,18 +174,6 @@ Partial Class formHome
         Me.menuReports.Size = New System.Drawing.Size(108, 48)
         Me.menuReports.Text = "&Report"
         '
-        'tsmiViewReports
-        '
-        Me.tsmiViewReports.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.tsmiViewReports.ForeColor = System.Drawing.Color.White
-        Me.tsmiViewReports.Name = "tsmiViewReports"
-        Me.tsmiViewReports.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiViewReports.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.tsmiViewReports.Size = New System.Drawing.Size(349, 36)
-        Me.tsmiViewReports.Text = "View Reports"
-        Me.tsmiViewReports.ToolTipText = "View reports"
-        '
         'tsmiGenerateReports
         '
         Me.tsmiGenerateReports.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))

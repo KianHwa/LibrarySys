@@ -242,7 +242,7 @@ Partial Class UserProfile
         'chkShowPass
         '
         Me.chkShowPass.AutoSize = True
-        Me.chkShowPass.Location = New System.Drawing.Point(246, 179)
+        Me.chkShowPass.Location = New System.Drawing.Point(230, 181)
         Me.chkShowPass.Name = "chkShowPass"
         Me.chkShowPass.Size = New System.Drawing.Size(129, 21)
         Me.chkShowPass.TabIndex = 0
@@ -274,7 +274,7 @@ Partial Class UserProfile
         Me.labelStatus.AutoSize = True
         Me.labelStatus.Location = New System.Drawing.Point(130, 416)
         Me.labelStatus.Name = "labelStatus"
-        Me.labelStatus.Size = New System.Drawing.Size(0, 21)
+        Me.labelStatus.Size = New System.Drawing.Size(0, 17)
         Me.labelStatus.TabIndex = 72
         '
         'UserProfile

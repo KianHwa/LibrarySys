@@ -22,6 +22,7 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPassword = New System.Windows.Forms.TextBox()
@@ -38,7 +39,10 @@ Partial Class Login
         Me.btnLogAdmin = New System.Windows.Forms.Button()
         Me.btnBack2 = New System.Windows.Forms.Button()
         Me.btnBack3 = New System.Windows.Forms.Button()
+        Me.chkShowPass = New System.Windows.Forms.CheckBox()
+        Me.err = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
+        CType(Me.err, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -86,6 +90,7 @@ Partial Class Login
         '
         'btnRegister
         '
+        Me.btnRegister.CausesValidation = False
         Me.btnRegister.Location = New System.Drawing.Point(161, 340)
         Me.btnRegister.Name = "btnRegister"
         Me.btnRegister.Size = New System.Drawing.Size(185, 34)
@@ -180,6 +185,7 @@ Partial Class Login
         '
         'btnBack3
         '
+        Me.btnBack3.CausesValidation = False
         Me.btnBack3.Location = New System.Drawing.Point(204, 274)
         Me.btnBack3.Name = "btnBack3"
         Me.btnBack3.Size = New System.Drawing.Size(92, 34)
@@ -187,12 +193,29 @@ Partial Class Login
         Me.btnBack3.Text = "Back"
         Me.btnBack3.UseVisualStyleBackColor = True
         '
+        'chkShowPass
+        '
+        Me.chkShowPass.AutoSize = True
+        Me.chkShowPass.Location = New System.Drawing.Point(319, 177)
+        Me.chkShowPass.Name = "chkShowPass"
+        Me.chkShowPass.Size = New System.Drawing.Size(18, 17)
+        Me.chkShowPass.TabIndex = 16
+        Me.chkShowPass.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.chkShowPass.UseVisualStyleBackColor = True
+        '
+        'err
+        '
+        Me.err.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
+        Me.err.ContainerControl = Me
+        '
         'Login
         '
         Me.AcceptButton = Me.btnLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.ClientSize = New System.Drawing.Size(497, 398)
+        Me.Controls.Add(Me.chkShowPass)
         Me.Controls.Add(Me.btnBack3)
         Me.Controls.Add(Me.btnBack2)
         Me.Controls.Add(Me.btnLogAdmin)
@@ -213,6 +236,7 @@ Partial Class Login
         Me.Text = "Login"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.err, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -234,4 +258,6 @@ Partial Class Login
     Friend WithEvents btnLogAdmin As Button
     Friend WithEvents btnBack2 As Button
     Friend WithEvents btnBack3 As Button
+    Friend WithEvents chkShowPass As CheckBox
+    Friend WithEvents err As ErrorProvider
 End Class

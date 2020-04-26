@@ -59,4 +59,41 @@
         Me.Close()
     End Sub
 
+    Public Function IsDuplicatedId(id As String) As Boolean
+        Dim db As New UserDataContext()
+        Return (From user In db.Users Where user.UserId = mskID.Text).Any
+    End Function
+
+    Private Sub mskID_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles mskID.Validating
+        Dim id As String = If(mskID.MaskCompleted, mskID.Text, "")
+        If id = "" Then
+            err.SetError(mskID, "Please enter valid ID")
+            e.Cancel = True
+        ElseIf IsDuplicatedId(id) Then
+            err.SetError(mskID, "ID" + mskID.Text + "is Duplicated")
+            e.Cancel = True
+        Else
+            err.SetError(mskID, Nothing)
+        End If
+    End Sub
+
+    Private Sub cboGender_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles cboGender.Validating
+        Dim gender As String = cboGender.Text
+        If gender = "" Then
+            err.SetError(cboGender, "Please choose your Gender")
+            e.Cancel = True
+        Else
+            err.SetError(cboGender, Nothing)
+        End If
+    End Sub
+
+    Private Sub txtName_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtName.Validating
+        Dim name As String = txtName.Text
+        If name = "" Then
+            err.SetError(txtName, "Please enter valid Name")
+            e.Cancel = True
+        Else
+            err.SetError(txtName, Nothing)
+        End If
+    End Sub
 End Class

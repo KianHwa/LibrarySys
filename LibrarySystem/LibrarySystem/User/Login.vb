@@ -2,6 +2,7 @@
     Private Sub ResetForm()
         txtPassword.Text = ""
         mskId.Text = ""
+        err.Clear()
     End Sub
 
     Dim userID As String
@@ -26,9 +27,6 @@
                 LibrarySystem.formHome.ShowDialog()
                 Me.Close()
             End If
-
-        Else
-            MessageBox.Show("Invalid Name or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
@@ -62,6 +60,7 @@
         btnBack2.Visible = False
         btnBack3.Visible = False
         btnBack.Visible = False
+        chkShowPass.Visible = False
     End Sub
 
     Private Sub btnMember_Click(sender As Object, e As EventArgs) Handles btnMember.Click
@@ -77,6 +76,7 @@
         lblId.Text = "MM"
         userID = "MM" + mskId.Text
         btnBack.Visible = True
+        chkShowPass.Visible = True
     End Sub
 
     Private Sub btnLibrarian_Click(sender As Object, e As EventArgs) Handles btnLibrarian.Click
@@ -93,6 +93,7 @@
         btnLogAdmin.Visible = True
         btnBack.Visible = False
         btnBack2.Visible = True
+        chkShowPass.Visible = False
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -105,6 +106,8 @@
         lblId.Visible = False
         btnLibrarian.Visible = True
         btnMember.Visible = True
+        chkShowPass.Visible = False
+        err.Clear()
         ResetForm()
     End Sub
 
@@ -122,6 +125,7 @@
         btnLogLibrarian.Visible = False
         lblId.Text = "LB"
         userID = "LB" + mskId.Text
+        chkShowPass.Visible = True
     End Sub
 
     Private Sub btnLogAdmin_Click(sender As Object, e As EventArgs) Handles btnLogAdmin.Click
@@ -141,6 +145,7 @@
         btnBack3.Visible = True
         lblId.Text = "AD"
         userID = "AD" + mskId.Text
+        chkShowPass.Visible = True
     End Sub
 
     Private Sub btnBack2_Click(sender As Object, e As EventArgs) Handles btnBack2.Click
@@ -157,6 +162,8 @@
         btnLogLibrarian.Visible = False
         btnBack.Visible = False
         btnBack2.Visible = False
+        chkShowPass.Visible = False
+        err.Clear()
     End Sub
 
     Private Sub btnBack3_Click(sender As Object, e As EventArgs) Handles btnBack3.Click
@@ -174,5 +181,37 @@
         btnBack.Visible = False
         btnBack2.Visible = True
         btnBack3.Visible = False
+        chkShowPass.Visible = False
+        err.Clear()
+    End Sub
+
+    Private Sub chkShowPass_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPass.CheckedChanged
+        If chkShowPass.Checked = True Then
+            txtPassword.PasswordChar = ""
+        ElseIf chkShowPass.Checked = False Then
+            txtPassword.PasswordChar = "*"
+        End If
+    End Sub
+
+    Private Sub mskId_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles mskId.Validating
+        Dim id As String = If(mskId.MaskCompleted, mskId.Text, "")
+
+        If id = "" Then
+            err.SetError(mskId, "Please enter valid ID")
+            e.Cancel = True
+        Else
+            err.SetError(mskId, Nothing)
+        End If
+    End Sub
+
+    Private Sub txtPassword_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtPassword.Validating
+        Dim pass As String = txtPassword.Text
+
+        If pass = "" Then
+            err.SetError(txtPassword, "Please enter valid Password")
+            e.Cancel = True
+        Else
+            err.SetError(txtPassword, Nothing)
+        End If
     End Sub
 End Class
