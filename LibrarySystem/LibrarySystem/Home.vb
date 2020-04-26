@@ -192,10 +192,19 @@
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Application.Restart()
+        loggedInID = ""
+        btnBookReturn.Enabled = True
+        tsmiGenerateReports.Enabled = True
+        menuReports.Enabled = True
+        Me.Hide()
+        Login.Show()
     End Sub
 
     Private Sub RegisterLibrarianToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiRegisterLibrarian.Click
         LibrarianRegis.Show()
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Application.Exit()
     End Sub
 End Class

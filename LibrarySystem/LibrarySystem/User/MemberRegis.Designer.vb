@@ -22,6 +22,7 @@ Partial Class MemberRegis
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
@@ -46,7 +47,9 @@ Partial Class MemberRegis
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblStatus = New System.Windows.Forms.Label()
+        Me.err = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
+        CType(Me.err, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtPassword
@@ -276,6 +279,10 @@ Partial Class MemberRegis
         Me.lblStatus.TabIndex = 74
         Me.lblStatus.Text = "Member"
         '
+        'err
+        '
+        Me.err.ContainerControl = Me
+        '
         'MemberRegis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -310,6 +317,7 @@ Partial Class MemberRegis
         Me.Text = "CreateAccount"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.err, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -339,4 +347,5 @@ Partial Class MemberRegis
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents lblStatus As Label
+    Friend WithEvents err As ErrorProvider
 End Class

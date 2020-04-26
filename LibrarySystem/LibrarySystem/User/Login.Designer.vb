@@ -41,6 +41,8 @@ Partial Class Login
         Me.btnBack3 = New System.Windows.Forms.Button()
         Me.chkShowPass = New System.Windows.Forms.CheckBox()
         Me.err = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnBack4 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.err, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -208,6 +210,24 @@ Partial Class Login
         Me.err.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.err.ContainerControl = Me
         '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(427, 350)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(58, 36)
+        Me.btnExit.TabIndex = 17
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'btnBack4
+        '
+        Me.btnBack4.Location = New System.Drawing.Point(204, 274)
+        Me.btnBack4.Name = "btnBack4"
+        Me.btnBack4.Size = New System.Drawing.Size(92, 34)
+        Me.btnBack4.TabIndex = 18
+        Me.btnBack4.Text = "Back"
+        Me.btnBack4.UseVisualStyleBackColor = True
+        '
         'Login
         '
         Me.AcceptButton = Me.btnLogin
@@ -215,6 +235,8 @@ Partial Class Login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.ClientSize = New System.Drawing.Size(497, 398)
+        Me.Controls.Add(Me.btnBack4)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.chkShowPass)
         Me.Controls.Add(Me.btnBack3)
         Me.Controls.Add(Me.btnBack2)
@@ -260,4 +282,6 @@ Partial Class Login
     Friend WithEvents btnBack3 As Button
     Friend WithEvents chkShowPass As CheckBox
     Friend WithEvents err As ErrorProvider
+    Friend WithEvents btnExit As Button
+    Friend WithEvents btnBack4 As Button
 End Class

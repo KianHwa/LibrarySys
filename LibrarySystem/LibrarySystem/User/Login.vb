@@ -12,20 +12,23 @@
             If userID.Contains("LB") Or userID.Contains("lb") Then
                 LibrarySystem.formHome.loggedInID = "LB" + mskId.Text
                 LibrarySystem.formHome.tsmiRegisterLibrarian.Enabled = False
+                Me.Hide()
                 LibrarySystem.formHome.ShowDialog()
-                Me.Close()
+                ResetForm()
             ElseIf userID.Contains("MM") Or userID.Contains("mm") Then
                 LibrarySystem.formHome.loggedInID = "MM" + mskId.Text
                 LibrarySystem.formHome.btnBookReturn.Enabled = False
                 LibrarySystem.formHome.menuReports.Enabled = False
                 LibrarySystem.formHome.tsmiAddBooks.Enabled = False
                 LibrarySystem.formHome.tsmiRegisterLibrarian.Enabled = False
+                Me.Hide()
                 LibrarySystem.formHome.ShowDialog()
-                Me.Close()
+                ResetForm()
             Else
                 LibrarySystem.formHome.loggedInID = "AD" + mskId.Text
+                Me.Hide()
                 LibrarySystem.formHome.ShowDialog()
-                Me.Close()
+                ResetForm()
             End If
         End If
     End Sub
@@ -46,7 +49,6 @@
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mskId.Focus()
         btnLogin.Visible = False
         btnRegister.Visible = False
         txtPassword.Visible = False
@@ -58,6 +60,7 @@
         btnLogLibrarian.Visible = False
         btnBack2.Visible = False
         btnBack3.Visible = False
+        btnBack4.Visible = False
         btnBack.Visible = False
         chkShowPass.Visible = False
     End Sub
@@ -76,6 +79,8 @@
         userID = "MM" + mskId.Text
         btnBack.Visible = True
         chkShowPass.Visible = True
+        btnBack4.Visible = True
+        mskId.Focus()
     End Sub
 
     Private Sub btnLibrarian_Click(sender As Object, e As EventArgs) Handles btnLibrarian.Click
@@ -93,6 +98,7 @@
         btnBack.Visible = False
         btnBack2.Visible = True
         chkShowPass.Visible = False
+        mskId.Focus()
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -122,9 +128,13 @@
         lblId.Visible = True
         btnLogAdmin.Visible = False
         btnLogLibrarian.Visible = False
+        btnBack.Visible = False
+        btnBack2.Visible = False
+        btnBack3.Visible = True
         lblId.Text = "LB"
         userID = "LB" + mskId.Text
         chkShowPass.Visible = True
+        mskId.Focus()
     End Sub
 
     Private Sub btnLogAdmin_Click(sender As Object, e As EventArgs) Handles btnLogAdmin.Click
@@ -145,6 +155,7 @@
         lblId.Text = "AD"
         userID = "AD" + mskId.Text
         chkShowPass.Visible = True
+        mskId.Focus()
     End Sub
 
     Private Sub btnBack2_Click(sender As Object, e As EventArgs) Handles btnBack2.Click
@@ -212,5 +223,28 @@
         Else
             err.SetError(txtPassword, Nothing)
         End If
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnBack4_Click(sender As Object, e As EventArgs) Handles btnBack4.Click
+        Label1.Visible = False
+        Label2.Visible = False
+        txtPassword.Visible = False
+        mskId.Visible = False
+        btnLogin.Visible = False
+        btnRegister.Visible = False
+        btnLibrarian.Visible = True
+        btnMember.Visible = True
+        lblId.Visible = False
+        btnLogAdmin.Visible = False
+        btnLogLibrarian.Visible = False
+        btnBack.Visible = False
+        btnBack2.Visible = False
+        btnBack3.Visible = False
+        btnBack4.Visible = False
+        chkShowPass.Visible = False
     End Sub
 End Class

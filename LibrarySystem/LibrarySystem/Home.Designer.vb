@@ -53,6 +53,7 @@ Partial Class formHome
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -162,7 +163,7 @@ Partial Class formHome
         Me.tsmiSearchBook.Name = "tsmiSearchBook"
         Me.tsmiSearchBook.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
         Me.tsmiSearchBook.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.tsmiSearchBook.Size = New System.Drawing.Size(257, 28)
+        Me.tsmiSearchBook.Size = New System.Drawing.Size(257, 36)
         Me.tsmiSearchBook.Text = "Search Books"
         '
         'menuReports
@@ -399,6 +400,17 @@ Partial Class formHome
         'Timer1
         '
         '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.btnExit.ForeColor = System.Drawing.Color.White
+        Me.btnExit.Location = New System.Drawing.Point(1459, 12)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(69, 29)
+        Me.btnExit.TabIndex = 3
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = False
+        '
         'formHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -407,6 +419,7 @@ Partial Class formHome
         Me.BackgroundImage = Global.LibrarySystem.My.Resources.Resources.bg11
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1540, 846)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -456,4 +469,5 @@ Partial Class formHome
     Friend WithEvents BorrowingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents tsmiRegisterLibrarian As ToolStripMenuItem
+    Friend WithEvents btnExit As Button
 End Class
