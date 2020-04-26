@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LibrarySystem", "LibrarySystem\LibrarySystem.vbproj", "{45D44D5E-3623-4883-BDF1-7BC24BE48C3A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{72ACCA36-486A-497C-9797-B815E9DF11FB}"
+	ProjectSection(SolutionItems) = preProject
+		LibrarySystem\LibraryDataSet.Designer.vb = LibrarySystem\LibraryDataSet.Designer.vb
+		LibrarySystem\LibraryDataSet.xsc = LibrarySystem\LibraryDataSet.xsc
+		LibrarySystem\LibraryDataSet.xsd = LibrarySystem\LibraryDataSet.xsd
+		LibrarySystem\LibraryDataSet.xss = LibrarySystem\LibraryDataSet.xss
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
