@@ -31,7 +31,6 @@ Partial Class Login
         Me.btnRegister = New System.Windows.Forms.Button()
         Me.btnLibrarian = New System.Windows.Forms.Button()
         Me.btnMember = New System.Windows.Forms.Button()
-        Me.lblId = New System.Windows.Forms.Label()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -84,10 +83,10 @@ Partial Class Login
         '
         'mskId
         '
-        Me.mskId.Location = New System.Drawing.Point(234, 126)
-        Me.mskId.Mask = "00000"
+        Me.mskId.Location = New System.Drawing.Point(209, 128)
+        Me.mskId.Mask = "AA00000"
         Me.mskId.Name = "mskId"
-        Me.mskId.Size = New System.Drawing.Size(113, 22)
+        Me.mskId.Size = New System.Drawing.Size(137, 22)
         Me.mskId.TabIndex = 0
         '
         'btnRegister
@@ -117,16 +116,6 @@ Partial Class Login
         Me.btnMember.TabIndex = 7
         Me.btnMember.Text = "Login as Member"
         Me.btnMember.UseVisualStyleBackColor = True
-        '
-        'lblId
-        '
-        Me.lblId.AutoSize = True
-        Me.lblId.Location = New System.Drawing.Point(201, 129)
-        Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(27, 17)
-        Me.lblId.TabIndex = 9
-        Me.lblId.Text = "AD"
-        Me.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'btnBack
         '
@@ -244,7 +233,6 @@ Partial Class Login
         Me.Controls.Add(Me.btnLogLibrarian)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.lblId)
         Me.Controls.Add(Me.btnMember)
         Me.Controls.Add(Me.btnLibrarian)
         Me.Controls.Add(Me.btnRegister)
@@ -272,7 +260,6 @@ Partial Class Login
     Friend WithEvents btnRegister As Button
     Friend WithEvents btnLibrarian As Button
     Friend WithEvents btnMember As Button
-    Friend WithEvents lblId As Label
     Friend WithEvents btnBack As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel

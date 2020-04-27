@@ -93,16 +93,39 @@ Public Class LibrarianRegis
         End If
     End Sub
 
+    Public Function IsValidIc(ic As String) As Boolean
+        Dim chk As String = mskIC.Text.Substring(Len(mskIC.Text) - 1, 1) Mod 2
+        If cboGender.SelectedItem = "Female" Then
+            If chk = 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        ElseIf cboGender.SelectedItem = "Male" Then
+            If chk <> 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        End If
+        Return True
+    End Function
+
     Private Sub mskIC_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles mskIC.Validating
         Dim ic As String = If(mskIC.MaskCompleted, txtPassword.Text, "")
-        If ic = "" Then
+        If IsValidIc(mskIC.Text) Then
+            If ic = "" Then
+                err.SetError(mskIC, "Please enter valid IC Number")
+                e.Cancel = True
+            ElseIf IsDuplicatedIc(ic) Then
+                err.SetError(mskIC, mskIC.Text + " is Registered")
+                e.Cancel = True
+            Else
+                err.SetError(mskIC, Nothing)
+            End If
+        Else
             err.SetError(mskIC, "Please enter valid IC Number")
             e.Cancel = True
-        ElseIf IsDuplicatedIc(ic) Then
-            err.SetError(mskIC, mskIC.Text + " is Registered")
-            e.Cancel = True
-        Else
-            err.SetError(mskIC, Nothing)
         End If
     End Sub
 
@@ -136,6 +159,14 @@ Public Class LibrarianRegis
         Else
             err.SetError(txtEmail, "Please enter valid format Email")
             e.Cancel = True
+        End If
+    End Sub
+
+    Private Sub chkShowPass_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPass.CheckedChanged
+        If chkShowPass.Checked = True Then
+            txtPassword.PasswordChar = ""
+        ElseIf chkShowPass.Checked = False Then
+            txtPassword.PasswordChar = "*"
         End If
     End Sub
 End Class

@@ -47,7 +47,7 @@ Partial Class BorrowHistory
         Me.dgvBorrowing.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvBorrowing.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvBorrowing.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvBorrowing.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvBorrowing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvBorrowing.Location = New System.Drawing.Point(26, 80)
@@ -84,7 +84,7 @@ Partial Class BorrowHistory
         Me.lblCount.AutoSize = True
         Me.lblCount.Location = New System.Drawing.Point(23, 457)
         Me.lblCount.Name = "lblCount"
-        Me.lblCount.Size = New System.Drawing.Size(86, 21)
+        Me.lblCount.Size = New System.Drawing.Size(69, 17)
         Me.lblCount.TabIndex = 7
         Me.lblCount.Text = "X book(s)"
         '

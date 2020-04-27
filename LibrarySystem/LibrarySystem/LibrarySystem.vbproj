@@ -244,6 +244,18 @@
     <Compile Include="User\Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User\ProcessRequest.Designer.vb">
+      <DependentUpon>ProcessRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\ProcessRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Request.Designer.vb">
+      <DependentUpon>Request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\Request.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User\UserProfile.Designer.vb">
       <DependentUpon>UserProfile.vb</DependentUpon>
     </Compile>
@@ -311,6 +323,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ProcessRequest.resx">
+      <DependentUpon>ProcessRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Request.resx">
+      <DependentUpon>Request.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\UserProfile.resx">
       <DependentUpon>UserProfile.vb</DependentUpon>

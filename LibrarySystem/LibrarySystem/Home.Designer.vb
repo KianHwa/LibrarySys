@@ -30,6 +30,7 @@ Partial Class formHome
         Me.BorrowingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiRegisterLibrarian = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiRequest = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBookManagement = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiAddBooks = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiSearchBook = New System.Windows.Forms.ToolStripMenuItem()
@@ -75,7 +76,7 @@ Partial Class formHome
         'menuUser
         '
         Me.menuUser.BackColor = System.Drawing.Color.Transparent
-        Me.menuUser.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiViewProfile, Me.tsmiChangePassword, Me.tsmiRegisterLibrarian})
+        Me.menuUser.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiViewProfile, Me.tsmiChangePassword, Me.tsmiRegisterLibrarian, Me.tsmiRequest})
         Me.menuUser.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menuUser.ForeColor = System.Drawing.Color.White
         Me.menuUser.Name = "menuUser"
@@ -134,6 +135,15 @@ Partial Class formHome
         Me.tsmiRegisterLibrarian.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
         Me.tsmiRegisterLibrarian.Size = New System.Drawing.Size(252, 36)
         Me.tsmiRegisterLibrarian.Text = "Register Librarian"
+        '
+        'tsmiRequest
+        '
+        Me.tsmiRequest.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.tsmiRequest.ForeColor = System.Drawing.Color.White
+        Me.tsmiRequest.Name = "tsmiRequest"
+        Me.tsmiRequest.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.tsmiRequest.Size = New System.Drawing.Size(252, 36)
+        Me.tsmiRequest.Text = "Request"
         '
         'menuBookManagement
         '
@@ -470,4 +480,5 @@ Partial Class formHome
     Friend WithEvents HistoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents tsmiRegisterLibrarian As ToolStripMenuItem
     Friend WithEvents btnExit As Button
+    Friend WithEvents tsmiRequest As ToolStripMenuItem
 End Class

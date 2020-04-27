@@ -48,6 +48,7 @@ Partial Class LibrarianRegis
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblLibrarian = New System.Windows.Forms.Label()
         Me.err = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.chkShowPass = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         CType(Me.err, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -284,11 +285,22 @@ Partial Class LibrarianRegis
         Me.err.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.err.ContainerControl = Me
         '
+        'chkShowPass
+        '
+        Me.chkShowPass.AutoSize = True
+        Me.chkShowPass.Location = New System.Drawing.Point(299, 174)
+        Me.chkShowPass.Name = "chkShowPass"
+        Me.chkShowPass.Size = New System.Drawing.Size(18, 17)
+        Me.chkShowPass.TabIndex = 75
+        Me.chkShowPass.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.chkShowPass.UseVisualStyleBackColor = True
+        '
         'LibrarianRegis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(629, 522)
+        Me.Controls.Add(Me.chkShowPass)
         Me.Controls.Add(Me.lblLibrarian)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Panel1)
@@ -349,4 +361,5 @@ Partial Class LibrarianRegis
     Friend WithEvents Label9 As Label
     Friend WithEvents lblLibrarian As Label
     Friend WithEvents err As ErrorProvider
+    Friend WithEvents chkShowPass As CheckBox
 End Class
