@@ -22,6 +22,7 @@ Partial Class MemberRegis
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
@@ -46,7 +47,10 @@ Partial Class MemberRegis
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblStatus = New System.Windows.Forms.Label()
+        Me.err = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.chkShowPass = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.err, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtPassword
@@ -276,11 +280,26 @@ Partial Class MemberRegis
         Me.lblStatus.TabIndex = 74
         Me.lblStatus.Text = "Member"
         '
+        'err
+        '
+        Me.err.ContainerControl = Me
+        '
+        'chkShowPass
+        '
+        Me.chkShowPass.AutoSize = True
+        Me.chkShowPass.Location = New System.Drawing.Point(299, 174)
+        Me.chkShowPass.Name = "chkShowPass"
+        Me.chkShowPass.Size = New System.Drawing.Size(18, 17)
+        Me.chkShowPass.TabIndex = 75
+        Me.chkShowPass.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.chkShowPass.UseVisualStyleBackColor = True
+        '
         'MemberRegis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(629, 522)
+        Me.Controls.Add(Me.chkShowPass)
         Me.Controls.Add(Me.lblStatus)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Panel1)
@@ -310,6 +329,7 @@ Partial Class MemberRegis
         Me.Text = "CreateAccount"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.err, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -339,4 +359,6 @@ Partial Class MemberRegis
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents lblStatus As Label
+    Friend WithEvents err As ErrorProvider
+    Friend WithEvents chkShowPass As CheckBox
 End Class

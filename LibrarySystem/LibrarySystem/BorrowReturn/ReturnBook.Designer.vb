@@ -23,6 +23,7 @@ Partial Class ReturnBook
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReturnBook))
         Me.btnReturn = New System.Windows.Forms.Button()
         Me.btnCheck = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -41,6 +42,7 @@ Partial Class ReturnBook
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.err = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.grpDetails.SuspendLayout()
         Me.grpBorrowList.SuspendLayout()
         CType(Me.err, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,23 +50,29 @@ Partial Class ReturnBook
         '
         'btnReturn
         '
+        Me.btnReturn.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnReturn.ForeColor = System.Drawing.Color.White
         Me.btnReturn.Location = New System.Drawing.Point(557, 212)
         Me.btnReturn.Margin = New System.Windows.Forms.Padding(2)
         Me.btnReturn.Name = "btnReturn"
         Me.btnReturn.Size = New System.Drawing.Size(90, 37)
         Me.btnReturn.TabIndex = 1
         Me.btnReturn.Text = "&Return"
-        Me.btnReturn.UseVisualStyleBackColor = True
+        Me.ToolTip1.SetToolTip(Me.btnReturn, "Return remaining books")
+        Me.btnReturn.UseVisualStyleBackColor = False
         '
         'btnCheck
         '
+        Me.btnCheck.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnCheck.ForeColor = System.Drawing.Color.White
         Me.btnCheck.Location = New System.Drawing.Point(310, 70)
         Me.btnCheck.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCheck.Name = "btnCheck"
         Me.btnCheck.Size = New System.Drawing.Size(90, 37)
         Me.btnCheck.TabIndex = 2
         Me.btnCheck.Text = "&Check"
-        Me.btnCheck.UseVisualStyleBackColor = True
+        Me.ToolTip1.SetToolTip(Me.btnCheck, "Check student's borrow list")
+        Me.btnCheck.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -136,12 +144,15 @@ Partial Class ReturnBook
         '
         'btnPaid
         '
+        Me.btnPaid.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnPaid.ForeColor = System.Drawing.Color.White
         Me.btnPaid.Location = New System.Drawing.Point(17, 214)
         Me.btnPaid.Name = "btnPaid"
         Me.btnPaid.Size = New System.Drawing.Size(103, 37)
         Me.btnPaid.TabIndex = 2
         Me.btnPaid.Text = "Clear Fined Books"
-        Me.btnPaid.UseVisualStyleBackColor = True
+        Me.ToolTip1.SetToolTip(Me.btnPaid, "Clear fined books")
+        Me.btnPaid.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -214,6 +225,7 @@ Partial Class ReturnBook
         Me.Controls.Add(Me.grpBorrowList)
         Me.Controls.Add(Me.grpDetails)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ReturnBook"
         Me.Text = "Return Book"
@@ -244,4 +256,5 @@ Partial Class ReturnBook
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Label3 As Label
     Friend WithEvents btnPaid As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

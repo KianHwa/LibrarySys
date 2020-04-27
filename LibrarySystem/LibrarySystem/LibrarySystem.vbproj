@@ -68,7 +68,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
@@ -244,6 +244,18 @@
     <Compile Include="User\Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User\ProcessRequest.Designer.vb">
+      <DependentUpon>ProcessRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\ProcessRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Request.Designer.vb">
+      <DependentUpon>Request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\Request.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User\UserProfile.Designer.vb">
       <DependentUpon>UserProfile.vb</DependentUpon>
     </Compile>
@@ -312,6 +324,12 @@
     <EmbeddedResource Include="User\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User\ProcessRequest.resx">
+      <DependentUpon>ProcessRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Request.resx">
+      <DependentUpon>Request.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\UserProfile.resx">
       <DependentUpon>UserProfile.vb</DependentUpon>
     </EmbeddedResource>
@@ -347,10 +365,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Library.mdf" />
-    <Content Include="Library_log.ldf">
-      <DependentUpon>Library.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\borrow.PNG" />
     <None Include="Resources\home.PNG" />
     <None Include="Resources\bg1.jpg" />
@@ -393,8 +407,17 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Library.mdf" />
+    <None Include="Resources\Book_Return sc.png" />
+    <None Include="Resources\new_book sc.png" />
+    <None Include="Resources\Search_book sc.png" />
+    <None Include="Resources\system_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Library.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Library_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Library.mdf</DependentUpon>
     </Content>
   </ItemGroup>

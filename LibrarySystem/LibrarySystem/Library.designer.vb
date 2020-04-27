@@ -535,6 +535,8 @@ Partial Public Class User
 	
 	Private _BookBorrowing As String
 	
+	Private _Request As String
+	
 	Private _Borrows As EntitySet(Of Borrow)
 	
     #Region "Extensibility Method Definitions"
@@ -587,6 +589,10 @@ Partial Public Class User
     Partial Private Sub OnBookBorrowingChanging(value As String)
     End Sub
     Partial Private Sub OnBookBorrowingChanged()
+    End Sub
+    Partial Private Sub OnRequestChanging(value As String)
+    End Sub
+    Partial Private Sub OnRequestChanged()
     End Sub
     #End Region
 	
@@ -768,6 +774,22 @@ Partial Public Class User
 				Me._BookBorrowing = value
 				Me.SendPropertyChanged("BookBorrowing")
 				Me.OnBookBorrowingChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Request", DbType:="VarChar(50)")>  _
+	Public Property Request() As String
+		Get
+			Return Me._Request
+		End Get
+		Set
+			If (String.Equals(Me._Request, value) = false) Then
+				Me.OnRequestChanging(value)
+				Me.SendPropertyChanging
+				Me._Request = value
+				Me.SendPropertyChanged("Request")
+				Me.OnRequestChanged
 			End If
 		End Set
 	End Property

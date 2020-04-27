@@ -23,6 +23,7 @@ Partial Class formSplash
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formSplash))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.pbSplashScreen = New System.Windows.Forms.ProgressBar()
@@ -38,7 +39,7 @@ Partial Class formSplash
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.LibrarySystem.My.Resources.Resources.pngguru_com__5_
         Me.PictureBox1.Location = New System.Drawing.Point(60, 15)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(78, 117)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -60,7 +61,7 @@ Partial Class formSplash
         'pbSplashScreen
         '
         Me.pbSplashScreen.Location = New System.Drawing.Point(52, 328)
-        Me.pbSplashScreen.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pbSplashScreen.Margin = New System.Windows.Forms.Padding(2)
         Me.pbSplashScreen.Name = "pbSplashScreen"
         Me.pbSplashScreen.Size = New System.Drawing.Size(480, 19)
         Me.pbSplashScreen.TabIndex = 5
@@ -117,7 +118,8 @@ Partial Class formSplash
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "formSplash"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "formSplash"

@@ -31,7 +31,6 @@ Partial Class Login
         Me.btnRegister = New System.Windows.Forms.Button()
         Me.btnLibrarian = New System.Windows.Forms.Button()
         Me.btnMember = New System.Windows.Forms.Button()
-        Me.lblId = New System.Windows.Forms.Label()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -41,6 +40,8 @@ Partial Class Login
         Me.btnBack3 = New System.Windows.Forms.Button()
         Me.chkShowPass = New System.Windows.Forms.CheckBox()
         Me.err = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnBack4 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.err, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -82,10 +83,10 @@ Partial Class Login
         '
         'mskId
         '
-        Me.mskId.Location = New System.Drawing.Point(234, 126)
-        Me.mskId.Mask = "00000"
+        Me.mskId.Location = New System.Drawing.Point(209, 128)
+        Me.mskId.Mask = "AA00000"
         Me.mskId.Name = "mskId"
-        Me.mskId.Size = New System.Drawing.Size(113, 22)
+        Me.mskId.Size = New System.Drawing.Size(137, 22)
         Me.mskId.TabIndex = 0
         '
         'btnRegister
@@ -115,16 +116,6 @@ Partial Class Login
         Me.btnMember.TabIndex = 7
         Me.btnMember.Text = "Login as Member"
         Me.btnMember.UseVisualStyleBackColor = True
-        '
-        'lblId
-        '
-        Me.lblId.AutoSize = True
-        Me.lblId.Location = New System.Drawing.Point(201, 129)
-        Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(27, 17)
-        Me.lblId.TabIndex = 9
-        Me.lblId.Text = "AD"
-        Me.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'btnBack
         '
@@ -208,6 +199,24 @@ Partial Class Login
         Me.err.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.err.ContainerControl = Me
         '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(427, 350)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(58, 36)
+        Me.btnExit.TabIndex = 17
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'btnBack4
+        '
+        Me.btnBack4.Location = New System.Drawing.Point(204, 274)
+        Me.btnBack4.Name = "btnBack4"
+        Me.btnBack4.Size = New System.Drawing.Size(92, 34)
+        Me.btnBack4.TabIndex = 18
+        Me.btnBack4.Text = "Back"
+        Me.btnBack4.UseVisualStyleBackColor = True
+        '
         'Login
         '
         Me.AcceptButton = Me.btnLogin
@@ -215,6 +224,8 @@ Partial Class Login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.ClientSize = New System.Drawing.Size(497, 398)
+        Me.Controls.Add(Me.btnBack4)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.chkShowPass)
         Me.Controls.Add(Me.btnBack3)
         Me.Controls.Add(Me.btnBack2)
@@ -222,7 +233,6 @@ Partial Class Login
         Me.Controls.Add(Me.btnLogLibrarian)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.lblId)
         Me.Controls.Add(Me.btnMember)
         Me.Controls.Add(Me.btnLibrarian)
         Me.Controls.Add(Me.btnRegister)
@@ -250,7 +260,6 @@ Partial Class Login
     Friend WithEvents btnRegister As Button
     Friend WithEvents btnLibrarian As Button
     Friend WithEvents btnMember As Button
-    Friend WithEvents lblId As Label
     Friend WithEvents btnBack As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
@@ -260,4 +269,6 @@ Partial Class Login
     Friend WithEvents btnBack3 As Button
     Friend WithEvents chkShowPass As CheckBox
     Friend WithEvents err As ErrorProvider
+    Friend WithEvents btnExit As Button
+    Friend WithEvents btnBack4 As Button
 End Class
