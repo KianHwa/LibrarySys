@@ -38,51 +38,51 @@ Public Class BorrowBookv2
         'Check if the book available
 
         If CheckBookExistence() = True Then
-                'Check if the member has returned the book A (if he borrow book A again)
-                Dim bookstatus = CheckCurrentBookStatus()
-                If (bookstatus = True) Then
-                    'Prevent from borrow the same book again
-                    MessageBox.Show("The book is not returned.", "Failed to borrow", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Else
-                    If lvBorrowList.Items.Count <= 5 Then
-                        Dim memberID, status As String
+            'Check if the member has returned the book A (if he borrow book A again)
+            Dim bookstatus = CheckCurrentBookStatus()
+            If (bookstatus = True) Then
+                'Prevent from borrow the same book again
+                MessageBox.Show("The book is not returned.", "Failed to borrow", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Else
+                If lvBorrowList.Items.Count <= 5 Then
+                    Dim memberID, status As String
                     memberID = formHome.loggedInID
                     status = "Borrow"
 
-                        If lvBorrowList.Items.Count = 0 Then
+                    If lvBorrowList.Items.Count = 0 Then
+                        Dim item As ListViewItem
+                        item = lvBorrowList.Items.Add(lvBorrowList.Items.Count + 1)
+                        item.SubItems.Add(txtISBN.Text)
+                        item.SubItems.Add(GetBookName(txtISBN.Text))
+                        item.SubItems.Add(dtpBorrowDate.Value.ToString("dd/MM/yyyy"))
+                    Else
+                        Dim existedInlist = False
+                        For Each item As ListViewItem In lvBorrowList.Items
+                            If item.SubItems.Item(1).Text = txtISBN.Text Then
+                                existedInlist = True
+                            End If
+                        Next
+
+                        If existedInlist = False Then
                             Dim item As ListViewItem
                             item = lvBorrowList.Items.Add(lvBorrowList.Items.Count + 1)
                             item.SubItems.Add(txtISBN.Text)
                             item.SubItems.Add(GetBookName(txtISBN.Text))
                             item.SubItems.Add(dtpBorrowDate.Value.ToString("dd/MM/yyyy"))
                         Else
-                            Dim existedInlist = False
-                            For Each item As ListViewItem In lvBorrowList.Items
-                                If item.SubItems.Item(1).Text = txtISBN.Text Then
-                                    existedInlist = True
-                                End If
-                            Next
-
-                            If existedInlist = False Then
-                                Dim item As ListViewItem
-                                item = lvBorrowList.Items.Add(lvBorrowList.Items.Count + 1)
-                                item.SubItems.Add(txtISBN.Text)
-                                item.SubItems.Add(GetBookName(txtISBN.Text))
-                                item.SubItems.Add(dtpBorrowDate.Value.ToString("dd/MM/yyyy"))
-                            Else
-                                MessageBox.Show("The book is already in the borrow list.", "Failed to borrow", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                            End If
+                            MessageBox.Show("The book is already in the borrow list.", "Failed to borrow", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                         End If
-
-                    Else
-                        'Maximum five books at a time
-                        MessageBox.Show("Sorry, you can only borrow five books at a time ", "Failed to borrow", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     End If
+
+                Else
+                    'Maximum five books at a time
+                    MessageBox.Show("Sorry, you can only borrow five books at a time ", "Failed to borrow", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 End If
-            Else
-                'Book not found
-                MessageBox.Show("Book with ISBN " & txtISBN.Text & " not found", "Book not found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
+        Else
+            'Book not found
+            MessageBox.Show("Book with ISBN " & txtISBN.Text & " not found", "Book not found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
 
     End Sub
 
@@ -183,8 +183,8 @@ Public Class BorrowBookv2
     End Sub
 
     Private Sub BorrowBookv2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dtpBorrowDate.Format = DateTimePickerFormat.Custom
-        dtpBorrowDate.CustomFormat = ("dd/MM/yyyy")
+        'dtpBorrowDate.Format = DateTimePickerFormat.Custom
+        'dtpBorrowDate.CustomFormat = "dd/MM/yyyy"
         dtpBorrowDate.Value = DateTime.Now
 
         Dim member = From m In db.Users Where m.UserID = formHome.loggedInID
@@ -213,4 +213,6 @@ Public Class BorrowBookv2
         lvBorrowList.Items(selectedItem).Remove()
 
     End Sub
+
+
 End Class

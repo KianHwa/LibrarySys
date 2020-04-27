@@ -35,7 +35,7 @@
       <Column Name="DateofBirth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="ReturnedBook" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="BookBorrowing" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Request" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Request" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="User_Borrow" Member="Borrows" ThisKey="UserID" OtherKey="UserID" Type="Borrow" />
     </Type>
   </Table>

@@ -23,8 +23,6 @@
                  Where b.bookName.Contains(title) And b.ISBN.Contains(isbn) And ((b.type.Contains(history) And b.type.Contains(mystery) And b.type.Contains(horror)))
 
 
-
-
         dgv.DataSource = rs
 
         lblCount.Text = rs.Count().ToString("0 book(s)")
