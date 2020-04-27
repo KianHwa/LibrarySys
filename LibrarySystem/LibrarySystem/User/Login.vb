@@ -9,7 +9,7 @@
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If IsValidUser(userID, txtPassword.Text) Then
-            If userID.Contains("LB") Or userID.Contains("lb") Then
+            If userID.Contains("LB") Or userID.Contains("lb") Or (userID.Contains("MM")) Then
                 LibrarySystem.formHome.loggedInID = "LB" + mskId.Text
                 LibrarySystem.formHome.tsmiRegisterLibrarian.Enabled = False
                 Me.Hide()
@@ -36,9 +36,9 @@
     Private Function IsValidUser(Name As String, Password As String) As Boolean
         Dim db As New LibraryDataContext()
         If userID.Contains("MM") Then
-            Return (From user In db.Users Where user.UserId = "MM" + mskId.Text And user.Password = txtPassword.Text).Any
+            Return (From user In db.Users Where user.UserID = "MM" + mskId.Text And user.Password = txtPassword.Text).Any
         ElseIf userID.Contains("LB") Then
-            Return (From user In db.Users Where user.UserId = "LB" + mskId.Text And user.Password = txtPassword.Text).Any
+            Return (From user In db.Users Where user.UserID = "LB" + mskId.Text And user.Password = txtPassword.Text).Any
         Else
             Return (From user In db.Users Where user.UserId = "AD" + mskId.Text And user.Password = txtPassword.Text).Any
         End If

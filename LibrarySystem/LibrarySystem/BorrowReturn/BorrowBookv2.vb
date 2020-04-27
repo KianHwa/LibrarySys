@@ -160,7 +160,7 @@ Public Class BorrowBookv2
                     .ISBN = item.SubItems.Item(1).Text,
                     .UserID = formHome.loggedInID,
                     .status = "Borrow",
-                    .borrowDate = dtpBorrowDate.Value.ToString("dd/MM/yyyy")}
+                    .borrowDate = dtpBorrowDate.Value.ToString()}
                     db.Borrows.InsertOnSubmit(borrow)
                 Next
                 MessageBox.Show("Successfully borrowed", "Borrow successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -183,9 +183,11 @@ Public Class BorrowBookv2
     End Sub
 
     Private Sub BorrowBookv2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'dtpBorrowDate.Format = DateTimePickerFormat.Custom
+        'dtpBorrowDate.CustomFormat = "dd/MM/yyyy"
         dtpBorrowDate.Value = DateTime.Now
 
-        Dim member = From m In db.Users Where m.UserId = formHome.loggedInID
+        Dim member = From m In db.Users Where m.UserID = formHome.loggedInID
         txtMemberID.Text = formHome.loggedInID
         For Each loggedInMember In member
             txtMemberName.Text = loggedInMember.Name
