@@ -32,26 +32,31 @@ Partial Class GenerateReport
         '
         'btnReportBorrowBook
         '
+        Me.btnReportBorrowBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnReportBorrowBook.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReportBorrowBook.Location = New System.Drawing.Point(21, 85)
+        Me.btnReportBorrowBook.ForeColor = System.Drawing.Color.White
+        Me.btnReportBorrowBook.Location = New System.Drawing.Point(22, 68)
         Me.btnReportBorrowBook.Name = "btnReportBorrowBook"
-        Me.btnReportBorrowBook.Size = New System.Drawing.Size(140, 50)
+        Me.btnReportBorrowBook.Size = New System.Drawing.Size(139, 67)
         Me.btnReportBorrowBook.TabIndex = 0
         Me.btnReportBorrowBook.Text = "&Borrow Book Report"
-        Me.btnReportBorrowBook.UseVisualStyleBackColor = True
+        Me.btnReportBorrowBook.UseVisualStyleBackColor = False
         '
         'btnReportReturnBook
         '
+        Me.btnReportReturnBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnReportReturnBook.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReportReturnBook.Location = New System.Drawing.Point(184, 85)
+        Me.btnReportReturnBook.ForeColor = System.Drawing.Color.White
+        Me.btnReportReturnBook.Location = New System.Drawing.Point(184, 68)
         Me.btnReportReturnBook.Name = "btnReportReturnBook"
-        Me.btnReportReturnBook.Size = New System.Drawing.Size(140, 50)
+        Me.btnReportReturnBook.Size = New System.Drawing.Size(140, 67)
         Me.btnReportReturnBook.TabIndex = 1
         Me.btnReportReturnBook.Text = "&Return Book Report"
-        Me.btnReportReturnBook.UseVisualStyleBackColor = True
+        Me.btnReportReturnBook.UseVisualStyleBackColor = False
         '
         'Label1
         '
+        Me.Label1.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.Label1.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(31, 25)
         Me.Label1.Name = "Label1"
@@ -62,14 +67,16 @@ Partial Class GenerateReport
         '
         'btnExit
         '
+        Me.btnExit.BackColor = System.Drawing.Color.DarkRed
         Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnExit.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.White
         Me.btnExit.Location = New System.Drawing.Point(39, 167)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(270, 50)
         Me.btnExit.TabIndex = 4
         Me.btnExit.Text = "E&xit"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '

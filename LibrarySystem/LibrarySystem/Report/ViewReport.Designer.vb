@@ -35,9 +35,9 @@ Partial Class ViewReport
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cboYears = New System.Windows.Forms.ComboBox()
         Me.cboDays = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.cboMonths = New System.Windows.Forms.ComboBox()
         Me.btnReset = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.lstView = New System.Windows.Forms.ListBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.radDaily = New System.Windows.Forms.RadioButton()
@@ -53,24 +53,28 @@ Partial Class ViewReport
         '
         'btnPrint
         '
+        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnPrint.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.White
         Me.btnPrint.Location = New System.Drawing.Point(19, 248)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(80, 40)
         Me.btnPrint.TabIndex = 1
         Me.btnPrint.Text = "&Print"
-        Me.btnPrint.UseVisualStyleBackColor = True
+        Me.btnPrint.UseVisualStyleBackColor = False
         '
         'btnExit
         '
+        Me.btnExit.BackColor = System.Drawing.Color.DarkRed
         Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnExit.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.White
         Me.btnExit.Location = New System.Drawing.Point(22, 310)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(195, 40)
         Me.btnExit.TabIndex = 2
         Me.btnExit.Text = "E&xit"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'lblCount
         '
@@ -174,15 +178,6 @@ Partial Class ViewReport
         Me.cboDays.Size = New System.Drawing.Size(198, 30)
         Me.cboDays.TabIndex = 6
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(18, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 22)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Years"
-        '
         'cboMonths
         '
         Me.cboMonths.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -195,13 +190,24 @@ Partial Class ViewReport
         '
         'btnReset
         '
+        Me.btnReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnReset.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReset.ForeColor = System.Drawing.Color.White
         Me.btnReset.Location = New System.Drawing.Point(137, 248)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(80, 40)
         Me.btnReset.TabIndex = 5
         Me.btnReset.Text = "&Reset"
-        Me.btnReset.UseVisualStyleBackColor = True
+        Me.btnReset.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(18, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(52, 22)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = "Years"
         '
         'lstView
         '
