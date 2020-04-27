@@ -5,7 +5,8 @@
         Dim history As String = ""
         Dim mystery As String = ""
         Dim horror As String = ""
-        Dim isbn As String = txtISBN.Text
+
+        Dim isbn As String = If(mskISBN.MaskCompleted, mskISBN.Text, "")
         Dim db As New LibraryDataContext()
 
         If chkHistory.Checked Then
@@ -68,9 +69,7 @@
         BindData()
     End Sub
 
-    Private Sub txtISBN_TextChanged(sender As Object, e As EventArgs) Handles txtISBN.TextChanged
-        BindData()
-    End Sub
+
 
 
 
@@ -89,4 +88,7 @@
         txtBookName.Focus()
     End Sub
 
+    Private Sub mskISBN_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles mskISBN.MaskInputRejected
+        BindData()
+    End Sub
 End Class

@@ -23,7 +23,7 @@ Partial Class SearchBook
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgv = New System.Windows.Forms.DataGridView()
         Me.ISBNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BookNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -46,6 +46,7 @@ Partial Class SearchBook
         Me.chkMystery = New System.Windows.Forms.CheckBox()
         Me.chkHorror = New System.Windows.Forms.CheckBox()
         Me.btnReset = New System.Windows.Forms.Button()
+        Me.mskISBN = New System.Windows.Forms.MaskedTextBox()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BookBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,8 +71,8 @@ Partial Class SearchBook
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
         Me.dgv.RowHeadersWidth = 51
-        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
-        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgv.RowTemplate.Height = 24
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv.Size = New System.Drawing.Size(956, 527)
@@ -256,11 +257,20 @@ Partial Class SearchBook
         Me.btnReset.Text = "&Reset"
         Me.btnReset.UseVisualStyleBackColor = False
         '
+        'mskISBN
+        '
+        Me.mskISBN.Location = New System.Drawing.Point(292, 26)
+        Me.mskISBN.Mask = "0000000000000"
+        Me.mskISBN.Name = "mskISBN"
+        Me.mskISBN.Size = New System.Drawing.Size(100, 22)
+        Me.mskISBN.TabIndex = 10
+        '
         'SearchBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1006, 721)
+        Me.Controls.Add(Me.mskISBN)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.grpCategory)
         Me.Controls.Add(Me.Label2)
@@ -306,4 +316,5 @@ Partial Class SearchBook
     Friend WithEvents chkMystery As CheckBox
     Friend WithEvents chkHorror As CheckBox
     Friend WithEvents btnReset As Button
+    Friend WithEvents mskISBN As MaskedTextBox
 End Class
