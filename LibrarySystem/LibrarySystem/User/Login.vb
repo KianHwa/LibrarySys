@@ -5,25 +5,25 @@
         err.Clear()
     End Sub
 
-    Dim userID As String
-
+    ' Dim userID As String
+    Dim role As String = ""
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim db As New LibraryDataContext()
+        Dim status As String = ""
+        For Each u In db.Users
+            If u.UserID = mskId.Text Then
+                status = u.Request.ToString
+            End If
+        Next
+        If IsValidUser(mskId.Text, txtPassword.Text) Then
 
-        If IsValidUser(userID, txtPassword.Text) Then
-            Dim status As String = ""
-            For Each u In db.Users
-                If u.UserID = userID Then
-                    status = u.Request.ToString
-                End If
-            Next
-            If userID.Contains("LB") Or userID.Contains("lb") Or (userID.Contains("MM") And status = "Requested") Then
+            If mskId.Text.Contains("LB") Or mskId.Text.Contains("lb") Or (mskId.Text.Contains("MM") And status = "Requested") Then
                 LibrarySystem.formHome.loggedInID = mskId.Text
                 LibrarySystem.formHome.tsmiRegisterLibrarian.Enabled = False
                 Me.Hide()
                 LibrarySystem.formHome.ShowDialog()
                 ResetForm()
-            ElseIf userID.Contains("MM") Or userID.Contains("mm") Then
+            ElseIf mskId.Text.Contains("MM") Or mskId.Text.Contains("mm") Then
                 LibrarySystem.formHome.loggedInID = mskId.Text
                 LibrarySystem.formHome.btnBookReturn.Enabled = False
                 LibrarySystem.formHome.menuReports.Enabled = False
@@ -43,13 +43,29 @@
 
     Private Function IsValidUser(Name As String, Password As String) As Boolean
         Dim db As New LibraryDataContext()
-        If userID.Contains("MM") Then
-            Return (From user In db.Users Where user.UserID = mskId.Text And user.Password = txtPassword.Text).Any
-        ElseIf userID.Contains("LB") Then
-            Return (From user In db.Users Where user.UserID = mskId.Text And user.Password = txtPassword.Text).Any
-        Else
-            Return (From user In db.Users Where user.UserID = mskId.Text And user.Password = txtPassword.Text).Any
+        Dim status As String = ""
+        For Each u In db.Users
+            If u.UserID = mskId.Text Then
+                status = u.Request.ToString
+            End If
+        Next
+
+        If role = "Admin" Then
+            Return (From user In db.Users Where user.UserID = mskId.Text And user.Password = txtPassword.Text And user.UserID.StartsWith("AD")).Any
+
+        ElseIf role = "Member" Then
+            If status <> "Requested" Then
+                Return (From user In db.Users Where user.UserID = mskId.Text And user.Password = txtPassword.Text And user.UserID.StartsWith("MM")).Any
+            End If
+
+        ElseIf role = "Librarian" Then
+            If status = "Requested" Then
+                Return (From user In db.Users Where user.UserID = mskId.Text And user.Password = txtPassword.Text And (user.UserID.StartsWith("MM"))).Any
+            Else
+                Return (From user In db.Users Where user.UserID = mskId.Text And user.Password = txtPassword.Text And (user.UserID.StartsWith("LB"))).Any
+            End If
         End If
+
     End Function
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
@@ -81,11 +97,11 @@
         btnRegister.Visible = True
         btnLibrarian.Visible = False
         btnMember.Visible = False
-        userID = mskId.Text
         btnBack.Visible = True
         chkShowPass.Visible = True
         btnBack4.Visible = True
         mskId.Focus()
+        role = "Member"
     End Sub
 
     Private Sub btnLibrarian_Click(sender As Object, e As EventArgs) Handles btnLibrarian.Click
@@ -133,9 +149,9 @@
         btnBack.Visible = False
         btnBack2.Visible = False
         btnBack3.Visible = True
-        userID = mskId.Text
         chkShowPass.Visible = True
         mskId.Focus()
+        role = "Librarian"
     End Sub
 
     Private Sub btnLogAdmin_Click(sender As Object, e As EventArgs) Handles btnLogAdmin.Click
@@ -152,9 +168,9 @@
         btnBack.Visible = False
         btnBack2.Visible = False
         btnBack3.Visible = True
-        userID = mskId.Text
         chkShowPass.Visible = True
         mskId.Focus()
+        role = "Admin"
     End Sub
 
     Private Sub btnBack2_Click(sender As Object, e As EventArgs) Handles btnBack2.Click

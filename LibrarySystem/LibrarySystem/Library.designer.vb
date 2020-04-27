@@ -778,7 +778,7 @@ Partial Public Class User
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Request", DbType:="NChar(10)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Request", DbType:="VarChar(50)")>  _
 	Public Property Request() As String
 		Get
 			Return Me._Request
