@@ -136,7 +136,7 @@
     End Sub
 
     Private Sub BtnBookBorrow_Click(sender As Object, e As EventArgs) Handles btnBookBorrow.Click
-        BorrowBookv2.ShowDialog()
+        BorrowBookv2.Show()
     End Sub
 
     Private Sub DefaultThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiDefaultTheme.Click
@@ -144,27 +144,27 @@
     End Sub
 
     Private Sub TsmiAbout_Click(sender As Object, e As EventArgs) Handles tsmiAbout.Click
-        About.ShowDialog()
+        About.Show()
     End Sub
 
     Private Sub TsmiUse_Click(sender As Object, e As EventArgs) Handles tsmiUse.Click
-        HowToUse.ShowDialog()
+        HowToUse.Show()
     End Sub
 
     Private Sub tsmiAddBooks_Click(sender As Object, e As EventArgs) Handles tsmiAddBooks.Click
-        NewBook.ShowDialog()
+        NewBook.Show()
     End Sub
 
     Private Sub SearchBooksToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiSearchBook.Click
-        SearchBook.ShowDialog()
+        SearchBook.Show()
     End Sub
 
     Private Sub btnSearchBook_Click(sender As Object, e As EventArgs) Handles btnSearchBook.Click
-        SearchBook.ShowDialog()
+        SearchBook.Show()
     End Sub
 
     Private Sub btnAddNewBook_Click(sender As Object, e As EventArgs) Handles btnAddNewBook.Click
-        NewBook.ShowDialog()
+        NewBook.Show()
     End Sub
 
     Private Sub tsmiGenerateReports_Click(sender As Object, e As EventArgs) Handles tsmiGenerateReports.Click
@@ -177,5 +177,42 @@
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblDIsplayDateTime.Text = DateTime.Now.ToString("MMMM dd, yyyy   HH:MM:ss")
+    End Sub
+
+    Private Sub tsmiViewProfile_Click(sender As Object, e As EventArgs) Handles tsmiViewProfile.Click
+        UserProfile.Show()
+    End Sub
+
+    Private Sub BorrowingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BorrowingToolStripMenuItem.Click
+        FrmBorrowing.Show()
+    End Sub
+
+    Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoryToolStripMenuItem.Click
+        BorrowHistory.Show()
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        loggedInID = ""
+        btnBookReturn.Enabled = True
+        tsmiGenerateReports.Enabled = True
+        menuReports.Enabled = True
+        Me.Hide()
+        Login.Show()
+    End Sub
+
+    Private Sub RegisterLibrarianToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiRegisterLibrarian.Click
+        If loggedInID.Contains("AD") Then
+            LibrarianRegis.Show()
+        ElseIf loggedInID.Contains("MM") Then
+            Request.Show()
+        End If
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub tsmiRequest_Click(sender As Object, e As EventArgs) Handles tsmiRequest.Click
+        ProcessRequest.Show()
     End Sub
 End Class

@@ -22,22 +22,40 @@ Public Class NewBook
         Dim history As String = ""
         Dim mystery As String = ""
         Dim horror As String = ""
+        Dim counter As Integer = 0
+
+        If chkHistory.Checked Then
+            counter += 1
+
+        End If
+        If chkMystery.Checked Then
+            counter += 1
+
+        End If
+        If chkHorror.Checked Then
+            counter += 1
+
+        End If
 
         If isbn = "" Then
-            err.AppendLine("- Book ISBN is empty")
+            err.AppendLine("[Book ISBN is empty!]")
             ctrl = If(ctrl, txtISBN)
         End If
         If title = "" Then
-            err.AppendLine("- Book Title is empty")
+            err.AppendLine("[Book Title is empty!]")
             ctrl = If(ctrl, txtBookName)
         End If
         If desc = "" Then
-            err.AppendLine("- Book Description is empty")
+            err.AppendLine("[Book Description is empty!]")
             ctrl = If(ctrl, txtBookDesc)
         End If
         If author = "" Then
-            err.AppendLine("- Author Name is empty")
+            err.AppendLine("[Author Name is empty!]")
             ctrl = If(ctrl, txtAuthor)
+        End If
+        If counter = 0 Then
+            err.AppendLine("[Category is empty!]")
+            ctrl = If(ctrl, txtISBN)
         End If
         ' (4) Check if there is input error
         If err.Length > 0 Then
@@ -51,12 +69,12 @@ Public Class NewBook
             MessageBox.Show("Book with ISBN [" & txtISBN.Text & "] already existing!Please re-enter another Book ISBN.", "Book not found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             Dim b As New Book()
-            Dim count As Integer = 0
+
             b.ISBN = isbn
             b.bookName = title
             b.bookDesc = desc
             b.author = author
-            Dim counter As Integer = 0
+
 
             If chkHistory.Checked Then
                 counter += 1
@@ -100,8 +118,10 @@ Public Class NewBook
                 End If
             End If
 
-            Dim lastComma As Integer = b.type.LastIndexOf(",")
-            b.type = b.type.Substring(0, lastComma) & " " & b.type.Substring(lastComma + 1)
+            If counter > 1 Then
+                Dim lastComma As Integer = b.type.LastIndexOf(",")
+                b.type = b.type.Substring(0, lastComma) & " " & b.type.Substring(lastComma + 1)
+            End If
 
             db.Books.InsertOnSubmit(b)
             db.SubmitChanges()

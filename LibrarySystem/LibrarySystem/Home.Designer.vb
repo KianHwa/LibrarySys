@@ -23,10 +23,15 @@ Partial Class formHome
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formHome))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.menuUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiViewProfile = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiChangePassword = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BorrowingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiRegisterLibrarian = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiRequest = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBookManagement = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiAddBooks = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiSearchBook = New System.Windows.Forms.ToolStripMenuItem()
@@ -40,6 +45,7 @@ Partial Class formHome
         Me.tsmiAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiUse = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblDIsplayDateTime = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnAddNewBook = New System.Windows.Forms.Button()
@@ -49,7 +55,7 @@ Partial Class formHome
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.lblDIsplayDateTime = New System.Windows.Forms.Label()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,7 +77,7 @@ Partial Class formHome
         'menuUser
         '
         Me.menuUser.BackColor = System.Drawing.Color.Transparent
-        Me.menuUser.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiViewProfile, Me.tsmiChangePassword})
+        Me.menuUser.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiViewProfile, Me.tsmiChangePassword, Me.tsmiRegisterLibrarian, Me.tsmiRequest})
         Me.menuUser.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.menuUser.ForeColor = System.Drawing.Color.White
         Me.menuUser.Name = "menuUser"
@@ -86,21 +92,59 @@ Partial Class formHome
         Me.tsmiViewProfile.Name = "tsmiViewProfile"
         Me.tsmiViewProfile.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
         Me.tsmiViewProfile.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
-        Me.tsmiViewProfile.Size = New System.Drawing.Size(276, 32)
+        Me.tsmiViewProfile.Size = New System.Drawing.Size(199, 32)
         Me.tsmiViewProfile.Text = "View Profile"
         Me.tsmiViewProfile.ToolTipText = "View your profile details"
         '
         'tsmiChangePassword
         '
         Me.tsmiChangePassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.tsmiChangePassword.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BorrowingToolStripMenuItem, Me.HistoryToolStripMenuItem})
         Me.tsmiChangePassword.ForeColor = System.Drawing.Color.White
         Me.tsmiChangePassword.Name = "tsmiChangePassword"
         Me.tsmiChangePassword.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiChangePassword.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.tsmiChangePassword.Size = New System.Drawing.Size(276, 32)
-        Me.tsmiChangePassword.Text = "Change Password"
+        Me.tsmiChangePassword.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
+        Me.tsmiChangePassword.Size = New System.Drawing.Size(199, 32)
+        Me.tsmiChangePassword.Text = "Books"
         Me.tsmiChangePassword.ToolTipText = "Change your passwords"
+        '
+        'BorrowingToolStripMenuItem
+        '
+        Me.BorrowingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.BorrowingToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.BorrowingToolStripMenuItem.Name = "BorrowingToolStripMenuItem"
+        Me.BorrowingToolStripMenuItem.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.BorrowingToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
+        Me.BorrowingToolStripMenuItem.Size = New System.Drawing.Size(189, 32)
+        Me.BorrowingToolStripMenuItem.Text = "Borrowing"
+        '
+        'HistoryToolStripMenuItem
+        '
+        Me.HistoryToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.HistoryToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.HistoryToolStripMenuItem.Name = "HistoryToolStripMenuItem"
+        Me.HistoryToolStripMenuItem.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.HistoryToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
+        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(189, 32)
+        Me.HistoryToolStripMenuItem.Text = "History"
+        '
+        'tsmiRegisterLibrarian
+        '
+        Me.tsmiRegisterLibrarian.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.tsmiRegisterLibrarian.ForeColor = System.Drawing.Color.White
+        Me.tsmiRegisterLibrarian.Name = "tsmiRegisterLibrarian"
+        Me.tsmiRegisterLibrarian.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.tsmiRegisterLibrarian.Size = New System.Drawing.Size(199, 32)
+        Me.tsmiRegisterLibrarian.Text = "Register Librarian"
+        '
+        'tsmiRequest
+        '
+        Me.tsmiRequest.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.tsmiRequest.ForeColor = System.Drawing.Color.White
+        Me.tsmiRequest.Name = "tsmiRequest"
+        Me.tsmiRequest.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.tsmiRequest.Size = New System.Drawing.Size(199, 32)
+        Me.tsmiRequest.Text = "Request"
         '
         'menuBookManagement
         '
@@ -128,8 +172,9 @@ Partial Class formHome
         Me.tsmiSearchBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.tsmiSearchBook.ForeColor = System.Drawing.Color.White
         Me.tsmiSearchBook.Name = "tsmiSearchBook"
+        Me.tsmiSearchBook.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
         Me.tsmiSearchBook.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.tsmiSearchBook.Size = New System.Drawing.Size(204, 24)
+        Me.tsmiSearchBook.Size = New System.Drawing.Size(204, 32)
         Me.tsmiSearchBook.Text = "Search Books"
         '
         'menuReports
@@ -170,7 +215,7 @@ Partial Class formHome
         Me.tsmiTheme.ForeColor = System.Drawing.Color.White
         Me.tsmiTheme.Name = "tsmiTheme"
         Me.tsmiTheme.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiTheme.Size = New System.Drawing.Size(122, 32)
+        Me.tsmiTheme.Size = New System.Drawing.Size(180, 32)
         Me.tsmiTheme.Text = "Theme"
         '
         'tsmiDefaultTheme
@@ -207,7 +252,7 @@ Partial Class formHome
         Me.tsmiAbout.ForeColor = System.Drawing.Color.White
         Me.tsmiAbout.Name = "tsmiAbout"
         Me.tsmiAbout.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiAbout.Size = New System.Drawing.Size(150, 32)
+        Me.tsmiAbout.Size = New System.Drawing.Size(180, 32)
         Me.tsmiAbout.Text = "About"
         Me.tsmiAbout.ToolTipText = "Know more about us"
         '
@@ -217,7 +262,7 @@ Partial Class formHome
         Me.tsmiUse.ForeColor = System.Drawing.Color.White
         Me.tsmiUse.Name = "tsmiUse"
         Me.tsmiUse.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.tsmiUse.Size = New System.Drawing.Size(150, 32)
+        Me.tsmiUse.Size = New System.Drawing.Size(180, 32)
         Me.tsmiUse.Text = "How to use"
         Me.tsmiUse.ToolTipText = "Guide on how to use the system"
         '
@@ -238,6 +283,16 @@ Partial Class formHome
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(269, 812)
         Me.Panel1.TabIndex = 1
+        '
+        'lblDIsplayDateTime
+        '
+        Me.lblDIsplayDateTime.AutoSize = True
+        Me.lblDIsplayDateTime.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDIsplayDateTime.Location = New System.Drawing.Point(46, 624)
+        Me.lblDIsplayDateTime.Name = "lblDIsplayDateTime"
+        Me.lblDIsplayDateTime.Size = New System.Drawing.Size(107, 20)
+        Me.lblDIsplayDateTime.TabIndex = 3
+        Me.lblDIsplayDateTime.Text = "Date and Time"
         '
         'PictureBox1
         '
@@ -356,15 +411,17 @@ Partial Class formHome
         'Timer1
         '
         '
-        'lblDIsplayDateTime
+        'btnExit
         '
-        Me.lblDIsplayDateTime.AutoSize = True
-        Me.lblDIsplayDateTime.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDIsplayDateTime.Location = New System.Drawing.Point(46, 624)
-        Me.lblDIsplayDateTime.Name = "lblDIsplayDateTime"
-        Me.lblDIsplayDateTime.Size = New System.Drawing.Size(107, 20)
-        Me.lblDIsplayDateTime.TabIndex = 3
-        Me.lblDIsplayDateTime.Text = "Date and Time"
+        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.btnExit.ForeColor = System.Drawing.Color.White
+        Me.btnExit.Location = New System.Drawing.Point(1094, 10)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(52, 24)
+        Me.btnExit.TabIndex = 3
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'formHome
         '
@@ -374,12 +431,14 @@ Partial Class formHome
         Me.BackgroundImage = Global.LibrarySystem.My.Resources.Resources.bg11
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1155, 687)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MinimumSize = New System.Drawing.Size(814, 592)
+        Me.MinimumSize = New System.Drawing.Size(813, 591)
         Me.Name = "formHome"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Library Management System"
@@ -420,4 +479,9 @@ Partial Class formHome
     Friend WithEvents tsmiSearchBook As ToolStripMenuItem
     Friend WithEvents Timer1 As Timer
     Friend WithEvents lblDIsplayDateTime As Label
+    Friend WithEvents BorrowingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HistoryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents tsmiRegisterLibrarian As ToolStripMenuItem
+    Friend WithEvents btnExit As Button
+    Friend WithEvents tsmiRequest As ToolStripMenuItem
 End Class

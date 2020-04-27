@@ -1,5 +1,5 @@
 ﻿Public Class SearchBook
-
+    Dim rowIndex As Integer = 0
     Private Sub BindData()
         Dim title As String = txtBookName.Text
         Dim history As String = ""
@@ -21,8 +21,6 @@
         End If
         Dim rs = From b In db.Books
                  Where b.bookName.Contains(title) And b.ISBN.Contains(isbn) And ((b.type.Contains(history) And b.type.Contains(mystery) And b.type.Contains(horror)))
-
-
 
 
         dgv.DataSource = rs
@@ -88,4 +86,5 @@
         chkHorror.Checked = False
         txtBookName.Focus()
     End Sub
+
 End Class

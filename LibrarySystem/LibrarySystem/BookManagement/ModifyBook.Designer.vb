@@ -27,15 +27,18 @@ Partial Class ModifyBook
         Me.txtAuthor = New System.Windows.Forms.TextBox()
         Me.txtBookDesc = New System.Windows.Forms.TextBox()
         Me.txtBookName = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblISBN = New System.Windows.Forms.Label()
-        Me.cboCategory = New System.Windows.Forms.ComboBox()
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
+        Me.grpCategory = New System.Windows.Forms.GroupBox()
+        Me.chkMystery = New System.Windows.Forms.CheckBox()
+        Me.chkHorror = New System.Windows.Forms.CheckBox()
+        Me.chkHistory = New System.Windows.Forms.CheckBox()
+        Me.grpCategory.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnCancel
@@ -45,7 +48,7 @@ Partial Class ModifyBook
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnCancel.Location = New System.Drawing.Point(222, 403)
+        Me.btnCancel.Location = New System.Drawing.Point(209, 482)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(120, 35)
         Me.btnCancel.TabIndex = 7
@@ -57,7 +60,7 @@ Partial Class ModifyBook
         Me.btnModify.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnModify.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnModify.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnModify.Location = New System.Drawing.Point(222, 348)
+        Me.btnModify.Location = New System.Drawing.Point(209, 427)
         Me.btnModify.Name = "btnModify"
         Me.btnModify.Size = New System.Drawing.Size(120, 35)
         Me.btnModify.TabIndex = 6
@@ -85,16 +88,6 @@ Partial Class ModifyBook
         Me.txtBookName.Name = "txtBookName"
         Me.txtBookName.Size = New System.Drawing.Size(162, 22)
         Me.txtBookName.TabIndex = 1
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.Label5.Location = New System.Drawing.Point(54, 274)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(95, 24)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Category :"
         '
         'Label6
         '
@@ -144,23 +137,13 @@ Partial Class ModifyBook
         Me.lblISBN.Size = New System.Drawing.Size(162, 27)
         Me.lblISBN.TabIndex = 0
         '
-        'cboCategory
-        '
-        Me.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboCategory.FormattingEnabled = True
-        Me.cboCategory.Items.AddRange(New Object() {"All", "Mystery", "Historical fiction", "Horror"})
-        Me.cboCategory.Location = New System.Drawing.Point(155, 281)
-        Me.cboCategory.Name = "cboCategory"
-        Me.cboCategory.Size = New System.Drawing.Size(162, 24)
-        Me.cboCategory.TabIndex = 4
-        '
         'btnRemove
         '
         Me.btnRemove.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnRemove.CausesValidation = False
         Me.btnRemove.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnRemove.Location = New System.Drawing.Point(58, 348)
+        Me.btnRemove.Location = New System.Drawing.Point(45, 427)
         Me.btnRemove.Name = "btnRemove"
         Me.btnRemove.Size = New System.Drawing.Size(120, 35)
         Me.btnRemove.TabIndex = 5
@@ -172,12 +155,55 @@ Partial Class ModifyBook
         Me.btnReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnReset.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnReset.Location = New System.Drawing.Point(58, 403)
+        Me.btnReset.Location = New System.Drawing.Point(45, 482)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(120, 35)
         Me.btnReset.TabIndex = 10
         Me.btnReset.Text = "&Reset"
         Me.btnReset.UseVisualStyleBackColor = False
+        '
+        'grpCategory
+        '
+        Me.grpCategory.Controls.Add(Me.chkMystery)
+        Me.grpCategory.Controls.Add(Me.chkHorror)
+        Me.grpCategory.Controls.Add(Me.chkHistory)
+        Me.grpCategory.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
+        Me.grpCategory.Location = New System.Drawing.Point(41, 289)
+        Me.grpCategory.Name = "grpCategory"
+        Me.grpCategory.Size = New System.Drawing.Size(288, 106)
+        Me.grpCategory.TabIndex = 14
+        Me.grpCategory.TabStop = False
+        Me.grpCategory.Text = "Category"
+        '
+        'chkMystery
+        '
+        Me.chkMystery.AutoSize = True
+        Me.chkMystery.Location = New System.Drawing.Point(6, 62)
+        Me.chkMystery.Name = "chkMystery"
+        Me.chkMystery.Size = New System.Drawing.Size(94, 28)
+        Me.chkMystery.TabIndex = 9
+        Me.chkMystery.Text = "Mystery"
+        Me.chkMystery.UseVisualStyleBackColor = True
+        '
+        'chkHorror
+        '
+        Me.chkHorror.AutoSize = True
+        Me.chkHorror.Location = New System.Drawing.Point(172, 29)
+        Me.chkHorror.Name = "chkHorror"
+        Me.chkHorror.Size = New System.Drawing.Size(83, 28)
+        Me.chkHorror.TabIndex = 8
+        Me.chkHorror.Text = "Horror"
+        Me.chkHorror.UseVisualStyleBackColor = True
+        '
+        'chkHistory
+        '
+        Me.chkHistory.AutoSize = True
+        Me.chkHistory.Location = New System.Drawing.Point(6, 28)
+        Me.chkHistory.Name = "chkHistory"
+        Me.chkHistory.Size = New System.Drawing.Size(160, 28)
+        Me.chkHistory.TabIndex = 7
+        Me.chkHistory.Text = "Historical fiction"
+        Me.chkHistory.UseVisualStyleBackColor = True
         '
         'ModifyBook
         '
@@ -185,24 +211,26 @@ Partial Class ModifyBook
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(405, 450)
+        Me.ClientSize = New System.Drawing.Size(363, 535)
+        Me.Controls.Add(Me.grpCategory)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnRemove)
-        Me.Controls.Add(Me.cboCategory)
         Me.Controls.Add(Me.lblISBN)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnModify)
         Me.Controls.Add(Me.txtAuthor)
         Me.Controls.Add(Me.txtBookDesc)
         Me.Controls.Add(Me.txtBookName)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label9)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "ModifyBook"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "ModifyBook"
+        Me.grpCategory.ResumeLayout(False)
+        Me.grpCategory.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -213,13 +241,15 @@ Partial Class ModifyBook
     Friend WithEvents txtAuthor As TextBox
     Friend WithEvents txtBookDesc As TextBox
     Friend WithEvents txtBookName As TextBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents lblISBN As Label
-    Friend WithEvents cboCategory As ComboBox
     Friend WithEvents btnRemove As Button
     Friend WithEvents btnReset As Button
+    Friend WithEvents grpCategory As GroupBox
+    Friend WithEvents chkMystery As CheckBox
+    Friend WithEvents chkHorror As CheckBox
+    Friend WithEvents chkHistory As CheckBox
 End Class

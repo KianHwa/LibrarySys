@@ -43,11 +43,11 @@ Partial Public Class LibraryDataContext
     End Sub
   Partial Private Sub DeleteBorrow(instance As Borrow)
     End Sub
-  Partial Private Sub InsertMember(instance As Member)
+  Partial Private Sub InsertUser(instance As User)
     End Sub
-  Partial Private Sub UpdateMember(instance As Member)
+  Partial Private Sub UpdateUser(instance As User)
     End Sub
-  Partial Private Sub DeleteMember(instance As Member)
+  Partial Private Sub DeleteUser(instance As User)
     End Sub
   #End Region
 	
@@ -88,9 +88,9 @@ Partial Public Class LibraryDataContext
 		End Get
 	End Property
 	
-	Public ReadOnly Property Members() As System.Data.Linq.Table(Of Member)
+	Public ReadOnly Property Users() As System.Data.Linq.Table(Of User)
 		Get
-			Return Me.GetTable(Of Member)
+			Return Me.GetTable(Of User)
 		End Get
 	End Property
 End Class
@@ -275,7 +275,7 @@ Partial Public Class Borrow
 	
 	Private _borrowID As Integer
 	
-	Private _memberID As String
+	Private _UserID As String
 	
 	Private _ISBN As String
 	
@@ -287,7 +287,7 @@ Partial Public Class Borrow
 	
 	Private _Book As EntityRef(Of Book)
 	
-	Private _Member As EntityRef(Of Member)
+	Private _User As EntityRef(Of User)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -300,9 +300,9 @@ Partial Public Class Borrow
     End Sub
     Partial Private Sub OnborrowIDChanged()
     End Sub
-    Partial Private Sub OnmemberIDChanging(value As String)
+    Partial Private Sub OnUserIDChanging(value As String)
     End Sub
-    Partial Private Sub OnmemberIDChanged()
+    Partial Private Sub OnUserIDChanged()
     End Sub
     Partial Private Sub OnISBNChanging(value As String)
     End Sub
@@ -325,11 +325,11 @@ Partial Public Class Borrow
 	Public Sub New()
 		MyBase.New
 		Me._Book = CType(Nothing, EntityRef(Of Book))
-		Me._Member = CType(Nothing, EntityRef(Of Member))
+		Me._User = CType(Nothing, EntityRef(Of User))
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_borrowID", DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_borrowID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
 	Public Property borrowID() As Integer
 		Get
 			Return Me._borrowID
@@ -346,21 +346,21 @@ Partial Public Class Borrow
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_memberID", DbType:="VarChar(50) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
-	Public Property memberID() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserID", DbType:="VarChar(50) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property UserID() As String
 		Get
-			Return Me._memberID
+			Return Me._UserID
 		End Get
 		Set
-			If (String.Equals(Me._memberID, value) = false) Then
-				If Me._Member.HasLoadedOrAssignedValue Then
+			If (String.Equals(Me._UserID, value) = false) Then
+				If Me._User.HasLoadedOrAssignedValue Then
 					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
 				End If
-				Me.OnmemberIDChanging(value)
+				Me.OnUserIDChanging(value)
 				Me.SendPropertyChanging
-				Me._memberID = value
-				Me.SendPropertyChanged("memberID")
-				Me.OnmemberIDChanged
+				Me._UserID = value
+				Me.SendPropertyChanged("UserID")
+				Me.OnUserIDChanged
 			End If
 		End Set
 	End Property
@@ -460,30 +460,30 @@ Partial Public Class Borrow
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Member_Borrow", Storage:="_Member", ThisKey:="memberID", OtherKey:="memberID", IsForeignKey:=true)>  _
-	Public Property Member() As Member
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="User_Borrow", Storage:="_User", ThisKey:="UserID", OtherKey:="UserID", IsForeignKey:=true)>  _
+	Public Property User() As User
 		Get
-			Return Me._Member.Entity
+			Return Me._User.Entity
 		End Get
 		Set
-			Dim previousValue As Member = Me._Member.Entity
+			Dim previousValue As User = Me._User.Entity
 			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._Member.HasLoadedOrAssignedValue = false)) Then
+						OrElse (Me._User.HasLoadedOrAssignedValue = false)) Then
 				Me.SendPropertyChanging
 				If ((previousValue Is Nothing)  _
 							= false) Then
-					Me._Member.Entity = Nothing
+					Me._User.Entity = Nothing
 					previousValue.Borrows.Remove(Me)
 				End If
-				Me._Member.Entity = value
+				Me._User.Entity = value
 				If ((value Is Nothing)  _
 							= false) Then
 					value.Borrows.Add(Me)
-					Me._memberID = value.memberID
+					Me._UserID = value.UserID
 				Else
-					Me._memberID = CType(Nothing, String)
+					Me._UserID = CType(Nothing, String)
 				End If
-				Me.SendPropertyChanged("Member")
+				Me.SendPropertyChanged("User")
 			End If
 		End Set
 	End Property
@@ -507,15 +507,35 @@ Partial Public Class Borrow
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Member")>  _
-Partial Public Class Member
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.[User]")>  _
+Partial Public Class User
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
 	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
 	
-	Private _memberID As String
+	Private _UserID As String
 	
-	Private _memberName As String
+	Private _Name As String
+	
+	Private _Password As String
+	
+	Private _Ic As String
+	
+	Private _Email As String
+	
+	Private _Address As String
+	
+	Private _Gender As String
+	
+	Private _Status As String
+	
+	Private _DateofBirth As System.Nullable(Of Date)
+	
+	Private _ReturnedBook As String
+	
+	Private _BookBorrowing As String
+	
+	Private _Request As String
 	
 	Private _Borrows As EntitySet(Of Borrow)
 	
@@ -526,13 +546,53 @@ Partial Public Class Member
     End Sub
     Partial Private Sub OnCreated()
     End Sub
-    Partial Private Sub OnmemberIDChanging(value As String)
+    Partial Private Sub OnUserIDChanging(value As String)
     End Sub
-    Partial Private Sub OnmemberIDChanged()
+    Partial Private Sub OnUserIDChanged()
     End Sub
-    Partial Private Sub OnmemberNameChanging(value As String)
+    Partial Private Sub OnNameChanging(value As String)
     End Sub
-    Partial Private Sub OnmemberNameChanged()
+    Partial Private Sub OnNameChanged()
+    End Sub
+    Partial Private Sub OnPasswordChanging(value As String)
+    End Sub
+    Partial Private Sub OnPasswordChanged()
+    End Sub
+    Partial Private Sub OnIcChanging(value As String)
+    End Sub
+    Partial Private Sub OnIcChanged()
+    End Sub
+    Partial Private Sub OnEmailChanging(value As String)
+    End Sub
+    Partial Private Sub OnEmailChanged()
+    End Sub
+    Partial Private Sub OnAddressChanging(value As String)
+    End Sub
+    Partial Private Sub OnAddressChanged()
+    End Sub
+    Partial Private Sub OnGenderChanging(value As String)
+    End Sub
+    Partial Private Sub OnGenderChanged()
+    End Sub
+    Partial Private Sub OnStatusChanging(value As String)
+    End Sub
+    Partial Private Sub OnStatusChanged()
+    End Sub
+    Partial Private Sub OnDateofBirthChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnDateofBirthChanged()
+    End Sub
+    Partial Private Sub OnReturnedBookChanging(value As String)
+    End Sub
+    Partial Private Sub OnReturnedBookChanged()
+    End Sub
+    Partial Private Sub OnBookBorrowingChanging(value As String)
+    End Sub
+    Partial Private Sub OnBookBorrowingChanged()
+    End Sub
+    Partial Private Sub OnRequestChanging(value As String)
+    End Sub
+    Partial Private Sub OnRequestChanged()
     End Sub
     #End Region
 	
@@ -542,39 +602,199 @@ Partial Public Class Member
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_memberID", DbType:="VarChar(50) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
-	Public Property memberID() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserID", DbType:="VarChar(50) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property UserID() As String
 		Get
-			Return Me._memberID
+			Return Me._UserID
 		End Get
 		Set
-			If (String.Equals(Me._memberID, value) = false) Then
-				Me.OnmemberIDChanging(value)
+			If (String.Equals(Me._UserID, value) = false) Then
+				Me.OnUserIDChanging(value)
 				Me.SendPropertyChanging
-				Me._memberID = value
-				Me.SendPropertyChanged("memberID")
-				Me.OnmemberIDChanged
+				Me._UserID = value
+				Me.SendPropertyChanged("UserID")
+				Me.OnUserIDChanged
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_memberName", DbType:="VarChar(50)")>  _
-	Public Property memberName() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Name", DbType:="VarChar(30)")>  _
+	Public Property Name() As String
 		Get
-			Return Me._memberName
+			Return Me._Name
 		End Get
 		Set
-			If (String.Equals(Me._memberName, value) = false) Then
-				Me.OnmemberNameChanging(value)
+			If (String.Equals(Me._Name, value) = false) Then
+				Me.OnNameChanging(value)
 				Me.SendPropertyChanging
-				Me._memberName = value
-				Me.SendPropertyChanged("memberName")
-				Me.OnmemberNameChanged
+				Me._Name = value
+				Me.SendPropertyChanged("Name")
+				Me.OnNameChanged
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Member_Borrow", Storage:="_Borrows", ThisKey:="memberID", OtherKey:="memberID")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Password", DbType:="VarChar(20)")>  _
+	Public Property Password() As String
+		Get
+			Return Me._Password
+		End Get
+		Set
+			If (String.Equals(Me._Password, value) = false) Then
+				Me.OnPasswordChanging(value)
+				Me.SendPropertyChanging
+				Me._Password = value
+				Me.SendPropertyChanged("Password")
+				Me.OnPasswordChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Ic", DbType:="VarChar(14)")>  _
+	Public Property Ic() As String
+		Get
+			Return Me._Ic
+		End Get
+		Set
+			If (String.Equals(Me._Ic, value) = false) Then
+				Me.OnIcChanging(value)
+				Me.SendPropertyChanging
+				Me._Ic = value
+				Me.SendPropertyChanged("Ic")
+				Me.OnIcChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Email", DbType:="VarChar(30)")>  _
+	Public Property Email() As String
+		Get
+			Return Me._Email
+		End Get
+		Set
+			If (String.Equals(Me._Email, value) = false) Then
+				Me.OnEmailChanging(value)
+				Me.SendPropertyChanging
+				Me._Email = value
+				Me.SendPropertyChanged("Email")
+				Me.OnEmailChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Address", DbType:="VarChar(50)")>  _
+	Public Property Address() As String
+		Get
+			Return Me._Address
+		End Get
+		Set
+			If (String.Equals(Me._Address, value) = false) Then
+				Me.OnAddressChanging(value)
+				Me.SendPropertyChanging
+				Me._Address = value
+				Me.SendPropertyChanged("Address")
+				Me.OnAddressChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Gender", DbType:="VarChar(6)")>  _
+	Public Property Gender() As String
+		Get
+			Return Me._Gender
+		End Get
+		Set
+			If (String.Equals(Me._Gender, value) = false) Then
+				Me.OnGenderChanging(value)
+				Me.SendPropertyChanging
+				Me._Gender = value
+				Me.SendPropertyChanged("Gender")
+				Me.OnGenderChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Status", DbType:="VarChar(10)")>  _
+	Public Property Status() As String
+		Get
+			Return Me._Status
+		End Get
+		Set
+			If (String.Equals(Me._Status, value) = false) Then
+				Me.OnStatusChanging(value)
+				Me.SendPropertyChanging
+				Me._Status = value
+				Me.SendPropertyChanged("Status")
+				Me.OnStatusChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DateofBirth", DbType:="Date")>  _
+	Public Property DateofBirth() As System.Nullable(Of Date)
+		Get
+			Return Me._DateofBirth
+		End Get
+		Set
+			If (Me._DateofBirth.Equals(value) = false) Then
+				Me.OnDateofBirthChanging(value)
+				Me.SendPropertyChanging
+				Me._DateofBirth = value
+				Me.SendPropertyChanged("DateofBirth")
+				Me.OnDateofBirthChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ReturnedBook", DbType:="VarChar(50)")>  _
+	Public Property ReturnedBook() As String
+		Get
+			Return Me._ReturnedBook
+		End Get
+		Set
+			If (String.Equals(Me._ReturnedBook, value) = false) Then
+				Me.OnReturnedBookChanging(value)
+				Me.SendPropertyChanging
+				Me._ReturnedBook = value
+				Me.SendPropertyChanged("ReturnedBook")
+				Me.OnReturnedBookChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_BookBorrowing", DbType:="VarChar(50)")>  _
+	Public Property BookBorrowing() As String
+		Get
+			Return Me._BookBorrowing
+		End Get
+		Set
+			If (String.Equals(Me._BookBorrowing, value) = false) Then
+				Me.OnBookBorrowingChanging(value)
+				Me.SendPropertyChanging
+				Me._BookBorrowing = value
+				Me.SendPropertyChanged("BookBorrowing")
+				Me.OnBookBorrowingChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Request", DbType:="VarChar(50)")>  _
+	Public Property Request() As String
+		Get
+			Return Me._Request
+		End Get
+		Set
+			If (String.Equals(Me._Request, value) = false) Then
+				Me.OnRequestChanging(value)
+				Me.SendPropertyChanging
+				Me._Request = value
+				Me.SendPropertyChanged("Request")
+				Me.OnRequestChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="User_Borrow", Storage:="_Borrows", ThisKey:="UserID", OtherKey:="UserID")>  _
 	Public Property Borrows() As EntitySet(Of Borrow)
 		Get
 			Return Me._Borrows
@@ -604,11 +824,11 @@ Partial Public Class Member
 	
 	Private Sub attach_Borrows(ByVal entity As Borrow)
 		Me.SendPropertyChanging
-		entity.Member = Me
+		entity.User = Me
 	End Sub
 	
 	Private Sub detach_Borrows(ByVal entity As Borrow)
 		Me.SendPropertyChanging
-		entity.Member = Nothing
+		entity.User = Nothing
 	End Sub
 End Class

@@ -84,11 +84,11 @@ Partial Class BorrowBookv2
         'txtMemberID
         '
         Me.txtMemberID.Location = New System.Drawing.Point(177, 50)
-        Me.txtMemberID.Mask = "L0000"
+        Me.txtMemberID.Mask = "LL00000"
         Me.txtMemberID.Name = "txtMemberID"
         Me.txtMemberID.Size = New System.Drawing.Size(200, 30)
         Me.txtMemberID.TabIndex = 14
-        Me.ToolTip1.SetToolTip(Me.txtMemberID, "Member ID, start with 'M'")
+        Me.ToolTip1.SetToolTip(Me.txtMemberID, "Member ID, start with 'MM'")
         '
         'btnBorrow
         '
@@ -256,7 +256,7 @@ Partial Class BorrowBookv2
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(210, 24)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(154, 24)
         Me.ToolStripMenuItem1.Text = "&Remove All"
         '
         'btnRemove

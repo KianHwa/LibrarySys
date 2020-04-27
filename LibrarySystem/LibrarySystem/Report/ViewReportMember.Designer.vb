@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class ViewReportReturnBook
+Partial Class ViewReportMember
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,6 @@ Partial Class ViewReportReturnBook
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ViewReportReturnBook))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.radDaily = New System.Windows.Forms.RadioButton()
         Me.radMonthly = New System.Windows.Forms.RadioButton()
@@ -41,12 +40,7 @@ Partial Class ViewReportReturnBook
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.lblCount = New System.Windows.Forms.Label()
-        Me.doc = New System.Drawing.Printing.PrintDocument()
-        Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -273,19 +267,6 @@ Partial Class ViewReportReturnBook
         Me.lblCount.Text = "0 record(s)"
         Me.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'doc
-        '
-        '
-        'dlgPreview
-        '
-        Me.dlgPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
-        Me.dlgPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
-        Me.dlgPreview.ClientSize = New System.Drawing.Size(400, 300)
-        Me.dlgPreview.Enabled = True
-        Me.dlgPreview.Icon = CType(resources.GetObject("dlgPreview.Icon"), System.Drawing.Icon)
-        Me.dlgPreview.Name = "dlgPreview"
-        Me.dlgPreview.Visible = False
-        '
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -293,64 +274,25 @@ Partial Class ViewReportReturnBook
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(195, 24)
-        Me.Label4.TabIndex = 13
-        Me.Label4.Text = "- Return Book Report -"
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "- Member Report -"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label7
-        '
-        Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label7.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(217, 50)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(190, 22)
-        Me.Label7.TabIndex = 20
-        Me.Label7.Text = "Book Name"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label6
-        '
-        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label6.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(121, 50)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(98, 22)
-        Me.Label6.TabIndex = 19
-        Me.Label6.Text = "Member ID"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label5
-        '
-        Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label5.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(19, 50)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(103, 22)
-        Me.Label5.TabIndex = 18
-        Me.Label5.Text = "Return Date"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'ViewReportReturnBook
+        'ViewReportMember
         '
         Me.AcceptButton = Me.btnPrint
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnExit
         Me.ClientSize = New System.Drawing.Size(636, 373)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.lstView)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lblCount)
         Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Name = "ViewReportReturnBook"
-        Me.Text = "ViewReportReturnBook"
+        Me.Name = "ViewReportMember"
+        Me.Text = "ViewReportMember"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -377,10 +319,5 @@ Partial Class ViewReportReturnBook
     Friend WithEvents btnExit As Button
     Friend WithEvents btnPrint As Button
     Friend WithEvents lblCount As Label
-    Friend WithEvents doc As Printing.PrintDocument
-    Friend WithEvents dlgPreview As PrintPreviewDialog
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
 End Class

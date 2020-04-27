@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SearchBook
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,10 @@ Partial Class SearchBook
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgv = New System.Windows.Forms.DataGridView()
         Me.ISBNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BookNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,8 +41,6 @@ Partial Class SearchBook
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BookTableAdapter = New LibrarySystem.LibraryDataSetTableAdapters.BookTableAdapter()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.chkHistory = New System.Windows.Forms.CheckBox()
         Me.grpCategory = New System.Windows.Forms.GroupBox()
         Me.chkMystery = New System.Windows.Forms.CheckBox()
@@ -62,7 +60,7 @@ Partial Class SearchBook
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgv.AutoGenerateColumns = False
-        Me.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgv.ColumnHeadersHeight = 25
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
@@ -72,11 +70,11 @@ Partial Class SearchBook
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
         Me.dgv.RowHeadersWidth = 51
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
-        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv.RowTemplate.Height = 24
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv.Size = New System.Drawing.Size(715, 254)
+        Me.dgv.Size = New System.Drawing.Size(956, 527)
         Me.dgv.TabIndex = 3
         Me.ToolTip1.SetToolTip(Me.dgv, "Double click to make changes of the book list.")
         '
@@ -87,7 +85,6 @@ Partial Class SearchBook
         Me.ISBNDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ISBNDataGridViewTextBoxColumn.Name = "ISBNDataGridViewTextBoxColumn"
         Me.ISBNDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ISBNDataGridViewTextBoxColumn.Width = 68
         '
         'BookNameDataGridViewTextBoxColumn
         '
@@ -96,7 +93,6 @@ Partial Class SearchBook
         Me.BookNameDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BookNameDataGridViewTextBoxColumn.Name = "BookNameDataGridViewTextBoxColumn"
         Me.BookNameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.BookNameDataGridViewTextBoxColumn.Width = 110
         '
         'BookDescDataGridViewTextBoxColumn
         '
@@ -105,7 +101,6 @@ Partial Class SearchBook
         Me.BookDescDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BookDescDataGridViewTextBoxColumn.Name = "BookDescDataGridViewTextBoxColumn"
         Me.BookDescDataGridViewTextBoxColumn.ReadOnly = True
-        Me.BookDescDataGridViewTextBoxColumn.Width = 108
         '
         'AuthorDataGridViewTextBoxColumn
         '
@@ -114,7 +109,6 @@ Partial Class SearchBook
         Me.AuthorDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.AuthorDataGridViewTextBoxColumn.Name = "AuthorDataGridViewTextBoxColumn"
         Me.AuthorDataGridViewTextBoxColumn.ReadOnly = True
-        Me.AuthorDataGridViewTextBoxColumn.Width = 79
         '
         'TypeDataGridViewTextBoxColumn
         '
@@ -123,7 +117,6 @@ Partial Class SearchBook
         Me.TypeDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.TypeDataGridViewTextBoxColumn.Name = "TypeDataGridViewTextBoxColumn"
         Me.TypeDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TypeDataGridViewTextBoxColumn.Width = 94
         '
         'BookBindingSource
         '
@@ -139,7 +132,7 @@ Partial Class SearchBook
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.Label8.Location = New System.Drawing.Point(50, 10)
+        Me.Label8.Location = New System.Drawing.Point(55, 65)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(57, 24)
         Me.Label8.TabIndex = 0
@@ -147,7 +140,7 @@ Partial Class SearchBook
         '
         'txtBookName
         '
-        Me.txtBookName.Location = New System.Drawing.Point(113, 17)
+        Me.txtBookName.Location = New System.Drawing.Point(118, 72)
         Me.txtBookName.Name = "txtBookName"
         Me.txtBookName.Size = New System.Drawing.Size(136, 22)
         Me.txtBookName.TabIndex = 0
@@ -158,7 +151,7 @@ Partial Class SearchBook
         Me.btnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnAdd.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAdd.Location = New System.Drawing.Point(262, 401)
+        Me.btnAdd.Location = New System.Drawing.Point(355, 674)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(120, 35)
         Me.btnAdd.TabIndex = 4
@@ -168,7 +161,7 @@ Partial Class SearchBook
         '
         'txtISBN
         '
-        Me.txtISBN.Location = New System.Drawing.Point(113, 50)
+        Me.txtISBN.Location = New System.Drawing.Point(118, 26)
         Me.txtISBN.Name = "txtISBN"
         Me.txtISBN.Size = New System.Drawing.Size(136, 22)
         Me.txtISBN.TabIndex = 1
@@ -178,7 +171,7 @@ Partial Class SearchBook
         '
         Me.lblCount.AutoSize = True
         Me.lblCount.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 7.8!)
-        Me.lblCount.Location = New System.Drawing.Point(687, 379)
+        Me.lblCount.Location = New System.Drawing.Point(908, 652)
         Me.lblCount.Name = "lblCount"
         Me.lblCount.Size = New System.Drawing.Size(52, 14)
         Me.lblCount.TabIndex = 0
@@ -188,7 +181,7 @@ Partial Class SearchBook
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.Label1.Location = New System.Drawing.Point(46, 43)
+        Me.Label1.Location = New System.Drawing.Point(51, 19)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 24)
         Me.Label1.TabIndex = 0
@@ -202,31 +195,11 @@ Partial Class SearchBook
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 7.8!)
-        Me.Label2.Location = New System.Drawing.Point(21, 379)
+        Me.Label2.Location = New System.Drawing.Point(21, 652)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(254, 14)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Double click on selected column to makes changes."
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(355, 50)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(100, 21)
-        Me.CheckBox1.TabIndex = 5
-        Me.CheckBox1.Text = "CheckBox1"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(355, 78)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(100, 21)
-        Me.CheckBox2.TabIndex = 6
-        Me.CheckBox2.Text = "CheckBox2"
-        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'chkHistory
         '
@@ -244,7 +217,7 @@ Partial Class SearchBook
         Me.grpCategory.Controls.Add(Me.chkHorror)
         Me.grpCategory.Controls.Add(Me.chkHistory)
         Me.grpCategory.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.grpCategory.Location = New System.Drawing.Point(322, 10)
+        Me.grpCategory.Location = New System.Drawing.Point(535, 10)
         Me.grpCategory.Name = "grpCategory"
         Me.grpCategory.Size = New System.Drawing.Size(288, 106)
         Me.grpCategory.TabIndex = 8
@@ -276,7 +249,7 @@ Partial Class SearchBook
         Me.btnReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnReset.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnReset.Location = New System.Drawing.Point(403, 401)
+        Me.btnReset.Location = New System.Drawing.Point(496, 674)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(120, 35)
         Me.btnReset.TabIndex = 9
@@ -287,11 +260,9 @@ Partial Class SearchBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(765, 448)
+        Me.ClientSize = New System.Drawing.Size(1006, 721)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.grpCategory)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtISBN)
         Me.Controls.Add(Me.Label1)
@@ -302,6 +273,7 @@ Partial Class SearchBook
         Me.Controls.Add(Me.Label8)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "SearchBook"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "SearchBook"
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BookBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -329,8 +301,6 @@ Partial Class SearchBook
     Friend WithEvents AuthorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Label2 As Label
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents chkHistory As CheckBox
     Friend WithEvents grpCategory As GroupBox
     Friend WithEvents chkMystery As CheckBox
