@@ -45,7 +45,7 @@ Partial Class NewBook
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.Label1.Location = New System.Drawing.Point(81, 43)
+        Me.Label1.Location = New System.Drawing.Point(138, 37)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 24)
         Me.Label1.TabIndex = 0
@@ -55,7 +55,7 @@ Partial Class NewBook
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.Label2.Location = New System.Drawing.Point(85, 81)
+        Me.Label2.Location = New System.Drawing.Point(142, 75)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(57, 24)
         Me.Label2.TabIndex = 0
@@ -65,7 +65,7 @@ Partial Class NewBook
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.Label3.Location = New System.Drawing.Point(30, 122)
+        Me.Label3.Location = New System.Drawing.Point(87, 116)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(112, 24)
         Me.Label3.TabIndex = 0
@@ -75,7 +75,7 @@ Partial Class NewBook
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.Label4.Location = New System.Drawing.Point(64, 236)
+        Me.Label4.Location = New System.Drawing.Point(121, 230)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(75, 24)
         Me.Label4.TabIndex = 0
@@ -83,7 +83,7 @@ Partial Class NewBook
         '
         'txtISBN
         '
-        Me.txtISBN.Location = New System.Drawing.Point(153, 48)
+        Me.txtISBN.Location = New System.Drawing.Point(210, 42)
         Me.txtISBN.MaxLength = 20
         Me.txtISBN.Name = "txtISBN"
         Me.txtISBN.Size = New System.Drawing.Size(162, 22)
@@ -91,7 +91,7 @@ Partial Class NewBook
         '
         'txtBookName
         '
-        Me.txtBookName.Location = New System.Drawing.Point(153, 86)
+        Me.txtBookName.Location = New System.Drawing.Point(210, 80)
         Me.txtBookName.MaxLength = 50
         Me.txtBookName.Name = "txtBookName"
         Me.txtBookName.Size = New System.Drawing.Size(162, 22)
@@ -99,16 +99,16 @@ Partial Class NewBook
         '
         'txtBookDesc
         '
-        Me.txtBookDesc.Location = New System.Drawing.Point(153, 122)
+        Me.txtBookDesc.Location = New System.Drawing.Point(210, 116)
         Me.txtBookDesc.MaxLength = 100
         Me.txtBookDesc.Multiline = True
         Me.txtBookDesc.Name = "txtBookDesc"
-        Me.txtBookDesc.Size = New System.Drawing.Size(162, 100)
+        Me.txtBookDesc.Size = New System.Drawing.Size(259, 99)
         Me.txtBookDesc.TabIndex = 2
         '
         'txtAuthor
         '
-        Me.txtAuthor.Location = New System.Drawing.Point(153, 243)
+        Me.txtAuthor.Location = New System.Drawing.Point(210, 237)
         Me.txtAuthor.MaxLength = 50
         Me.txtAuthor.Name = "txtAuthor"
         Me.txtAuthor.Size = New System.Drawing.Size(162, 22)
@@ -119,7 +119,7 @@ Partial Class NewBook
         Me.btnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnAdd.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAdd.Location = New System.Drawing.Point(47, 436)
+        Me.btnAdd.Location = New System.Drawing.Point(149, 456)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(120, 35)
         Me.btnAdd.TabIndex = 5
@@ -132,7 +132,7 @@ Partial Class NewBook
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(195, 436)
+        Me.btnCancel.Location = New System.Drawing.Point(297, 456)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(120, 35)
         Me.btnCancel.TabIndex = 6
@@ -145,7 +145,7 @@ Partial Class NewBook
         Me.grpCategory.Controls.Add(Me.chkHorror)
         Me.grpCategory.Controls.Add(Me.chkHistory)
         Me.grpCategory.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.grpCategory.Location = New System.Drawing.Point(34, 294)
+        Me.grpCategory.Location = New System.Drawing.Point(125, 298)
         Me.grpCategory.Name = "grpCategory"
         Me.grpCategory.Size = New System.Drawing.Size(288, 106)
         Me.grpCategory.TabIndex = 11
@@ -185,7 +185,7 @@ Partial Class NewBook
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(67, 339)
+        Me.CheckBox2.Location = New System.Drawing.Point(158, 343)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(100, 21)
         Me.CheckBox2.TabIndex = 10
@@ -195,7 +195,7 @@ Partial Class NewBook
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(67, 311)
+        Me.CheckBox1.Location = New System.Drawing.Point(158, 315)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(100, 21)
         Me.CheckBox1.TabIndex = 9
@@ -208,7 +208,7 @@ Partial Class NewBook
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(361, 527)
+        Me.ClientSize = New System.Drawing.Size(580, 542)
         Me.Controls.Add(Me.grpCategory)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)

@@ -209,6 +209,7 @@ Public Class BorrowBookv2
     Private Sub LvBorrowList_DoubleClick(sender As Object, e As EventArgs) Handles lvBorrowList.DoubleClick
         Dim selectedItem = lvBorrowList.SelectedIndices(0)
         lvBorrowList.Items(selectedItem).Remove()
+
     End Sub
 
 
