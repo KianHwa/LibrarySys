@@ -26,7 +26,6 @@ Partial Class NewBook
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtISBN = New System.Windows.Forms.TextBox()
         Me.txtBookName = New System.Windows.Forms.TextBox()
         Me.txtBookDesc = New System.Windows.Forms.TextBox()
         Me.txtAuthor = New System.Windows.Forms.TextBox()
@@ -38,6 +37,7 @@ Partial Class NewBook
         Me.chkHistory = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.mskISBN = New System.Windows.Forms.MaskedTextBox()
         Me.grpCategory.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -80,14 +80,6 @@ Partial Class NewBook
         Me.Label4.Size = New System.Drawing.Size(75, 24)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Author :"
-        '
-        'txtISBN
-        '
-        Me.txtISBN.Location = New System.Drawing.Point(210, 42)
-        Me.txtISBN.MaxLength = 20
-        Me.txtISBN.Name = "txtISBN"
-        Me.txtISBN.Size = New System.Drawing.Size(162, 22)
-        Me.txtISBN.TabIndex = 0
         '
         'txtBookName
         '
@@ -202,6 +194,14 @@ Partial Class NewBook
         Me.CheckBox1.Text = "CheckBox1"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'mskISBN
+        '
+        Me.mskISBN.Location = New System.Drawing.Point(210, 44)
+        Me.mskISBN.Mask = "0000000000000"
+        Me.mskISBN.Name = "mskISBN"
+        Me.mskISBN.Size = New System.Drawing.Size(115, 22)
+        Me.mskISBN.TabIndex = 16
+        '
         'NewBook
         '
         Me.AcceptButton = Me.btnAdd
@@ -209,6 +209,7 @@ Partial Class NewBook
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(580, 542)
+        Me.Controls.Add(Me.mskISBN)
         Me.Controls.Add(Me.grpCategory)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
@@ -217,7 +218,6 @@ Partial Class NewBook
         Me.Controls.Add(Me.txtAuthor)
         Me.Controls.Add(Me.txtBookDesc)
         Me.Controls.Add(Me.txtBookName)
-        Me.Controls.Add(Me.txtISBN)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -237,7 +237,6 @@ Partial Class NewBook
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtISBN As TextBox
     Friend WithEvents txtBookName As TextBox
     Friend WithEvents txtBookDesc As TextBox
     Friend WithEvents txtAuthor As TextBox
@@ -249,4 +248,5 @@ Partial Class NewBook
     Friend WithEvents chkHistory As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents mskISBN As MaskedTextBox
 End Class

@@ -11,7 +11,8 @@ Public Class NewBook
 
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim isbn As String = txtISBN.Text.Trim
+
+        Dim isbn As String = If(mskISBN.MaskCompleted, mskISBN.Text, "")
         Dim err As New StringBuilder()
         Dim ctrl As Control = Nothing
         Dim title As String = txtBookName.Text.Trim
@@ -38,24 +39,26 @@ Public Class NewBook
         End If
 
         If isbn = "" Then
-            err.AppendLine("[Book ISBN is empty!]")
-            ctrl = If(ctrl, txtISBN)
+            err.AppendLine("[Book ISBN is invalid]")
+            ctrl = If(ctrl, mskISBN)
         End If
         If title = "" Then
-            err.AppendLine("[Book Title is empty!]")
+            err.AppendLine("[Book Title is empty]")
             ctrl = If(ctrl, txtBookName)
         End If
         If desc = "" Then
-            err.AppendLine("[Book Description is empty!]")
+            err.AppendLine("[Book Description is empty]")
             ctrl = If(ctrl, txtBookDesc)
         End If
         If author = "" Then
-            err.AppendLine("[Author Name is empty!]")
+            err.AppendLine("[Author Name is empty]")
             ctrl = If(ctrl, txtAuthor)
         End If
         If counter = 0 Then
-            err.AppendLine("[Category is empty!]")
-            ctrl = If(ctrl, txtISBN)
+            err.AppendLine("[Category is empty]")
+            ctrl = If(ctrl, chkHistory)
+            ctrl = If(ctrl, chkMystery)
+            ctrl = If(ctrl, chkHorror)
         End If
         ' (4) Check if there is input error
         If err.Length > 0 Then
@@ -66,7 +69,7 @@ Public Class NewBook
 
         If CheckBookExistence() = True Then
             'Book existing
-            MessageBox.Show("Book with ISBN [" & txtISBN.Text & "] already existing!Please re-enter another Book ISBN.", "Book not found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Book with ISBN [" & mskISBN.Text & "] already existing!Please re-enter another Book ISBN.", "Book not found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             Dim b As New Book()
 
@@ -134,7 +137,7 @@ Public Class NewBook
         Dim db As New LibraryDataContext()
         Dim exist As Boolean = False
         For Each book In db.Books
-            If book.ISBN = txtISBN.Text Then
+            If book.ISBN = mskISBN.Text Then
                 exist = True
             End If
         Next
@@ -147,14 +150,14 @@ Public Class NewBook
         ResetForm()
     End Sub
     Private Sub ResetForm()
-        txtISBN.Text = ""
+        mskISBN.Text = ""
         txtAuthor.Text = ""
         txtBookName.Text = ""
         txtBookDesc.Text = ""
         chkHistory.Checked = False
         chkMystery.Checked = False
         chkHorror.Checked = False
-        txtISBN.Focus()
+        mskISBN.Focus()
 
     End Sub
 

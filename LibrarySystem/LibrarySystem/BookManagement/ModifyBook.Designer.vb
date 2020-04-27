@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ModifyBook
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,9 @@ Partial Class ModifyBook
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnClose = New System.Windows.Forms.Button()
         Me.btnModify = New System.Windows.Forms.Button()
         Me.txtAuthor = New System.Windows.Forms.TextBox()
         Me.txtBookDesc = New System.Windows.Forms.TextBox()
@@ -41,19 +41,19 @@ Partial Class ModifyBook
         Me.grpCategory.SuspendLayout()
         Me.SuspendLayout()
         '
-        'btnCancel
+        'btnClose
         '
-        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btnCancel.CausesValidation = False
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
-        Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnCancel.Location = New System.Drawing.Point(209, 482)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(120, 35)
-        Me.btnCancel.TabIndex = 7
-        Me.btnCancel.Text = "&Close"
-        Me.btnCancel.UseVisualStyleBackColor = False
+        Me.btnClose.BackColor = System.Drawing.Color.DarkRed
+        Me.btnClose.CausesValidation = False
+        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnClose.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
+        Me.btnClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnClose.Location = New System.Drawing.Point(209, 482)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(120, 35)
+        Me.btnClose.TabIndex = 8
+        Me.btnClose.Text = "&Close"
+        Me.btnClose.UseVisualStyleBackColor = False
         '
         'btnModify
         '
@@ -158,8 +158,8 @@ Partial Class ModifyBook
         Me.btnReset.Location = New System.Drawing.Point(45, 482)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(120, 35)
-        Me.btnReset.TabIndex = 10
-        Me.btnReset.Text = "&Reset"
+        Me.btnReset.TabIndex = 7
+        Me.btnReset.Text = "R&eset"
         Me.btnReset.UseVisualStyleBackColor = False
         '
         'grpCategory
@@ -171,7 +171,7 @@ Partial Class ModifyBook
         Me.grpCategory.Location = New System.Drawing.Point(41, 289)
         Me.grpCategory.Name = "grpCategory"
         Me.grpCategory.Size = New System.Drawing.Size(288, 106)
-        Me.grpCategory.TabIndex = 14
+        Me.grpCategory.TabIndex = 4
         Me.grpCategory.TabStop = False
         Me.grpCategory.Text = "Category"
         '
@@ -181,7 +181,7 @@ Partial Class ModifyBook
         Me.chkMystery.Location = New System.Drawing.Point(6, 62)
         Me.chkMystery.Name = "chkMystery"
         Me.chkMystery.Size = New System.Drawing.Size(94, 28)
-        Me.chkMystery.TabIndex = 9
+        Me.chkMystery.TabIndex = 1
         Me.chkMystery.Text = "Mystery"
         Me.chkMystery.UseVisualStyleBackColor = True
         '
@@ -191,7 +191,7 @@ Partial Class ModifyBook
         Me.chkHorror.Location = New System.Drawing.Point(172, 29)
         Me.chkHorror.Name = "chkHorror"
         Me.chkHorror.Size = New System.Drawing.Size(83, 28)
-        Me.chkHorror.TabIndex = 8
+        Me.chkHorror.TabIndex = 2
         Me.chkHorror.Text = "Horror"
         Me.chkHorror.UseVisualStyleBackColor = True
         '
@@ -201,7 +201,7 @@ Partial Class ModifyBook
         Me.chkHistory.Location = New System.Drawing.Point(6, 28)
         Me.chkHistory.Name = "chkHistory"
         Me.chkHistory.Size = New System.Drawing.Size(160, 28)
-        Me.chkHistory.TabIndex = 7
+        Me.chkHistory.TabIndex = 0
         Me.chkHistory.Text = "Historical fiction"
         Me.chkHistory.UseVisualStyleBackColor = True
         '
@@ -211,12 +211,13 @@ Partial Class ModifyBook
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
+        Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(363, 535)
         Me.Controls.Add(Me.grpCategory)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.lblISBN)
-        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnModify)
         Me.Controls.Add(Me.txtAuthor)
         Me.Controls.Add(Me.txtBookDesc)
@@ -236,7 +237,7 @@ Partial Class ModifyBook
 
     End Sub
 
-    Friend WithEvents btnCancel As Button
+    Friend WithEvents btnClose As Button
     Friend WithEvents btnModify As Button
     Friend WithEvents txtAuthor As TextBox
     Friend WithEvents txtBookDesc As TextBox

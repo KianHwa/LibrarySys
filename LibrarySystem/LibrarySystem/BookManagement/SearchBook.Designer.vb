@@ -23,15 +23,8 @@ Partial Class SearchBook
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgv = New System.Windows.Forms.DataGridView()
-        Me.ISBNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BookNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BookDescDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AuthorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BookBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.LibraryDataSet = New LibrarySystem.LibraryDataSet()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtBookName = New System.Windows.Forms.TextBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
@@ -39,18 +32,25 @@ Partial Class SearchBook
         Me.txtISBN = New System.Windows.Forms.TextBox()
         Me.lblCount = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.BookTableAdapter = New LibrarySystem.LibraryDataSetTableAdapters.BookTableAdapter()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.chkHistory = New System.Windows.Forms.CheckBox()
         Me.grpCategory = New System.Windows.Forms.GroupBox()
         Me.chkMystery = New System.Windows.Forms.CheckBox()
         Me.chkHorror = New System.Windows.Forms.CheckBox()
         Me.btnReset = New System.Windows.Forms.Button()
-        Me.mskISBN = New System.Windows.Forms.MaskedTextBox()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.ISBNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BookNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BookDescDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AuthorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BookBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LibraryDataSet = New LibrarySystem.LibraryDataSet()
+        Me.BookTableAdapter = New LibrarySystem.LibraryDataSetTableAdapters.BookTableAdapter()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpCategory.SuspendLayout()
         CType(Me.BookBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.grpCategory.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgv
@@ -71,63 +71,13 @@ Partial Class SearchBook
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
         Me.dgv.RowHeadersWidth = 51
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
-        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv.RowTemplate.Height = 24
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv.Size = New System.Drawing.Size(956, 527)
         Me.dgv.TabIndex = 3
         Me.ToolTip1.SetToolTip(Me.dgv, "Double click to make changes of the book list.")
-        '
-        'ISBNDataGridViewTextBoxColumn
-        '
-        Me.ISBNDataGridViewTextBoxColumn.DataPropertyName = "ISBN"
-        Me.ISBNDataGridViewTextBoxColumn.HeaderText = "ISBN"
-        Me.ISBNDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ISBNDataGridViewTextBoxColumn.Name = "ISBNDataGridViewTextBoxColumn"
-        Me.ISBNDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'BookNameDataGridViewTextBoxColumn
-        '
-        Me.BookNameDataGridViewTextBoxColumn.DataPropertyName = "bookName"
-        Me.BookNameDataGridViewTextBoxColumn.HeaderText = "Book Name"
-        Me.BookNameDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.BookNameDataGridViewTextBoxColumn.Name = "BookNameDataGridViewTextBoxColumn"
-        Me.BookNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'BookDescDataGridViewTextBoxColumn
-        '
-        Me.BookDescDataGridViewTextBoxColumn.DataPropertyName = "bookDesc"
-        Me.BookDescDataGridViewTextBoxColumn.HeaderText = "Description"
-        Me.BookDescDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.BookDescDataGridViewTextBoxColumn.Name = "BookDescDataGridViewTextBoxColumn"
-        Me.BookDescDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'AuthorDataGridViewTextBoxColumn
-        '
-        Me.AuthorDataGridViewTextBoxColumn.DataPropertyName = "author"
-        Me.AuthorDataGridViewTextBoxColumn.HeaderText = "Author"
-        Me.AuthorDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.AuthorDataGridViewTextBoxColumn.Name = "AuthorDataGridViewTextBoxColumn"
-        Me.AuthorDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TypeDataGridViewTextBoxColumn
-        '
-        Me.TypeDataGridViewTextBoxColumn.DataPropertyName = "type"
-        Me.TypeDataGridViewTextBoxColumn.HeaderText = "Category"
-        Me.TypeDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.TypeDataGridViewTextBoxColumn.Name = "TypeDataGridViewTextBoxColumn"
-        Me.TypeDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'BookBindingSource
-        '
-        Me.BookBindingSource.DataMember = "Book"
-        Me.BookBindingSource.DataSource = Me.LibraryDataSet
-        '
-        'LibraryDataSet
-        '
-        Me.LibraryDataSet.DataSetName = "LibraryDataSet"
-        Me.LibraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label8
         '
@@ -152,7 +102,7 @@ Partial Class SearchBook
         Me.btnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnAdd.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAdd.Location = New System.Drawing.Point(355, 674)
+        Me.btnAdd.Location = New System.Drawing.Point(324, 674)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(120, 35)
         Me.btnAdd.TabIndex = 4
@@ -187,10 +137,6 @@ Partial Class SearchBook
         Me.Label1.Size = New System.Drawing.Size(63, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ISBN :"
-        '
-        'BookTableAdapter
-        '
-        Me.BookTableAdapter.ClearBeforeFill = True
         '
         'Label2
         '
@@ -250,27 +196,88 @@ Partial Class SearchBook
         Me.btnReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnReset.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnReset.Location = New System.Drawing.Point(496, 674)
+        Me.btnReset.Location = New System.Drawing.Point(576, 674)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(120, 35)
         Me.btnReset.TabIndex = 9
         Me.btnReset.Text = "&Reset"
         Me.btnReset.UseVisualStyleBackColor = False
         '
-        'mskISBN
+        'btnExit
         '
-        Me.mskISBN.Location = New System.Drawing.Point(292, 26)
-        Me.mskISBN.Mask = "0000000000000"
-        Me.mskISBN.Name = "mskISBN"
-        Me.mskISBN.Size = New System.Drawing.Size(100, 22)
-        Me.mskISBN.TabIndex = 10
+        Me.btnExit.BackColor = System.Drawing.Color.DarkRed
+        Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnExit.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
+        Me.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnExit.Location = New System.Drawing.Point(450, 674)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(120, 35)
+        Me.btnExit.TabIndex = 10
+        Me.btnExit.Text = "E&xit"
+        Me.btnExit.UseVisualStyleBackColor = False
+        '
+        'ISBNDataGridViewTextBoxColumn
+        '
+        Me.ISBNDataGridViewTextBoxColumn.DataPropertyName = "ISBN"
+        Me.ISBNDataGridViewTextBoxColumn.HeaderText = "ISBN"
+        Me.ISBNDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ISBNDataGridViewTextBoxColumn.Name = "ISBNDataGridViewTextBoxColumn"
+        Me.ISBNDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'BookNameDataGridViewTextBoxColumn
+        '
+        Me.BookNameDataGridViewTextBoxColumn.DataPropertyName = "bookName"
+        Me.BookNameDataGridViewTextBoxColumn.HeaderText = "Book Name"
+        Me.BookNameDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.BookNameDataGridViewTextBoxColumn.Name = "BookNameDataGridViewTextBoxColumn"
+        Me.BookNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'BookDescDataGridViewTextBoxColumn
+        '
+        Me.BookDescDataGridViewTextBoxColumn.DataPropertyName = "bookDesc"
+        Me.BookDescDataGridViewTextBoxColumn.HeaderText = "Description"
+        Me.BookDescDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.BookDescDataGridViewTextBoxColumn.Name = "BookDescDataGridViewTextBoxColumn"
+        Me.BookDescDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'AuthorDataGridViewTextBoxColumn
+        '
+        Me.AuthorDataGridViewTextBoxColumn.DataPropertyName = "author"
+        Me.AuthorDataGridViewTextBoxColumn.HeaderText = "Author"
+        Me.AuthorDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.AuthorDataGridViewTextBoxColumn.Name = "AuthorDataGridViewTextBoxColumn"
+        Me.AuthorDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TypeDataGridViewTextBoxColumn
+        '
+        Me.TypeDataGridViewTextBoxColumn.DataPropertyName = "type"
+        Me.TypeDataGridViewTextBoxColumn.HeaderText = "Category"
+        Me.TypeDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.TypeDataGridViewTextBoxColumn.Name = "TypeDataGridViewTextBoxColumn"
+        Me.TypeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'BookBindingSource
+        '
+        Me.BookBindingSource.DataMember = "Book"
+        Me.BookBindingSource.DataSource = Me.LibraryDataSet
+        '
+        'LibraryDataSet
+        '
+        Me.LibraryDataSet.DataSetName = "LibraryDataSet"
+        Me.LibraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BookTableAdapter
+        '
+        Me.BookTableAdapter.ClearBeforeFill = True
         '
         'SearchBook
         '
+        Me.AcceptButton = Me.btnAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnExit
         Me.ClientSize = New System.Drawing.Size(1006, 721)
-        Me.Controls.Add(Me.mskISBN)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.grpCategory)
         Me.Controls.Add(Me.Label2)
@@ -286,10 +293,10 @@ Partial Class SearchBook
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "SearchBook"
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BookBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpCategory.ResumeLayout(False)
         Me.grpCategory.PerformLayout()
+        CType(Me.BookBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -316,5 +323,5 @@ Partial Class SearchBook
     Friend WithEvents chkMystery As CheckBox
     Friend WithEvents chkHorror As CheckBox
     Friend WithEvents btnReset As Button
-    Friend WithEvents mskISBN As MaskedTextBox
+    Friend WithEvents btnExit As Button
 End Class

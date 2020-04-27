@@ -35,20 +35,20 @@ Public Class ModifyBook
 
         ' (3) Validate Borrow details
         If title = "" Then
-            err.AppendLine("[Book Title is empty!]")
+            err.AppendLine("[Book Title is empty]")
             ctrl = If(ctrl, txtBookName)
         End If
         If desc = "" Then
-            err.AppendLine("[Book Description is empty!]")
+            err.AppendLine("[Book Description is empty]")
             ctrl = If(ctrl, txtBookDesc)
         End If
         If author = "" Then
-            err.AppendLine("[Author Name is empty!]")
+            err.AppendLine("[Author Name is empty]")
             ctrl = If(ctrl, txtAuthor)
         End If
         If counter = 0 Then
 
-            err.AppendLine("[Category is empty!]")
+            err.AppendLine("[Category is empty]")
             ctrl = If(ctrl, chkHistory)
             ctrl = If(ctrl, chkMystery)
             ctrl = If(ctrl, chkHorror)

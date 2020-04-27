@@ -5,8 +5,8 @@
         Dim history As String = ""
         Dim mystery As String = ""
         Dim horror As String = ""
+        Dim isbn As String = txtISBN.Text
 
-        Dim isbn As String = If(mskISBN.MaskCompleted, mskISBN.Text, "")
         Dim db As New LibraryDataContext()
 
         If chkHistory.Checked Then
@@ -34,8 +34,6 @@
         Dim db As New LibraryDataContext()
         Dim rs = From b In db.Books
 
-
-
         BindData()
     End Sub
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
@@ -43,7 +41,6 @@
         NewBook.ShowDialog()
         BindData()
     End Sub
-
 
 
     Private Sub dgv_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellDoubleClick
@@ -58,7 +55,6 @@
     End Sub
 
 
-
     Private Sub txtBookName_TextChanged(sender As Object, e As EventArgs) Handles txtBookName.TextChanged
         BindData()
     End Sub
@@ -68,10 +64,9 @@
     End Sub
 
 
-
-
-
-
+    Private Sub txtISBN_TextChanged(sender As Object, e As EventArgs) Handles txtISBN.TextChanged
+        BindData()
+    End Sub
 
     Private Sub chkHistory_CheckedChanged(sender As Object, e As EventArgs) Handles chkHistory.CheckedChanged, chkMystery.CheckedChanged, chkHorror.CheckedChanged
         BindData()
@@ -86,7 +81,7 @@
         txtBookName.Focus()
     End Sub
 
-    Private Sub mskISBN_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles mskISBN.MaskInputRejected
-        BindData()
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
     End Sub
 End Class
