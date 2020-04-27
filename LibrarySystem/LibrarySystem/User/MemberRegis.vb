@@ -43,6 +43,7 @@ Public Class MemberRegis
         user.Gender = gender
         user.Status = status
         user.DateofBirth = dob
+        user.Request = ""
 
         db.Users.InsertOnSubmit(user)
         db.SubmitChanges()

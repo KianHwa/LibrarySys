@@ -40,6 +40,7 @@ Public Class LibrarianRegis
         user.Gender = gender
         user.Status = status
         user.DateofBirth = dob
+        user.Request = ""
 
         Dim db As New LibraryDataContext()
         db.Users.InsertOnSubmit(user)

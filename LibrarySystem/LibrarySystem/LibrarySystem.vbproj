@@ -407,6 +407,12 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Book_Return sc.png" />
+    <None Include="Resources\new_book sc.png" />
+    <None Include="Resources\Search_book sc.png" />
+    <None Include="Resources\system_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Library.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -414,10 +420,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Library.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\Book_Return sc.png" />
-    <None Include="Resources\new_book sc.png" />
-    <None Include="Resources\Search_book sc.png" />
-    <None Include="Resources\system_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

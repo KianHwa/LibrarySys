@@ -20,6 +20,8 @@
             If mskId.Text.Contains("LB") Or mskId.Text.Contains("lb") Or (mskId.Text.Contains("MM") And status = "Requested") Then
                 LibrarySystem.formHome.loggedInID = mskId.Text
                 LibrarySystem.formHome.tsmiRegisterLibrarian.Enabled = False
+                LibrarySystem.formHome.tsmiAddBooks.Enabled = True
+                LibrarySystem.formHome.tsmiRequest.Enabled = True
                 Me.Hide()
                 LibrarySystem.formHome.ShowDialog()
                 ResetForm()
@@ -33,11 +35,17 @@
                 LibrarySystem.formHome.ShowDialog()
                 ResetForm()
             Else
+                LibrarySystem.formHome.tsmiRegisterLibrarian.Enabled = True
+                LibrarySystem.formHome.tsmiAddBooks.Enabled = True
                 LibrarySystem.formHome.loggedInID = mskId.Text
                 Me.Hide()
                 LibrarySystem.formHome.ShowDialog()
                 ResetForm()
             End If
+        ElseIf mskId.Text = "" Or txtPassword.Text = "" Then
+            MessageBox.Show("Please enter User ID and Password", "Invalid Login")
+        Else
+            MessageBox.Show("Invalid User ID or Password", "Invalid Login")
         End If
     End Sub
 

@@ -27,6 +27,7 @@ Partial Class ProcessRequest
         Me.btnBack = New System.Windows.Forms.Button()
         Me.dgvRequest = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.dgvRequest, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -70,13 +71,13 @@ Partial Class ProcessRequest
         Me.dgvRequest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvRequest.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvRequest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRequest.Location = New System.Drawing.Point(27, 80)
+        Me.dgvRequest.Location = New System.Drawing.Point(27, 102)
         Me.dgvRequest.Name = "dgvRequest"
         Me.dgvRequest.ReadOnly = True
         Me.dgvRequest.RowHeadersWidth = 51
         Me.dgvRequest.RowTemplate.Height = 24
         Me.dgvRequest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvRequest.Size = New System.Drawing.Size(471, 355)
+        Me.dgvRequest.Size = New System.Drawing.Size(471, 333)
         Me.dgvRequest.TabIndex = 6
         '
         'Panel1
@@ -88,16 +89,27 @@ Partial Class ProcessRequest
         Me.Panel1.Size = New System.Drawing.Size(525, 55)
         Me.Panel1.TabIndex = 5
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(34, 68)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(291, 17)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Double click the name to approve application"
+        '
         'ProcessRequest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(528, 550)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lblCount)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.dgvRequest)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "ProcessRequest"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ProcessRequest"
         CType(Me.dgvRequest, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -112,4 +124,5 @@ Partial Class ProcessRequest
     Friend WithEvents btnBack As Button
     Friend WithEvents dgvRequest As DataGridView
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label2 As Label
 End Class
