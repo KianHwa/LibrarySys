@@ -208,12 +208,6 @@
     <Compile Include="Report\ViewReport.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report\ViewReportMember.Designer.vb">
-      <DependentUpon>ViewReportMember.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Report\ViewReportMember.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Report\ViewReportReturnBook.Designer.vb">
       <DependentUpon>ViewReportReturnBook.vb</DependentUpon>
     </Compile>
@@ -286,9 +280,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ViewReport.resx">
       <DependentUpon>ViewReport.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\ViewReportMember.resx">
-      <DependentUpon>ViewReportMember.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ViewReportReturnBook.resx">
       <DependentUpon>ViewReportReturnBook.vb</DependentUpon>

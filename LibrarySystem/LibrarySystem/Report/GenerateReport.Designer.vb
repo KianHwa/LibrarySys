@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class GenerateReport
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,13 @@ Partial Class GenerateReport
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnReportBorrowBook = New System.Windows.Forms.Button()
         Me.btnReportReturnBook = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnReportMember = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,16 +64,15 @@ Partial Class GenerateReport
         '
         Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnExit.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Location = New System.Drawing.Point(184, 170)
+        Me.btnExit.Location = New System.Drawing.Point(39, 167)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(140, 50)
+        Me.btnExit.Size = New System.Drawing.Size(270, 50)
         Me.btnExit.TabIndex = 4
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnReportMember)
         Me.GroupBox1.Controls.Add(Me.btnReportReturnBook)
         Me.GroupBox1.Controls.Add(Me.btnExit)
         Me.GroupBox1.Controls.Add(Me.btnReportBorrowBook)
@@ -84,23 +82,13 @@ Partial Class GenerateReport
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         '
-        'btnReportMember
-        '
-        Me.btnReportMember.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReportMember.Location = New System.Drawing.Point(21, 170)
-        Me.btnReportMember.Name = "btnReportMember"
-        Me.btnReportMember.Size = New System.Drawing.Size(140, 50)
-        Me.btnReportMember.TabIndex = 5
-        Me.btnReportMember.Text = "&Member Report"
-        Me.btnReportMember.UseVisualStyleBackColor = True
-        '
         'GenerateReport
         '
         Me.AcceptButton = Me.btnReportBorrowBook
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnExit
-        Me.ClientSize = New System.Drawing.Size(426, 410)
+        Me.ClientSize = New System.Drawing.Size(417, 403)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "GenerateReport"
@@ -115,5 +103,4 @@ Partial Class GenerateReport
     Friend WithEvents Label1 As Label
     Friend WithEvents btnExit As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents btnReportMember As Button
 End Class

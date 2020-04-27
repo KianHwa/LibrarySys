@@ -12,7 +12,4 @@
         Me.Close()
     End Sub
 
-    Private Sub btnReportMember_Click(sender As Object, e As EventArgs) Handles btnReportMember.Click
-        ViewReportMember.ShowDialog(Me)
-    End Sub
 End Class

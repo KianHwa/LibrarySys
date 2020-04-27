@@ -168,11 +168,11 @@ Public Class ViewReport
         Dim formMarginY As Single = e.MarginBounds.Top
 
         '(2) Prepare Header and Sub Header
-        Dim header As String = "Student Listing"
+        Dim header As String = "Borrow Book Report"
         formMarginY += formLineHeight
         Dim subHeader As String = String.Format(
             "Printed On {0:dd-MMMM-yyyy hh:mm:ss}" & vbNewLine &
-            "Prepared by SOMEBODY", DateTime.Now
+            "Prepared by Administrator", DateTime.Now
 )
         '(3) Prepare body
         Dim body As New StringBuilder()
