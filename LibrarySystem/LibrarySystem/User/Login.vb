@@ -8,24 +8,32 @@
     Dim userID As String
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        Dim db As New LibraryDataContext()
+
         If IsValidUser(userID, txtPassword.Text) Then
-            If userID.Contains("LB") Or userID.Contains("lb") Or (userID.Contains("MM")) Then
-                LibrarySystem.formHome.loggedInID = "LB" + mskId.Text
+            Dim status As String = ""
+            For Each u In db.Users
+                If u.UserID = userID Then
+                    status = u.Request.ToString
+                End If
+            Next
+            If userID.Contains("LB") Or userID.Contains("lb") Or (userID.Contains("MM") And status = "Requested") Then
+                LibrarySystem.formHome.loggedInID = mskId.Text
                 LibrarySystem.formHome.tsmiRegisterLibrarian.Enabled = False
                 Me.Hide()
                 LibrarySystem.formHome.ShowDialog()
                 ResetForm()
             ElseIf userID.Contains("MM") Or userID.Contains("mm") Then
-                LibrarySystem.formHome.loggedInID = "MM" + mskId.Text
+                LibrarySystem.formHome.loggedInID = mskId.Text
                 LibrarySystem.formHome.btnBookReturn.Enabled = False
                 LibrarySystem.formHome.menuReports.Enabled = False
                 LibrarySystem.formHome.tsmiAddBooks.Enabled = False
-                LibrarySystem.formHome.tsmiRegisterLibrarian.Enabled = False
+                LibrarySystem.formHome.tsmiRequest.Enabled = False
                 Me.Hide()
                 LibrarySystem.formHome.ShowDialog()
                 ResetForm()
             Else
-                LibrarySystem.formHome.loggedInID = "AD" + mskId.Text
+                LibrarySystem.formHome.loggedInID = mskId.Text
                 Me.Hide()
                 LibrarySystem.formHome.ShowDialog()
                 ResetForm()
@@ -36,11 +44,11 @@
     Private Function IsValidUser(Name As String, Password As String) As Boolean
         Dim db As New LibraryDataContext()
         If userID.Contains("MM") Then
-            Return (From user In db.Users Where user.UserID = "MM" + mskId.Text And user.Password = txtPassword.Text).Any
+            Return (From user In db.Users Where user.UserID = mskId.Text And user.Password = txtPassword.Text).Any
         ElseIf userID.Contains("LB") Then
-            Return (From user In db.Users Where user.UserID = "LB" + mskId.Text And user.Password = txtPassword.Text).Any
+            Return (From user In db.Users Where user.UserID = mskId.Text And user.Password = txtPassword.Text).Any
         Else
-            Return (From user In db.Users Where user.UserId = "AD" + mskId.Text And user.Password = txtPassword.Text).Any
+            Return (From user In db.Users Where user.UserID = mskId.Text And user.Password = txtPassword.Text).Any
         End If
     End Function
 
@@ -55,7 +63,6 @@
         mskId.Visible = False
         Label1.Visible = False
         Label2.Visible = False
-        lblId.Visible = False
         btnLogAdmin.Visible = False
         btnLogLibrarian.Visible = False
         btnBack2.Visible = False
@@ -74,9 +81,7 @@
         btnRegister.Visible = True
         btnLibrarian.Visible = False
         btnMember.Visible = False
-        lblId.Visible = True
-        lblId.Text = "MM"
-        userID = "MM" + mskId.Text
+        userID = mskId.Text
         btnBack.Visible = True
         chkShowPass.Visible = True
         btnBack4.Visible = True
@@ -92,7 +97,6 @@
         btnRegister.Visible = False
         btnLibrarian.Visible = False
         btnMember.Visible = False
-        lblId.Visible = False
         btnLogLibrarian.Visible = True
         btnLogAdmin.Visible = True
         btnBack.Visible = False
@@ -108,7 +112,6 @@
         mskId.Visible = False
         Label1.Visible = False
         Label2.Visible = False
-        lblId.Visible = False
         btnLibrarian.Visible = True
         btnMember.Visible = True
         chkShowPass.Visible = False
@@ -125,14 +128,12 @@
         btnRegister.Visible = False
         btnLibrarian.Visible = False
         btnMember.Visible = False
-        lblId.Visible = True
         btnLogAdmin.Visible = False
         btnLogLibrarian.Visible = False
         btnBack.Visible = False
         btnBack2.Visible = False
         btnBack3.Visible = True
-        lblId.Text = "LB"
-        userID = "LB" + mskId.Text
+        userID = mskId.Text
         chkShowPass.Visible = True
         mskId.Focus()
     End Sub
@@ -146,14 +147,12 @@
         btnRegister.Visible = False
         btnLibrarian.Visible = False
         btnMember.Visible = False
-        lblId.Visible = True
         btnLogAdmin.Visible = False
         btnLogLibrarian.Visible = False
         btnBack.Visible = False
         btnBack2.Visible = False
         btnBack3.Visible = True
-        lblId.Text = "AD"
-        userID = "AD" + mskId.Text
+        userID = mskId.Text
         chkShowPass.Visible = True
         mskId.Focus()
     End Sub
@@ -167,7 +166,6 @@
         btnRegister.Visible = False
         btnLibrarian.Visible = True
         btnMember.Visible = True
-        lblId.Visible = False
         btnLogAdmin.Visible = False
         btnLogLibrarian.Visible = False
         btnBack.Visible = False
@@ -185,7 +183,6 @@
         btnRegister.Visible = False
         btnLibrarian.Visible = False
         btnMember.Visible = False
-        lblId.Visible = False
         btnLogAdmin.Visible = True
         btnLogLibrarian.Visible = True
         btnBack.Visible = False
@@ -238,7 +235,6 @@
         btnRegister.Visible = False
         btnLibrarian.Visible = True
         btnMember.Visible = True
-        lblId.Visible = False
         btnLogAdmin.Visible = False
         btnLogLibrarian.Visible = False
         btnBack.Visible = False
@@ -246,5 +242,6 @@
         btnBack3.Visible = False
         btnBack4.Visible = False
         chkShowPass.Visible = False
+        err.Clear()
     End Sub
 End Class

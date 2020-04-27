@@ -142,4 +142,12 @@ Public Class MemberRegis
             e.Cancel = True
         End If
     End Sub
+
+    Private Sub chkShowPass_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPass.CheckedChanged
+        If chkShowPass.Checked = True Then
+            txtPassword.PasswordChar = ""
+        ElseIf chkShowPass.Checked = False Then
+            txtPassword.PasswordChar = "*"
+        End If
+    End Sub
 End Class
