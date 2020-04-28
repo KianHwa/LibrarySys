@@ -49,10 +49,10 @@ Partial Class ModifyBook
         Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnClose.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnClose.Location = New System.Drawing.Point(157, 392)
-        Me.btnClose.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnClose.Location = New System.Drawing.Point(209, 482)
+        Me.btnClose.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(90, 28)
+        Me.btnClose.Size = New System.Drawing.Size(120, 34)
         Me.btnClose.TabIndex = 8
         Me.btnClose.Text = "&Close"
         Me.btnClose.UseVisualStyleBackColor = False
@@ -62,47 +62,46 @@ Partial Class ModifyBook
         Me.btnModify.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnModify.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnModify.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnModify.Location = New System.Drawing.Point(157, 347)
-        Me.btnModify.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnModify.Location = New System.Drawing.Point(209, 427)
+        Me.btnModify.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnModify.Name = "btnModify"
-        Me.btnModify.Size = New System.Drawing.Size(90, 28)
+        Me.btnModify.Size = New System.Drawing.Size(120, 34)
         Me.btnModify.TabIndex = 6
         Me.btnModify.Text = "&Modify"
         Me.btnModify.UseVisualStyleBackColor = False
         '
         'txtAuthor
         '
-        Me.txtAuthor.Location = New System.Drawing.Point(116, 200)
-        Me.txtAuthor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtAuthor.Location = New System.Drawing.Point(155, 246)
+        Me.txtAuthor.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtAuthor.Name = "txtAuthor"
-        Me.txtAuthor.Size = New System.Drawing.Size(122, 20)
+        Me.txtAuthor.Size = New System.Drawing.Size(161, 22)
         Me.txtAuthor.TabIndex = 3
         '
         'txtBookDesc
         '
-        Me.txtBookDesc.Location = New System.Drawing.Point(116, 103)
-        Me.txtBookDesc.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtBookDesc.Location = New System.Drawing.Point(155, 127)
+        Me.txtBookDesc.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBookDesc.Multiline = True
         Me.txtBookDesc.Name = "txtBookDesc"
-        Me.txtBookDesc.Size = New System.Drawing.Size(122, 82)
+        Me.txtBookDesc.Size = New System.Drawing.Size(161, 100)
         Me.txtBookDesc.TabIndex = 2
         '
         'txtBookName
         '
-        Me.txtBookName.Location = New System.Drawing.Point(116, 74)
-        Me.txtBookName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtBookName.Location = New System.Drawing.Point(155, 91)
+        Me.txtBookName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBookName.Name = "txtBookName"
-        Me.txtBookName.Size = New System.Drawing.Size(122, 20)
+        Me.txtBookName.Size = New System.Drawing.Size(161, 22)
         Me.txtBookName.TabIndex = 1
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.Label6.Location = New System.Drawing.Point(53, 194)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(71, 239)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(60, 19)
+        Me.Label6.Size = New System.Drawing.Size(75, 24)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Author :"
         '
@@ -110,10 +109,9 @@ Partial Class ModifyBook
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.Label7.Location = New System.Drawing.Point(28, 98)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Location = New System.Drawing.Point(37, 121)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(89, 19)
+        Me.Label7.Size = New System.Drawing.Size(112, 24)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Description :"
         '
@@ -121,10 +119,9 @@ Partial Class ModifyBook
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.Label8.Location = New System.Drawing.Point(69, 68)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Location = New System.Drawing.Point(92, 84)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(45, 19)
+        Me.Label8.Size = New System.Drawing.Size(57, 24)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Title :"
         '
@@ -132,20 +129,18 @@ Partial Class ModifyBook
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.Label9.Location = New System.Drawing.Point(66, 37)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Location = New System.Drawing.Point(88, 46)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(49, 19)
+        Me.Label9.Size = New System.Drawing.Size(63, 24)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "ISBN :"
         '
         'lblISBN
         '
         Me.lblISBN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblISBN.Location = New System.Drawing.Point(116, 42)
-        Me.lblISBN.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblISBN.Location = New System.Drawing.Point(155, 52)
         Me.lblISBN.Name = "lblISBN"
-        Me.lblISBN.Size = New System.Drawing.Size(122, 22)
+        Me.lblISBN.Size = New System.Drawing.Size(162, 27)
         Me.lblISBN.TabIndex = 0
         '
         'btnRemove
@@ -154,10 +149,10 @@ Partial Class ModifyBook
         Me.btnRemove.CausesValidation = False
         Me.btnRemove.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnRemove.Location = New System.Drawing.Point(34, 347)
-        Me.btnRemove.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnRemove.Location = New System.Drawing.Point(45, 427)
+        Me.btnRemove.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.Size = New System.Drawing.Size(90, 28)
+        Me.btnRemove.Size = New System.Drawing.Size(120, 34)
         Me.btnRemove.TabIndex = 5
         Me.btnRemove.Text = "&Remove"
         Me.btnRemove.UseVisualStyleBackColor = False
@@ -167,10 +162,10 @@ Partial Class ModifyBook
         Me.btnReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnReset.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!)
         Me.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnReset.Location = New System.Drawing.Point(34, 392)
-        Me.btnReset.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnReset.Location = New System.Drawing.Point(45, 482)
+        Me.btnReset.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(90, 28)
+        Me.btnReset.Size = New System.Drawing.Size(120, 34)
         Me.btnReset.TabIndex = 7
         Me.btnReset.Text = "R&eset"
         Me.btnReset.UseVisualStyleBackColor = False
@@ -181,11 +176,11 @@ Partial Class ModifyBook
         Me.grpCategory.Controls.Add(Me.chkHorror)
         Me.grpCategory.Controls.Add(Me.chkHistory)
         Me.grpCategory.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!)
-        Me.grpCategory.Location = New System.Drawing.Point(31, 235)
-        Me.grpCategory.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grpCategory.Location = New System.Drawing.Point(41, 289)
+        Me.grpCategory.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grpCategory.Name = "grpCategory"
-        Me.grpCategory.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.grpCategory.Size = New System.Drawing.Size(216, 86)
+        Me.grpCategory.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grpCategory.Size = New System.Drawing.Size(288, 106)
         Me.grpCategory.TabIndex = 4
         Me.grpCategory.TabStop = False
         Me.grpCategory.Text = "Category"
@@ -193,10 +188,10 @@ Partial Class ModifyBook
         'chkMystery
         '
         Me.chkMystery.AutoSize = True
-        Me.chkMystery.Location = New System.Drawing.Point(4, 50)
-        Me.chkMystery.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.chkMystery.Location = New System.Drawing.Point(5, 62)
+        Me.chkMystery.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chkMystery.Name = "chkMystery"
-        Me.chkMystery.Size = New System.Drawing.Size(77, 23)
+        Me.chkMystery.Size = New System.Drawing.Size(94, 28)
         Me.chkMystery.TabIndex = 1
         Me.chkMystery.Text = "Mystery"
         Me.chkMystery.UseVisualStyleBackColor = True
@@ -204,10 +199,10 @@ Partial Class ModifyBook
         'chkHorror
         '
         Me.chkHorror.AutoSize = True
-        Me.chkHorror.Location = New System.Drawing.Point(129, 24)
-        Me.chkHorror.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.chkHorror.Location = New System.Drawing.Point(172, 30)
+        Me.chkHorror.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chkHorror.Name = "chkHorror"
-        Me.chkHorror.Size = New System.Drawing.Size(69, 23)
+        Me.chkHorror.Size = New System.Drawing.Size(83, 28)
         Me.chkHorror.TabIndex = 2
         Me.chkHorror.Text = "Horror"
         Me.chkHorror.UseVisualStyleBackColor = True
@@ -215,10 +210,10 @@ Partial Class ModifyBook
         'chkHistory
         '
         Me.chkHistory.AutoSize = True
-        Me.chkHistory.Location = New System.Drawing.Point(4, 23)
-        Me.chkHistory.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.chkHistory.Location = New System.Drawing.Point(5, 28)
+        Me.chkHistory.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chkHistory.Name = "chkHistory"
-        Me.chkHistory.Size = New System.Drawing.Size(128, 23)
+        Me.chkHistory.Size = New System.Drawing.Size(160, 28)
         Me.chkHistory.TabIndex = 0
         Me.chkHistory.Text = "Historical fiction"
         Me.chkHistory.UseVisualStyleBackColor = True
@@ -226,11 +221,11 @@ Partial Class ModifyBook
         'ModifyBook
         '
         Me.AcceptButton = Me.btnModify
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.CancelButton = Me.btnClose
-        Me.ClientSize = New System.Drawing.Size(272, 435)
+        Me.ClientSize = New System.Drawing.Size(363, 535)
         Me.Controls.Add(Me.grpCategory)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnRemove)
@@ -246,10 +241,11 @@ Partial Class ModifyBook
         Me.Controls.Add(Me.Label9)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximumSize = New System.Drawing.Size(381, 582)
         Me.Name = "ModifyBook"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "ModifyBook"
+        Me.Text = "Update Book"
         Me.grpCategory.ResumeLayout(False)
         Me.grpCategory.PerformLayout()
         Me.ResumeLayout(False)

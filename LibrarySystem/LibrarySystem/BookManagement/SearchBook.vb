@@ -33,7 +33,7 @@
         Me.BookTableAdapter.Fill(Me.LibraryDataSet.Book)
         Dim db As New LibraryDataContext()
         Dim rs = From b In db.Books
-
+        txtISBN.Select()
         BindData()
     End Sub
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
@@ -78,10 +78,12 @@
         chkHistory.Checked = False
         chkMystery.Checked = False
         chkHorror.Checked = False
-        txtBookName.Focus()
+        txtISBN.Focus()
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
     End Sub
+
+
 End Class
