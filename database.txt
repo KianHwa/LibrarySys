@@ -31,5 +31,6 @@ CREATE TABLE [dbo].[User] (
     [DateofBirth]   DATE         NULL,
     [ReturnedBook]  VARCHAR (50) NULL,
     [BookBorrowing] VARCHAR (50) NULL,
+    [Request]       VARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([UserID] ASC)
 );
