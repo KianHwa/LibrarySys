@@ -161,4 +161,7 @@ Public Class NewBook
 
     End Sub
 
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.Close()
+    End Sub
 End Class

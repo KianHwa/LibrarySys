@@ -70,24 +70,28 @@ Partial Class UserProfile
         '
         'btnEdit
         '
-        Me.btnEdit.Location = New System.Drawing.Point(38, 470)
+        Me.btnEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnEdit.ForeColor = System.Drawing.Color.White
+        Me.btnEdit.Location = New System.Drawing.Point(36, 460)
         Me.btnEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(100, 28)
+        Me.btnEdit.Size = New System.Drawing.Size(120, 35)
         Me.btnEdit.TabIndex = 5
         Me.btnEdit.Text = "Edit"
-        Me.btnEdit.UseVisualStyleBackColor = True
+        Me.btnEdit.UseVisualStyleBackColor = False
         '
         'btnCancel
         '
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnCancel.CausesValidation = False
-        Me.btnCancel.Location = New System.Drawing.Point(167, 470)
+        Me.btnCancel.ForeColor = System.Drawing.Color.White
+        Me.btnCancel.Location = New System.Drawing.Point(170, 460)
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(100, 28)
+        Me.btnCancel.Size = New System.Drawing.Size(120, 35)
         Me.btnCancel.TabIndex = 6
         Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'Label5
         '
@@ -209,12 +213,14 @@ Partial Class UserProfile
         '
         'btnResetPassword
         '
-        Me.btnResetPassword.Location = New System.Drawing.Point(296, 470)
+        Me.btnResetPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnResetPassword.ForeColor = System.Drawing.Color.White
+        Me.btnResetPassword.Location = New System.Drawing.Point(309, 460)
         Me.btnResetPassword.Name = "btnResetPassword"
-        Me.btnResetPassword.Size = New System.Drawing.Size(155, 28)
+        Me.btnResetPassword.Size = New System.Drawing.Size(120, 35)
         Me.btnResetPassword.TabIndex = 7
         Me.btnResetPassword.Text = "Reset Password"
-        Me.btnResetPassword.UseVisualStyleBackColor = True
+        Me.btnResetPassword.UseVisualStyleBackColor = False
         '
         'txtAddress
         '

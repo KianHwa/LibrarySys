@@ -76,12 +76,14 @@ Partial Class Request
         '
         'btnRequest
         '
+        Me.btnRequest.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnRequest.ForeColor = System.Drawing.Color.White
         Me.btnRequest.Location = New System.Drawing.Point(190, 331)
         Me.btnRequest.Name = "btnRequest"
         Me.btnRequest.Size = New System.Drawing.Size(110, 42)
         Me.btnRequest.TabIndex = 15
         Me.btnRequest.Text = "Request"
-        Me.btnRequest.UseVisualStyleBackColor = True
+        Me.btnRequest.UseVisualStyleBackColor = False
         '
         'Label4
         '

@@ -17,6 +17,9 @@ Public Class BorrowBookv2
         If id = "" Then
             err.AppendLine("- Member ID is invalid")
             ctr = If(ctr, txtMemberID)
+        ElseIf id <> formHome.loggedInID Then
+            err.AppendLine("- Member ID is invalid")
+            ctr = If(ctr, txtMemberID)
         End If
 
         If name = "" Then
@@ -44,7 +47,7 @@ Public Class BorrowBookv2
                 'Prevent from borrow the same book again
                 MessageBox.Show("The book is not returned.", "Failed to borrow", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
-                If lvBorrowList.Items.Count <= 5 Then
+                If lvBorrowList.Items.Count < 5 Then
                     Dim memberID, status As String
                     memberID = formHome.loggedInID
                     status = "Borrow"
@@ -151,35 +154,39 @@ Public Class BorrowBookv2
     Private Sub BtnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
         Dim result As DialogResult = MessageBox.Show("Confirm borrow?", "Borrowing a book", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 
+
         If result = DialogResult.OK Then
-            If lvBorrowList.Items.Count > 0 Then
-                'Borrow the book
-                For Each item As ListViewItem In lvBorrowList.Items
+            If BorrowingNumber() + lvBorrowList.Items.Count <= 5 Then
+                If lvBorrowList.Items.Count > 0 Then
                     'Borrow the book
-                    Dim borrow As New Borrow With {
+                    For Each item As ListViewItem In lvBorrowList.Items
+                        'Borrow the book
+                        Dim borrow As New Borrow With {
                     .ISBN = item.SubItems.Item(1).Text,
                     .UserID = formHome.loggedInID,
                     .status = "Borrow",
                     .borrowDate = dtpBorrowDate.Value.ToString()}
-                    db.Borrows.InsertOnSubmit(borrow)
-                Next
-                MessageBox.Show("Successfully borrowed", "Borrow successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                lvBorrowList.Items.Clear()
+                        db.Borrows.InsertOnSubmit(borrow)
+                    Next
+                    MessageBox.Show("Successfully borrowed", "Borrow successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    lvBorrowList.Items.Clear()
 
-                'Clear all the textboxes
-                txtMemberID.Clear()
-                txtMemberName.Clear()
-                txtISBN.Clear()
+                    'Clear all the textboxes
+                    txtISBN.Clear()
 
-                'Focus to the desired textbox
-                txtMemberID.Focus()
+                    'Focus to the desired textbox
+                    txtMemberID.Focus()
 
-                db.SubmitChanges()
+                    db.SubmitChanges()
+                Else
+                    MessageBox.Show("Borrow list is empty", "Borrow failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
             Else
-                MessageBox.Show("Borrow list is empty", "Borrow failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("You have previous borrowed book that not returned, only allow 5 book person", "Borrow failed", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
 
         End If
+
     End Sub
 
     Private Sub BorrowBookv2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -211,8 +218,11 @@ Public Class BorrowBookv2
     Private Sub LvBorrowList_DoubleClick(sender As Object, e As EventArgs) Handles lvBorrowList.DoubleClick
         Dim selectedItem = lvBorrowList.SelectedIndices(0)
         lvBorrowList.Items(selectedItem).Remove()
-
     End Sub
 
+    Private Function BorrowingNumber() As Integer
+        Dim borrowing = From m In db.Users Join br In db.Borrows On m.UserID Equals br.UserID Where m.UserID = formHome.loggedInID And br.status = "Borrow"
+        Return borrowing.Count
+    End Function
 
 End Class

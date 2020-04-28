@@ -72,12 +72,14 @@ Partial Class FrmBorrowing
         '
         'btnBack
         '
+        Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnBack.ForeColor = System.Drawing.Color.White
         Me.btnBack.Location = New System.Drawing.Point(26, 489)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(136, 41)
         Me.btnBack.TabIndex = 3
         Me.btnBack.Text = "Back"
-        Me.btnBack.UseVisualStyleBackColor = True
+        Me.btnBack.UseVisualStyleBackColor = False
         '
         'lblCount
         '

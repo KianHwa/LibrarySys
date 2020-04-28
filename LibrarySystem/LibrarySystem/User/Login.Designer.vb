@@ -74,12 +74,14 @@ Partial Class Login
         '
         'btnLogin
         '
+        Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
         Me.btnLogin.Location = New System.Drawing.Point(204, 234)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(92, 34)
         Me.btnLogin.TabIndex = 2
-        Me.btnLogin.Text = "Login"
-        Me.btnLogin.UseVisualStyleBackColor = True
+        Me.btnLogin.Text = "L&ogin"
+        Me.btnLogin.UseVisualStyleBackColor = False
         '
         'mskId
         '
@@ -91,13 +93,15 @@ Partial Class Login
         '
         'btnRegister
         '
+        Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnRegister.CausesValidation = False
+        Me.btnRegister.ForeColor = System.Drawing.Color.White
         Me.btnRegister.Location = New System.Drawing.Point(161, 340)
         Me.btnRegister.Name = "btnRegister"
         Me.btnRegister.Size = New System.Drawing.Size(185, 34)
         Me.btnRegister.TabIndex = 3
-        Me.btnRegister.Text = "Register as Member"
-        Me.btnRegister.UseVisualStyleBackColor = True
+        Me.btnRegister.Text = "Register as &Member"
+        Me.btnRegister.UseVisualStyleBackColor = False
         '
         'btnLibrarian
         '
@@ -149,21 +153,25 @@ Partial Class Login
         '
         'btnLogLibrarian
         '
+        Me.btnLogLibrarian.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnLogLibrarian.ForeColor = System.Drawing.Color.White
         Me.btnLogLibrarian.Location = New System.Drawing.Point(83, 200)
         Me.btnLogLibrarian.Name = "btnLogLibrarian"
         Me.btnLogLibrarian.Size = New System.Drawing.Size(131, 43)
         Me.btnLogLibrarian.TabIndex = 12
-        Me.btnLogLibrarian.Text = "Librarian"
-        Me.btnLogLibrarian.UseVisualStyleBackColor = True
+        Me.btnLogLibrarian.Text = "&Librarian"
+        Me.btnLogLibrarian.UseVisualStyleBackColor = False
         '
         'btnLogAdmin
         '
+        Me.btnLogAdmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnLogAdmin.ForeColor = System.Drawing.Color.White
         Me.btnLogAdmin.Location = New System.Drawing.Point(283, 200)
         Me.btnLogAdmin.Name = "btnLogAdmin"
         Me.btnLogAdmin.Size = New System.Drawing.Size(131, 43)
         Me.btnLogAdmin.TabIndex = 13
-        Me.btnLogAdmin.Text = "Admin"
-        Me.btnLogAdmin.UseVisualStyleBackColor = True
+        Me.btnLogAdmin.Text = "&Admin"
+        Me.btnLogAdmin.UseVisualStyleBackColor = False
         '
         'btnBack2
         '
@@ -201,21 +209,26 @@ Partial Class Login
         '
         'btnExit
         '
+        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnExit.ForeColor = System.Drawing.Color.White
         Me.btnExit.Location = New System.Drawing.Point(427, 350)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(58, 36)
         Me.btnExit.TabIndex = 17
-        Me.btnExit.Text = "Exit"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnExit.Text = "&Exit"
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'btnBack4
         '
+        Me.btnBack4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnBack4.ForeColor = System.Drawing.Color.White
         Me.btnBack4.Location = New System.Drawing.Point(204, 274)
         Me.btnBack4.Name = "btnBack4"
         Me.btnBack4.Size = New System.Drawing.Size(92, 34)
         Me.btnBack4.TabIndex = 18
-        Me.btnBack4.Text = "Back"
-        Me.btnBack4.UseVisualStyleBackColor = True
+        Me.btnBack4.Text = "&Back"
+        Me.btnBack4.UseVisualStyleBackColor = False
         '
         'Login
         '
@@ -223,6 +236,7 @@ Partial Class Login
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
+        Me.CancelButton = Me.btnExit
         Me.ClientSize = New System.Drawing.Size(497, 398)
         Me.Controls.Add(Me.btnBack4)
         Me.Controls.Add(Me.btnExit)

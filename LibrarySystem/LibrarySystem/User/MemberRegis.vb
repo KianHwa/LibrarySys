@@ -59,7 +59,7 @@ Public Class MemberRegis
 
     Private Sub MemberRegis_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim rs = From m In db.Users Where m.UserID.StartsWith("MM")
-        mskID.Text = rs.Count().ToString("00000")
+        mskID.Text = (rs.Count() + 1).ToString("00000")
 
         mskID.Enabled = False
     End Sub
