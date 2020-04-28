@@ -78,23 +78,23 @@ Partial Class ReturnBook
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(40, 37)
+        Me.Label1.Location = New System.Drawing.Point(94, 43)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 18)
+        Me.Label1.Size = New System.Drawing.Size(26, 18)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Student ID:"
+        Me.Label1.Text = "ID:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(14, 80)
+        Me.Label2.Location = New System.Drawing.Point(68, 86)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(106, 18)
+        Me.Label2.Size = New System.Drawing.Size(52, 18)
         Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Student Name:"
+        Me.Label2.Text = "Name:"
         '
         'txtName
         '

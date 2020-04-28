@@ -23,6 +23,7 @@ Partial Class BorrowBookv2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BorrowBookv2))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtISBN = New System.Windows.Forms.TextBox()
         Me.txtMemberID = New System.Windows.Forms.MaskedTextBox()
@@ -67,26 +68,30 @@ Partial Class BorrowBookv2
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(29, 39)
+        Me.GroupBox1.Location = New System.Drawing.Point(22, 32)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(914, 266)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(686, 216)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
         'txtISBN
         '
-        Me.txtISBN.Location = New System.Drawing.Point(656, 150)
+        Me.txtISBN.Location = New System.Drawing.Point(492, 122)
+        Me.txtISBN.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtISBN.Name = "txtISBN"
-        Me.txtISBN.Size = New System.Drawing.Size(200, 30)
+        Me.txtISBN.Size = New System.Drawing.Size(151, 26)
         Me.txtISBN.TabIndex = 15
         Me.ToolTip1.SetToolTip(Me.txtISBN, "10 - 13 digits found on the book")
         '
         'txtMemberID
         '
-        Me.txtMemberID.Location = New System.Drawing.Point(177, 50)
+        Me.txtMemberID.Location = New System.Drawing.Point(133, 41)
+        Me.txtMemberID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtMemberID.Mask = "LL00000"
         Me.txtMemberID.Name = "txtMemberID"
-        Me.txtMemberID.Size = New System.Drawing.Size(200, 30)
+        Me.txtMemberID.Size = New System.Drawing.Size(151, 26)
         Me.txtMemberID.TabIndex = 14
         Me.ToolTip1.SetToolTip(Me.txtMemberID, "Member ID, start with 'MM'")
         '
@@ -99,9 +104,10 @@ Partial Class BorrowBookv2
         Me.btnBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBorrow.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBorrow.ForeColor = System.Drawing.Color.White
-        Me.btnBorrow.Location = New System.Drawing.Point(736, 202)
+        Me.btnBorrow.Location = New System.Drawing.Point(552, 164)
+        Me.btnBorrow.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnBorrow.Name = "btnBorrow"
-        Me.btnBorrow.Size = New System.Drawing.Size(120, 35)
+        Me.btnBorrow.Size = New System.Drawing.Size(90, 28)
         Me.btnBorrow.TabIndex = 13
         Me.btnBorrow.Text = "&Borrow"
         Me.btnBorrow.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -117,9 +123,10 @@ Partial Class BorrowBookv2
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClear.ForeColor = System.Drawing.Color.White
-        Me.btnClear.Location = New System.Drawing.Point(587, 202)
+        Me.btnClear.Location = New System.Drawing.Point(440, 164)
+        Me.btnClear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(120, 35)
+        Me.btnClear.Size = New System.Drawing.Size(90, 28)
         Me.btnClear.TabIndex = 12
         Me.btnClear.Text = "C&lear"
         Me.btnClear.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -130,17 +137,19 @@ Partial Class BorrowBookv2
         '
         Me.lblDueDate.BackColor = System.Drawing.Color.White
         Me.lblDueDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblDueDate.Location = New System.Drawing.Point(656, 100)
+        Me.lblDueDate.Location = New System.Drawing.Point(492, 81)
+        Me.lblDueDate.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblDueDate.Name = "lblDueDate"
-        Me.lblDueDate.Size = New System.Drawing.Size(200, 30)
+        Me.lblDueDate.Size = New System.Drawing.Size(150, 25)
         Me.lblDueDate.TabIndex = 9
         Me.ToolTip1.SetToolTip(Me.lblDueDate, "Day where you must return the book borrowed")
         '
         'Label5
         '
-        Me.Label5.Location = New System.Drawing.Point(500, 100)
+        Me.Label5.Location = New System.Drawing.Point(375, 81)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(150, 30)
+        Me.Label5.Size = New System.Drawing.Size(112, 24)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Due Date"
         '
@@ -148,53 +157,59 @@ Partial Class BorrowBookv2
         '
         Me.dtpBorrowDate.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpBorrowDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpBorrowDate.Location = New System.Drawing.Point(656, 50)
+        Me.dtpBorrowDate.Location = New System.Drawing.Point(492, 41)
+        Me.dtpBorrowDate.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dtpBorrowDate.Name = "dtpBorrowDate"
-        Me.dtpBorrowDate.Size = New System.Drawing.Size(200, 30)
+        Me.dtpBorrowDate.Size = New System.Drawing.Size(151, 26)
         Me.dtpBorrowDate.TabIndex = 3
         Me.ToolTip1.SetToolTip(Me.dtpBorrowDate, "Borrow Date")
         '
         'txtMemberName
         '
-        Me.txtMemberName.Location = New System.Drawing.Point(176, 100)
+        Me.txtMemberName.Location = New System.Drawing.Point(132, 81)
+        Me.txtMemberName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtMemberName.Name = "txtMemberName"
-        Me.txtMemberName.Size = New System.Drawing.Size(200, 30)
+        Me.txtMemberName.Size = New System.Drawing.Size(151, 26)
         Me.txtMemberName.TabIndex = 2
         Me.ToolTip1.SetToolTip(Me.txtMemberName, "Your name")
         '
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(500, 150)
+        Me.Label4.Location = New System.Drawing.Point(375, 122)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(150, 30)
+        Me.Label4.Size = New System.Drawing.Size(112, 24)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Book ISBN"
         '
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(500, 50)
+        Me.Label3.Location = New System.Drawing.Point(375, 41)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(150, 30)
+        Me.Label3.Size = New System.Drawing.Size(112, 24)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Borrow Date"
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(20, 100)
+        Me.Label2.Location = New System.Drawing.Point(15, 81)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(150, 30)
+        Me.Label2.Size = New System.Drawing.Size(112, 24)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Member Name"
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(20, 50)
+        Me.Label1.Location = New System.Drawing.Point(15, 41)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(150, 30)
+        Me.Label1.Size = New System.Drawing.Size(112, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Member ID"
         '
@@ -203,9 +218,11 @@ Partial Class BorrowBookv2
         Me.GroupBox3.Controls.Add(Me.lvBorrowList)
         Me.GroupBox3.Controls.Add(Me.btnRemove)
         Me.GroupBox3.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(29, 330)
+        Me.GroupBox3.Location = New System.Drawing.Point(22, 268)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(914, 307)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Size = New System.Drawing.Size(686, 249)
         Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         '
@@ -217,9 +234,10 @@ Partial Class BorrowBookv2
         Me.lvBorrowList.GridLines = True
         Me.lvBorrowList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.lvBorrowList.HideSelection = False
-        Me.lvBorrowList.Location = New System.Drawing.Point(33, 40)
+        Me.lvBorrowList.Location = New System.Drawing.Point(25, 32)
+        Me.lvBorrowList.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lvBorrowList.Name = "lvBorrowList"
-        Me.lvBorrowList.Size = New System.Drawing.Size(850, 184)
+        Me.lvBorrowList.Size = New System.Drawing.Size(638, 150)
         Me.lvBorrowList.TabIndex = 7
         Me.ToolTip1.SetToolTip(Me.lvBorrowList, "Borrow list, double click to remove")
         Me.lvBorrowList.UseCompatibleStateImageBehavior = False
@@ -250,13 +268,13 @@ Partial Class BorrowBookv2
         Me.cmsRmvAllBorrowList.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.cmsRmvAllBorrowList.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
         Me.cmsRmvAllBorrowList.Name = "cmsRmvAllBorrowList"
-        Me.cmsRmvAllBorrowList.Size = New System.Drawing.Size(155, 28)
+        Me.cmsRmvAllBorrowList.Size = New System.Drawing.Size(135, 26)
         Me.cmsRmvAllBorrowList.Text = "Remove all"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(154, 24)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(134, 22)
         Me.ToolStripMenuItem1.Text = "&Remove All"
         '
         'btnRemove
@@ -268,9 +286,10 @@ Partial Class BorrowBookv2
         Me.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRemove.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRemove.ForeColor = System.Drawing.Color.White
-        Me.btnRemove.Location = New System.Drawing.Point(774, 253)
+        Me.btnRemove.Location = New System.Drawing.Point(580, 206)
+        Me.btnRemove.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.Size = New System.Drawing.Size(120, 35)
+        Me.btnRemove.Size = New System.Drawing.Size(90, 28)
         Me.btnRemove.TabIndex = 6
         Me.btnRemove.Text = "&Remove"
         Me.btnRemove.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -286,9 +305,10 @@ Partial Class BorrowBookv2
         Me.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConfirm.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirm.ForeColor = System.Drawing.Color.White
-        Me.btnConfirm.Location = New System.Drawing.Point(803, 662)
+        Me.btnConfirm.Location = New System.Drawing.Point(602, 538)
+        Me.btnConfirm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnConfirm.Name = "btnConfirm"
-        Me.btnConfirm.Size = New System.Drawing.Size(120, 35)
+        Me.btnConfirm.Size = New System.Drawing.Size(90, 28)
         Me.btnConfirm.TabIndex = 14
         Me.btnConfirm.Text = "&Confirm"
         Me.btnConfirm.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -297,12 +317,14 @@ Partial Class BorrowBookv2
         '
         'BorrowBookv2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1006, 721)
+        Me.ClientSize = New System.Drawing.Size(754, 586)
         Me.Controls.Add(Me.btnConfirm)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "BorrowBookv2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "BorrowBookv2"

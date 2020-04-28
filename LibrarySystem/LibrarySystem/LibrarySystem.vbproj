@@ -288,6 +288,9 @@
     <EmbeddedResource Include="Others\HowToUse.resx">
       <DependentUpon>HowToUse.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Others\Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\GenerateReport.resx">
       <DependentUpon>GenerateReport.vb</DependentUpon>
     </EmbeddedResource>

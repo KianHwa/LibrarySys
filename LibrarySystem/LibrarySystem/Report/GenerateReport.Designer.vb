@@ -22,6 +22,7 @@ Partial Class GenerateReport
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GenerateReport))
         Me.btnReportBorrowBook = New System.Windows.Forms.Button()
         Me.btnReportReturnBook = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -35,10 +36,10 @@ Partial Class GenerateReport
         Me.btnReportBorrowBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnReportBorrowBook.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReportBorrowBook.ForeColor = System.Drawing.Color.White
-        Me.btnReportBorrowBook.Location = New System.Drawing.Point(21, 76)
-        Me.btnReportBorrowBook.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnReportBorrowBook.Location = New System.Drawing.Point(16, 62)
+        Me.btnReportBorrowBook.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnReportBorrowBook.Name = "btnReportBorrowBook"
-        Me.btnReportBorrowBook.Size = New System.Drawing.Size(144, 59)
+        Me.btnReportBorrowBook.Size = New System.Drawing.Size(108, 48)
         Me.btnReportBorrowBook.TabIndex = 0
         Me.btnReportBorrowBook.Text = "&Borrow Book Report"
         Me.btnReportBorrowBook.UseVisualStyleBackColor = False
@@ -48,10 +49,10 @@ Partial Class GenerateReport
         Me.btnReportReturnBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnReportReturnBook.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReportReturnBook.ForeColor = System.Drawing.Color.White
-        Me.btnReportReturnBook.Location = New System.Drawing.Point(184, 76)
-        Me.btnReportReturnBook.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnReportReturnBook.Location = New System.Drawing.Point(138, 62)
+        Me.btnReportReturnBook.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnReportReturnBook.Name = "btnReportReturnBook"
-        Me.btnReportReturnBook.Size = New System.Drawing.Size(142, 59)
+        Me.btnReportReturnBook.Size = New System.Drawing.Size(106, 48)
         Me.btnReportReturnBook.TabIndex = 1
         Me.btnReportReturnBook.Text = "&Return Book Report"
         Me.btnReportReturnBook.UseVisualStyleBackColor = False
@@ -60,9 +61,10 @@ Partial Class GenerateReport
         '
         Me.Label1.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.Label1.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(31, 25)
+        Me.Label1.Location = New System.Drawing.Point(23, 20)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(347, 66)
+        Me.Label1.Size = New System.Drawing.Size(260, 54)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "What Report Do You Want To Generate?"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -73,10 +75,10 @@ Partial Class GenerateReport
         Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnExit.Font = New System.Drawing.Font("HoloLens MDL2 Assets", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(74, 161)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnExit.Location = New System.Drawing.Point(56, 131)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(187, 62)
+        Me.btnExit.Size = New System.Drawing.Size(140, 50)
         Me.btnExit.TabIndex = 4
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = False
@@ -86,24 +88,25 @@ Partial Class GenerateReport
         Me.GroupBox1.Controls.Add(Me.btnReportReturnBook)
         Me.GroupBox1.Controls.Add(Me.btnExit)
         Me.GroupBox1.Controls.Add(Me.btnReportBorrowBook)
-        Me.GroupBox1.Location = New System.Drawing.Point(29, 95)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Location = New System.Drawing.Point(22, 77)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(348, 265)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(261, 215)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         '
         'GenerateReport
         '
         Me.AcceptButton = Me.btnReportBorrowBook
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnExit
-        Me.ClientSize = New System.Drawing.Size(420, 422)
+        Me.ClientSize = New System.Drawing.Size(315, 343)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "GenerateReport"
         Me.Text = "GenerateReport"
         Me.GroupBox1.ResumeLayout(False)

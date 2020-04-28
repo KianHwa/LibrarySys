@@ -14,7 +14,7 @@ Public Class ReturnBook
         End If
         For Each item In lvBorrowList.Items
             Dim bookISBN As String = item.SubItems(1).Text
-            If Math.Abs(DateDiff(DateInterval.Day, Date.Now(), GetBorrowDate(bookISBN))) >= 7 Then
+            If Math.Abs(DateDiff(DateInterval.Day, Date.Now(), GetBorrowDate(bookISBN, "Borrow"))) >= 7 Then
                 finedBooks.Append(bookISBN + vbNewLine)
             End If
         Next
@@ -28,7 +28,7 @@ Public Class ReturnBook
             For Each item In lvBorrowList.Items
                 Dim bookISBN As String = item.SubItems(1).Text
 
-                If Math.Abs(DateDiff(DateInterval.Day, Date.Now(), GetBorrowDate(bookISBN))) <= 7 Then
+                If Math.Abs(DateDiff(DateInterval.Day, Date.Now(), GetBorrowDate(bookISBN, "Borrow"))) <= 7 Then
                     For Each record In db.Borrows
                         If record.ISBN = bookISBN Then
                             record.status = "Returned"
@@ -44,9 +44,9 @@ Public Class ReturnBook
     End Sub
 
     'Get borrow Date (Of particular book)
-    Private Function GetBorrowDate(bookISBN As String) As Date
+    Private Function GetBorrowDate(bookISBN As String, status As String) As Date
         Dim borrowdate As DateTime
-        Dim bookBorrowDate = From br In db.Borrows Where br.ISBN = bookISBN
+        Dim bookBorrowDate = From br In db.Borrows Where br.ISBN = bookISBN AndAlso br.status = status
         For Each bd In bookBorrowDate
             borrowdate = bd.borrowDate
         Next
@@ -131,7 +131,7 @@ Public Class ReturnBook
                 Dim fined As String() = temp.Split(vbNewLine)
                 Dim finedChanges As Integer = 0
                 For Each record In db.Borrows
-                    If record.ISBN.Equals(fined(finedChanges).Trim) Then
+                    If record.ISBN.Equals(fined(finedChanges).Trim) AndAlso record.status = "Borrow" Then
                         record.status = "Returned"
                         record.returnDate = Date.Now()
                         finedChanges += 1

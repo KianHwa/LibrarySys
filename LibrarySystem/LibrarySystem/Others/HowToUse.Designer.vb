@@ -22,6 +22,7 @@ Partial Class HowToUse
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HowToUse))
         Me.panelHome = New System.Windows.Forms.Panel()
         Me.lblHomeDetails = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -161,6 +162,7 @@ Partial Class HowToUse
         Me.Controls.Add(Me.panelHome)
         Me.Controls.Add(Me.btnPrevious)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "HowToUse"
         Me.Text = "How To Use"

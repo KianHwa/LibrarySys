@@ -23,6 +23,7 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPassword = New System.Windows.Forms.TextBox()
@@ -49,46 +50,51 @@ Partial Class Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(140, 131)
+        Me.Label1.Location = New System.Drawing.Point(105, 106)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 17)
+        Me.Label1.Size = New System.Drawing.Size(49, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "User ID :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(126, 172)
+        Me.Label2.Location = New System.Drawing.Point(94, 140)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 17)
+        Me.Label2.Size = New System.Drawing.Size(59, 13)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Password :"
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(209, 172)
+        Me.txtPassword.Location = New System.Drawing.Point(157, 140)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(138, 22)
+        Me.txtPassword.Size = New System.Drawing.Size(104, 20)
         Me.txtPassword.TabIndex = 1
         '
         'btnLogin
         '
         Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(204, 234)
+        Me.btnLogin.Location = New System.Drawing.Point(153, 190)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(92, 34)
+        Me.btnLogin.Size = New System.Drawing.Size(69, 28)
         Me.btnLogin.TabIndex = 2
         Me.btnLogin.Text = "L&ogin"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
         'mskId
         '
-        Me.mskId.Location = New System.Drawing.Point(209, 128)
+        Me.mskId.Location = New System.Drawing.Point(157, 104)
+        Me.mskId.Margin = New System.Windows.Forms.Padding(2)
         Me.mskId.Mask = "AA00000"
         Me.mskId.Name = "mskId"
-        Me.mskId.Size = New System.Drawing.Size(137, 22)
+        Me.mskId.Size = New System.Drawing.Size(104, 20)
         Me.mskId.TabIndex = 0
         '
         'btnRegister
@@ -96,36 +102,44 @@ Partial Class Login
         Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnRegister.CausesValidation = False
         Me.btnRegister.ForeColor = System.Drawing.Color.White
-        Me.btnRegister.Location = New System.Drawing.Point(161, 340)
+        Me.btnRegister.Location = New System.Drawing.Point(121, 276)
+        Me.btnRegister.Margin = New System.Windows.Forms.Padding(2)
         Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(185, 34)
+        Me.btnRegister.Size = New System.Drawing.Size(139, 28)
         Me.btnRegister.TabIndex = 3
         Me.btnRegister.Text = "Register as &Member"
         Me.btnRegister.UseVisualStyleBackColor = False
         '
         'btnLibrarian
         '
-        Me.btnLibrarian.Location = New System.Drawing.Point(283, 200)
+        Me.btnLibrarian.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnLibrarian.ForeColor = System.Drawing.Color.White
+        Me.btnLibrarian.Location = New System.Drawing.Point(212, 162)
+        Me.btnLibrarian.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLibrarian.Name = "btnLibrarian"
-        Me.btnLibrarian.Size = New System.Drawing.Size(131, 43)
+        Me.btnLibrarian.Size = New System.Drawing.Size(98, 35)
         Me.btnLibrarian.TabIndex = 8
         Me.btnLibrarian.Text = "Login as Staff"
-        Me.btnLibrarian.UseVisualStyleBackColor = True
+        Me.btnLibrarian.UseVisualStyleBackColor = False
         '
         'btnMember
         '
-        Me.btnMember.Location = New System.Drawing.Point(83, 200)
+        Me.btnMember.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnMember.ForeColor = System.Drawing.Color.White
+        Me.btnMember.Location = New System.Drawing.Point(62, 162)
+        Me.btnMember.Margin = New System.Windows.Forms.Padding(2)
         Me.btnMember.Name = "btnMember"
-        Me.btnMember.Size = New System.Drawing.Size(131, 43)
+        Me.btnMember.Size = New System.Drawing.Size(98, 35)
         Me.btnMember.TabIndex = 7
         Me.btnMember.Text = "Login as Member"
-        Me.btnMember.UseVisualStyleBackColor = True
+        Me.btnMember.UseVisualStyleBackColor = False
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(204, 274)
+        Me.btnBack.Location = New System.Drawing.Point(153, 223)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(92, 34)
+        Me.btnBack.Size = New System.Drawing.Size(69, 28)
         Me.btnBack.TabIndex = 10
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -134,9 +148,10 @@ Partial Class Login
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(59, 26)
+        Me.Label3.Location = New System.Drawing.Point(44, 21)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(371, 25)
+        Me.Label3.Size = New System.Drawing.Size(299, 20)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Welcome to Library Management System"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -146,18 +161,20 @@ Partial Class Login
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.ForeColor = System.Drawing.Color.White
-        Me.Panel1.Location = New System.Drawing.Point(3, 1)
+        Me.Panel1.Location = New System.Drawing.Point(2, 1)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(494, 82)
+        Me.Panel1.Size = New System.Drawing.Size(370, 67)
         Me.Panel1.TabIndex = 11
         '
         'btnLogLibrarian
         '
         Me.btnLogLibrarian.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnLogLibrarian.ForeColor = System.Drawing.Color.White
-        Me.btnLogLibrarian.Location = New System.Drawing.Point(83, 200)
+        Me.btnLogLibrarian.Location = New System.Drawing.Point(62, 162)
+        Me.btnLogLibrarian.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogLibrarian.Name = "btnLogLibrarian"
-        Me.btnLogLibrarian.Size = New System.Drawing.Size(131, 43)
+        Me.btnLogLibrarian.Size = New System.Drawing.Size(98, 35)
         Me.btnLogLibrarian.TabIndex = 12
         Me.btnLogLibrarian.Text = "&Librarian"
         Me.btnLogLibrarian.UseVisualStyleBackColor = False
@@ -166,38 +183,46 @@ Partial Class Login
         '
         Me.btnLogAdmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnLogAdmin.ForeColor = System.Drawing.Color.White
-        Me.btnLogAdmin.Location = New System.Drawing.Point(283, 200)
+        Me.btnLogAdmin.Location = New System.Drawing.Point(212, 162)
+        Me.btnLogAdmin.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogAdmin.Name = "btnLogAdmin"
-        Me.btnLogAdmin.Size = New System.Drawing.Size(131, 43)
+        Me.btnLogAdmin.Size = New System.Drawing.Size(98, 35)
         Me.btnLogAdmin.TabIndex = 13
         Me.btnLogAdmin.Text = "&Admin"
         Me.btnLogAdmin.UseVisualStyleBackColor = False
         '
         'btnBack2
         '
-        Me.btnBack2.Location = New System.Drawing.Point(204, 274)
+        Me.btnBack2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnBack2.ForeColor = System.Drawing.Color.White
+        Me.btnBack2.Location = New System.Drawing.Point(153, 223)
+        Me.btnBack2.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBack2.Name = "btnBack2"
-        Me.btnBack2.Size = New System.Drawing.Size(92, 34)
+        Me.btnBack2.Size = New System.Drawing.Size(69, 28)
         Me.btnBack2.TabIndex = 14
         Me.btnBack2.Text = "Back"
-        Me.btnBack2.UseVisualStyleBackColor = True
+        Me.btnBack2.UseVisualStyleBackColor = False
         '
         'btnBack3
         '
+        Me.btnBack3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnBack3.CausesValidation = False
-        Me.btnBack3.Location = New System.Drawing.Point(204, 274)
+        Me.btnBack3.ForeColor = System.Drawing.Color.White
+        Me.btnBack3.Location = New System.Drawing.Point(153, 222)
+        Me.btnBack3.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBack3.Name = "btnBack3"
-        Me.btnBack3.Size = New System.Drawing.Size(92, 34)
+        Me.btnBack3.Size = New System.Drawing.Size(69, 28)
         Me.btnBack3.TabIndex = 15
         Me.btnBack3.Text = "Back"
-        Me.btnBack3.UseVisualStyleBackColor = True
+        Me.btnBack3.UseVisualStyleBackColor = False
         '
         'chkShowPass
         '
         Me.chkShowPass.AutoSize = True
-        Me.chkShowPass.Location = New System.Drawing.Point(319, 177)
+        Me.chkShowPass.Location = New System.Drawing.Point(239, 144)
+        Me.chkShowPass.Margin = New System.Windows.Forms.Padding(2)
         Me.chkShowPass.Name = "chkShowPass"
-        Me.chkShowPass.Size = New System.Drawing.Size(18, 17)
+        Me.chkShowPass.Size = New System.Drawing.Size(15, 14)
         Me.chkShowPass.TabIndex = 16
         Me.chkShowPass.TextAlign = System.Drawing.ContentAlignment.TopRight
         Me.chkShowPass.UseVisualStyleBackColor = True
@@ -212,9 +237,10 @@ Partial Class Login
         Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(427, 350)
+        Me.btnExit.Location = New System.Drawing.Point(320, 284)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(58, 36)
+        Me.btnExit.Size = New System.Drawing.Size(44, 29)
         Me.btnExit.TabIndex = 17
         Me.btnExit.Text = "&Exit"
         Me.btnExit.UseVisualStyleBackColor = False
@@ -223,9 +249,10 @@ Partial Class Login
         '
         Me.btnBack4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnBack4.ForeColor = System.Drawing.Color.White
-        Me.btnBack4.Location = New System.Drawing.Point(204, 274)
+        Me.btnBack4.Location = New System.Drawing.Point(153, 223)
+        Me.btnBack4.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBack4.Name = "btnBack4"
-        Me.btnBack4.Size = New System.Drawing.Size(92, 34)
+        Me.btnBack4.Size = New System.Drawing.Size(69, 28)
         Me.btnBack4.TabIndex = 18
         Me.btnBack4.Text = "&Back"
         Me.btnBack4.UseVisualStyleBackColor = False
@@ -233,11 +260,11 @@ Partial Class Login
         'Login
         '
         Me.AcceptButton = Me.btnLogin
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.CancelButton = Me.btnExit
-        Me.ClientSize = New System.Drawing.Size(497, 398)
+        Me.ClientSize = New System.Drawing.Size(373, 323)
         Me.Controls.Add(Me.btnBack4)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.chkShowPass)
@@ -255,6 +282,8 @@ Partial Class Login
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"

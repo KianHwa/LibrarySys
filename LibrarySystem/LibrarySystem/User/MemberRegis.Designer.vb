@@ -23,6 +23,7 @@ Partial Class MemberRegis
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MemberRegis))
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
@@ -55,20 +56,18 @@ Partial Class MemberRegis
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(134, 171)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPassword.Location = New System.Drawing.Point(100, 139)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(159, 22)
+        Me.txtPassword.Size = New System.Drawing.Size(120, 20)
         Me.txtPassword.TabIndex = 2
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(48, 174)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(36, 141)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(77, 17)
+        Me.Label6.Size = New System.Drawing.Size(59, 13)
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Password :"
         '
@@ -76,10 +75,9 @@ Partial Class MemberRegis
         '
         Me.btnReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnReset.ForeColor = System.Drawing.Color.White
-        Me.btnReset.Location = New System.Drawing.Point(186, 465)
-        Me.btnReset.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnReset.Location = New System.Drawing.Point(140, 378)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(120, 35)
+        Me.btnReset.Size = New System.Drawing.Size(90, 28)
         Me.btnReset.TabIndex = 10
         Me.btnReset.Text = "Reset "
         Me.btnReset.UseVisualStyleBackColor = False
@@ -89,10 +87,9 @@ Partial Class MemberRegis
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnCancel.CausesValidation = False
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(319, 465)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCancel.Location = New System.Drawing.Point(239, 378)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(120, 35)
+        Me.btnCancel.Size = New System.Drawing.Size(90, 28)
         Me.btnCancel.TabIndex = 11
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
@@ -101,28 +98,25 @@ Partial Class MemberRegis
         '
         Me.btnSubmit.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btnSubmit.ForeColor = System.Drawing.Color.White
-        Me.btnSubmit.Location = New System.Drawing.Point(51, 465)
-        Me.btnSubmit.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSubmit.Location = New System.Drawing.Point(38, 378)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(120, 35)
+        Me.btnSubmit.Size = New System.Drawing.Size(90, 28)
         Me.btnSubmit.TabIndex = 9
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = False
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(186, 125)
-        Me.txtName.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtName.Location = New System.Drawing.Point(140, 102)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(392, 22)
+        Me.txtName.Size = New System.Drawing.Size(295, 20)
         Me.txtName.TabIndex = 1
         '
         'datePicker
         '
-        Me.datePicker.Location = New System.Drawing.Point(344, 217)
-        Me.datePicker.Margin = New System.Windows.Forms.Padding(4)
+        Me.datePicker.Location = New System.Drawing.Point(258, 176)
         Me.datePicker.Name = "datePicker"
-        Me.datePicker.Size = New System.Drawing.Size(260, 22)
+        Me.datePicker.Size = New System.Drawing.Size(196, 20)
         Me.datePicker.TabIndex = 4
         '
         'cboGender
@@ -130,121 +124,116 @@ Partial Class MemberRegis
         Me.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboGender.FormattingEnabled = True
         Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
-        Me.cboGender.Location = New System.Drawing.Point(120, 216)
-        Me.cboGender.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboGender.Location = New System.Drawing.Point(90, 176)
         Me.cboGender.Name = "cboGender"
-        Me.cboGender.Size = New System.Drawing.Size(92, 24)
+        Me.cboGender.Size = New System.Drawing.Size(70, 21)
         Me.cboGender.TabIndex = 3
         '
         'mskIC
         '
-        Me.mskIC.Location = New System.Drawing.Point(173, 257)
-        Me.mskIC.Margin = New System.Windows.Forms.Padding(4)
+        Me.mskIC.Location = New System.Drawing.Point(130, 209)
         Me.mskIC.Mask = "000000-00-0000"
         Me.mskIC.Name = "mskIC"
-        Me.mskIC.Size = New System.Drawing.Size(120, 22)
+        Me.mskIC.Size = New System.Drawing.Size(91, 20)
         Me.mskIC.TabIndex = 5
         '
         'txtAddress
         '
-        Me.txtAddress.Location = New System.Drawing.Point(124, 297)
-        Me.txtAddress.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtAddress.Location = New System.Drawing.Point(93, 241)
         Me.txtAddress.Multiline = True
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(456, 47)
+        Me.txtAddress.Size = New System.Drawing.Size(343, 39)
         Me.txtAddress.TabIndex = 6
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(161, 365)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtEmail.Location = New System.Drawing.Point(121, 297)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(419, 22)
+        Me.txtEmail.Size = New System.Drawing.Size(315, 20)
         Me.txtEmail.TabIndex = 7
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(48, 406)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(36, 330)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(56, 17)
+        Me.Label5.Size = New System.Drawing.Size(43, 13)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Status :"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(48, 301)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(36, 245)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(68, 17)
+        Me.Label4.Size = New System.Drawing.Size(51, 13)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Address :"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(240, 220)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(180, 179)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 17)
+        Me.Label3.Size = New System.Drawing.Size(72, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Date of Birth :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(48, 220)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(36, 179)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 17)
+        Me.Label2.Size = New System.Drawing.Size(48, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Gender :"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(48, 365)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(36, 297)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(106, 17)
+        Me.Label1.Size = New System.Drawing.Size(79, 13)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Email Address :"
         '
         'lblStudentID
         '
         Me.lblStudentID.AutoSize = True
-        Me.lblStudentID.Location = New System.Drawing.Point(48, 260)
+        Me.lblStudentID.Location = New System.Drawing.Point(36, 211)
+        Me.lblStudentID.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblStudentID.Name = "lblStudentID"
-        Me.lblStudentID.Size = New System.Drawing.Size(117, 17)
+        Me.lblStudentID.Size = New System.Drawing.Size(89, 13)
         Me.lblStudentID.TabIndex = 5
         Me.lblStudentID.Text = "Identity Card No :"
         '
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(46, 129)
+        Me.lblName.Location = New System.Drawing.Point(34, 105)
+        Me.lblName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(131, 17)
+        Me.lblName.Size = New System.Drawing.Size(100, 13)
         Me.lblName.TabIndex = 1
         Me.lblName.Text = "Name of Applicant :"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(46, 86)
+        Me.Label7.Location = New System.Drawing.Point(34, 70)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(63, 17)
+        Me.Label7.Size = New System.Drawing.Size(49, 13)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "User ID :"
         '
         'mskID
         '
-        Me.mskID.Location = New System.Drawing.Point(149, 81)
+        Me.mskID.Location = New System.Drawing.Point(112, 66)
+        Me.mskID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.mskID.Mask = "00000"
         Me.mskID.Name = "mskID"
-        Me.mskID.Size = New System.Drawing.Size(123, 22)
+        Me.mskID.Size = New System.Drawing.Size(93, 20)
         Me.mskID.TabIndex = 0
         '
         'Panel1
@@ -252,8 +241,9 @@ Partial Class MemberRegis
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Location = New System.Drawing.Point(2, 1)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(626, 55)
+        Me.Panel1.Size = New System.Drawing.Size(470, 45)
         Me.Panel1.TabIndex = 72
         '
         'Label8
@@ -261,18 +251,20 @@ Partial Class MemberRegis
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(255, 18)
+        Me.Label8.Location = New System.Drawing.Point(191, 15)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(116, 20)
+        Me.Label8.Size = New System.Drawing.Size(97, 17)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Register Form"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(113, 84)
+        Me.Label9.Location = New System.Drawing.Point(85, 68)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(30, 17)
+        Me.Label9.Size = New System.Drawing.Size(25, 13)
         Me.Label9.TabIndex = 73
         Me.Label9.Text = "MM"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -280,9 +272,10 @@ Partial Class MemberRegis
         'lblStatus
         '
         Me.lblStatus.AutoSize = True
-        Me.lblStatus.Location = New System.Drawing.Point(111, 406)
+        Me.lblStatus.Location = New System.Drawing.Point(83, 330)
+        Me.lblStatus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(59, 17)
+        Me.lblStatus.Size = New System.Drawing.Size(45, 13)
         Me.lblStatus.TabIndex = 74
         Me.lblStatus.Text = "Member"
         '
@@ -293,18 +286,19 @@ Partial Class MemberRegis
         'chkShowPass
         '
         Me.chkShowPass.AutoSize = True
-        Me.chkShowPass.Location = New System.Drawing.Point(299, 174)
+        Me.chkShowPass.Location = New System.Drawing.Point(224, 141)
+        Me.chkShowPass.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.chkShowPass.Name = "chkShowPass"
-        Me.chkShowPass.Size = New System.Drawing.Size(18, 17)
+        Me.chkShowPass.Size = New System.Drawing.Size(15, 14)
         Me.chkShowPass.TabIndex = 75
         Me.chkShowPass.TextAlign = System.Drawing.ContentAlignment.TopRight
         Me.chkShowPass.UseVisualStyleBackColor = True
         '
         'MemberRegis
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(629, 522)
+        Me.ClientSize = New System.Drawing.Size(472, 424)
         Me.Controls.Add(Me.chkShowPass)
         Me.Controls.Add(Me.lblStatus)
         Me.Controls.Add(Me.Label9)
@@ -329,7 +323,7 @@ Partial Class MemberRegis
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblStudentID)
         Me.Controls.Add(Me.lblName)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "MemberRegis"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CreateAccount"
