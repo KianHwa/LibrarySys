@@ -8,13 +8,13 @@
         <elementListCompartment Id="d89fa04d-4107-4365-80ab-edb399f6aeeb" absoluteBounds="0.76500000000000012, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="9a26db72-58d6-4f4b-8909-43129535dc74" absoluteBounds="0.875, 3.125, 2, 1.9631982421875">
+    <classShape Id="9a26db72-58d6-4f4b-8909-43129535dc74" absoluteBounds="0.875, 3, 2, 1.9631982421875">
       <DataClassMoniker Name="/LibraryDataContext/Borrow" />
       <nestedChildShapes>
-        <elementListCompartment Id="1cddf14e-f839-4bec-9b06-f901b57b8657" absoluteBounds="0.88999999999999968, 3.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="1cddf14e-f839-4bec-9b06-f901b57b8657" absoluteBounds="0.88999999999999968, 3.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(1.8125 : 2.27089680989583); (1.8125 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.8125 : 2.27089680989583); (1.8125 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LibraryDataContext/Book/Book_Borrow" />
       <nodes>
         <classShapeMoniker Id="7063206f-2857-4ee0-b9e5-9aa561d1c935" />
@@ -27,7 +27,7 @@
         <elementListCompartment Id="d52dcc35-02d5-4839-b71d-42af369b9fd6" absoluteBounds="4.39, 3.335, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(4.375 : 4.10659912109375); (2.875 : 4.10659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.375 : 3.98159912109375); (2.875 : 3.98159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LibraryDataContext/User/User_Borrow" />
       <nodes>
         <classShapeMoniker Id="fba74964-8b49-45d1-9e78-a36c1c78fc14" />
