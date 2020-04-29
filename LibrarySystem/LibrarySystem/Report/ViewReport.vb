@@ -182,11 +182,12 @@ Public Class ViewReport
 
         Dim cnt As Integer = 0
         Dim parts() As String
+
         For Each item In lstView.Items
             cnt += 1
             parts = CStr(item).Split(CChar(vbTab))
-            body.AppendFormat("{0,2}   {1,10}  {2,-30}" & vbNewLine,
-                                cnt, parts(0), parts(1))
+            body.AppendFormat("{0,-8} {1,-20} {2,-22} {3,10}" & vbNewLine,
+                                cnt, parts(0), parts(2), parts(4))
         Next
 
         body.AppendLine()

@@ -87,10 +87,12 @@
         chkHistory.Checked = False
         chkMystery.Checked = False
         chkHorror.Checked = False
-        txtBookName.Focus()
+        txtISBN.Focus()
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
     End Sub
+
+
 End Class
