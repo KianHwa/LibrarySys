@@ -151,7 +151,7 @@ Partial Class ReturnBook
         Me.btnPaid.Size = New System.Drawing.Size(103, 37)
         Me.btnPaid.TabIndex = 2
         Me.btnPaid.Text = "Clear Fined Books"
-        Me.ToolTip1.SetToolTip(Me.btnPaid, "Clear fined books")
+        Me.ToolTip1.SetToolTip(Me.btnPaid, "C&lear fined books")
         Me.btnPaid.UseVisualStyleBackColor = False
         '
         'Label3
