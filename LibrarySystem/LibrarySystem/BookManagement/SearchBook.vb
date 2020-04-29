@@ -33,8 +33,17 @@
         Me.BookTableAdapter.Fill(Me.LibraryDataSet.Book)
         Dim db As New LibraryDataContext()
         Dim rs = From b In db.Books
-
         BindData()
+
+        Dim status As String = ""
+        For Each u In db.Users
+            If u.UserID = formHome.loggedInID Then
+                status = u.Request.ToString
+            End If
+        Next
+        If formHome.loggedInID.StartsWith("MM") And status <> "Requested" Then
+            btnAdd.Enabled = False
+        End If
     End Sub
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
