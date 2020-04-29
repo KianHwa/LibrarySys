@@ -31,6 +31,7 @@
                 LibrarySystem.formHome.menuReports.Enabled = False
                 LibrarySystem.formHome.tsmiAddBooks.Enabled = False
                 LibrarySystem.formHome.tsmiRequest.Enabled = False
+                LibrarySystem.formHome.tsmiRegisterLibrarian.Enabled = True
                 Me.Hide()
                 LibrarySystem.formHome.ShowDialog()
                 ResetForm()
